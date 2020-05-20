@@ -51,6 +51,6 @@ traitlets==4.3.2
 Twisted==17.1.0
 w3lib==1.17.0
 wcwidth==0.1.7
-Werkzeug==0.12.1
+Werkzeug==0.15.3
 win-unicode-console==0.5
 zope.interface==4.3.3
