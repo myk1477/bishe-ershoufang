@@ -13,7 +13,7 @@ cssselect==1.0.1
 decorator==4.0.11
 Django==1.10.6
 enum34==1.1.6
-Flask==0.12
+Flask==1.0
 idna==2.5
 incremental==16.10.1
 ipaddress==1.0.18
