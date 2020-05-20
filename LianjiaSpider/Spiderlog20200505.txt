@@ -1,0 +1,498 @@
+2020-05-05 15:04:32 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-05 15:04:32 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-05 15:04:32 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.5, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200505.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-05 15:04:32 [scrapy.extensions.telnet] INFO: Telnet Password: fc44a7536c3304f3
+2020-05-05 15:04:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-05 15:04:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-05 15:04:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-05 15:04:32 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-05 15:04:32 [scrapy.core.engine] INFO: Spider opened
+2020-05-05 15:04:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-05 15:04:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-05 15:05:01 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103166105.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:05:32 [scrapy.extensions.logstats] INFO: Crawled 94 pages (at 94 pages/min), scraped 94 items (at 94 items/min)
+2020-05-05 15:06:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104103289018.html save CSV Field error
+2020-05-05 15:06:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104103292056.html save CSV Field error
+2020-05-05 15:06:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103315656.html save CSV Field error
+2020-05-05 15:06:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103336770.html save CSV Field error
+2020-05-05 15:06:32 [scrapy.extensions.logstats] INFO: Crawled 194 pages (at 100 pages/min), scraped 193 items (at 99 items/min)
+2020-05-05 15:06:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103390042.html save CSV Field error
+2020-05-05 15:06:58 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103363750.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:07:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103456403.html save CSV Field error
+2020-05-05 15:07:32 [scrapy.extensions.logstats] INFO: Crawled 285 pages (at 91 pages/min), scraped 285 items (at 92 items/min)
+2020-05-05 15:08:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103532979.html save CSV Field error
+2020-05-05 15:08:32 [scrapy.extensions.logstats] INFO: Crawled 380 pages (at 95 pages/min), scraped 380 items (at 95 items/min)
+2020-05-05 15:08:39 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103542044.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:08:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103582189.html save CSV Field error
+2020-05-05 15:08:43 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103544173.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:09:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103624751.html save CSV Field error
+2020-05-05 15:09:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103635539.html save CSV Field error
+2020-05-05 15:09:32 [scrapy.extensions.logstats] INFO: Crawled 474 pages (at 94 pages/min), scraped 474 items (at 94 items/min)
+2020-05-05 15:10:29 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103673989.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:10:32 [scrapy.extensions.logstats] INFO: Crawled 565 pages (at 91 pages/min), scraped 564 items (at 90 items/min)
+2020-05-05 15:11:32 [scrapy.extensions.logstats] INFO: Crawled 662 pages (at 97 pages/min), scraped 662 items (at 98 items/min)
+2020-05-05 15:12:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103751531.html save CSV Field error
+2020-05-05 15:12:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103754267.html save CSV Field error
+2020-05-05 15:12:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103757676.html save CSV Field error
+2020-05-05 15:12:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103764708.html save CSV Field error
+2020-05-05 15:12:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://zz.lianjia.com/ershoufang/104103764992.html>: HTTP status code is not handled or not allowed
+2020-05-05 15:12:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103771536.html save CSV Field error
+2020-05-05 15:12:32 [scrapy.extensions.logstats] INFO: Crawled 756 pages (at 94 pages/min), scraped 755 items (at 93 items/min)
+2020-05-05 15:12:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103784966.html save CSV Field error
+2020-05-05 15:12:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104103806246.html save CSV Field error
+2020-05-05 15:13:32 [scrapy.extensions.logstats] INFO: Crawled 848 pages (at 92 pages/min), scraped 847 items (at 92 items/min)
+2020-05-05 15:13:38 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103833255.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:13:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103879062.html save CSV Field error
+2020-05-05 15:14:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103896869.html save CSV Field error
+2020-05-05 15:14:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103911809.html save CSV Field error
+2020-05-05 15:14:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104103917793.html save CSV Field error
+2020-05-05 15:14:32 [scrapy.extensions.logstats] INFO: Crawled 939 pages (at 91 pages/min), scraped 937 items (at 90 items/min)
+2020-05-05 15:14:41 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103919330.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:15:32 [scrapy.extensions.logstats] INFO: Crawled 1026 pages (at 87 pages/min), scraped 1025 items (at 88 items/min)
+2020-05-05 15:15:33 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103981747.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:16:32 [scrapy.extensions.logstats] INFO: Crawled 1119 pages (at 93 pages/min), scraped 1118 items (at 93 items/min)
+2020-05-05 15:16:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104100970485.html save CSV Field error
+2020-05-05 15:17:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104101183084.html save CSV Field error
+2020-05-05 15:17:15 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101092818.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:17:32 [scrapy.extensions.logstats] INFO: Crawled 1209 pages (at 90 pages/min), scraped 1208 items (at 90 items/min)
+2020-05-05 15:17:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104101338591.html save CSV Field error
+2020-05-05 15:18:32 [scrapy.extensions.logstats] INFO: Crawled 1303 pages (at 94 pages/min), scraped 1302 items (at 94 items/min)
+2020-05-05 15:18:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104101543657.html save CSV Field error
+2020-05-05 15:19:32 [scrapy.extensions.logstats] INFO: Crawled 1395 pages (at 92 pages/min), scraped 1394 items (at 92 items/min)
+2020-05-05 15:19:34 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101706332.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:20:23 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101901590.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:20:32 [scrapy.extensions.logstats] INFO: Crawled 1484 pages (at 89 pages/min), scraped 1483 items (at 89 items/min)
+2020-05-05 15:21:09 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102059803.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:21:17 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102093564.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:21:25 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102114638.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:21:29 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102118976.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:21:32 [scrapy.extensions.logstats] INFO: Crawled 1577 pages (at 93 pages/min), scraped 1576 items (at 93 items/min)
+2020-05-05 15:22:19 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102344750.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:22:32 [scrapy.extensions.logstats] INFO: Crawled 1672 pages (at 95 pages/min), scraped 1671 items (at 95 items/min)
+2020-05-05 15:23:32 [scrapy.extensions.logstats] INFO: Crawled 1767 pages (at 95 pages/min), scraped 1765 items (at 94 items/min)
+2020-05-05 15:24:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104102717330.html save CSV Field error
+2020-05-05 15:24:32 [scrapy.extensions.logstats] INFO: Crawled 1861 pages (at 94 pages/min), scraped 1860 items (at 95 items/min)
+2020-05-05 15:25:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104102829292.html save CSV Field error
+2020-05-05 15:25:32 [scrapy.extensions.logstats] INFO: Crawled 1956 pages (at 95 pages/min), scraped 1955 items (at 95 items/min)
+2020-05-05 15:26:13 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102934577.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:26:32 [scrapy.extensions.logstats] INFO: Crawled 2046 pages (at 90 pages/min), scraped 2045 items (at 90 items/min)
+2020-05-05 15:26:55 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102956551.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:27:30 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103063177.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:27:32 [scrapy.extensions.logstats] INFO: Crawled 2139 pages (at 93 pages/min), scraped 2138 items (at 93 items/min)
+2020-05-05 15:27:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103156312.html save CSV Field error
+2020-05-05 15:28:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104103271603.html save CSV Field error
+2020-05-05 15:28:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103271858.html save CSV Field error
+2020-05-05 15:28:32 [scrapy.extensions.logstats] INFO: Crawled 2234 pages (at 95 pages/min), scraped 2233 items (at 95 items/min)
+2020-05-05 15:29:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103350120.html save CSV Field error
+2020-05-05 15:29:32 [scrapy.extensions.logstats] INFO: Crawled 2331 pages (at 97 pages/min), scraped 2330 items (at 97 items/min)
+2020-05-05 15:29:44 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103364341.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:30:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103419720.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:30:08 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103423867.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:30:32 [scrapy.extensions.logstats] INFO: Crawled 2424 pages (at 93 pages/min), scraped 2422 items (at 92 items/min)
+2020-05-05 15:31:32 [scrapy.extensions.logstats] INFO: Crawled 2515 pages (at 91 pages/min), scraped 2514 items (at 92 items/min)
+2020-05-05 15:32:32 [scrapy.extensions.logstats] INFO: Crawled 2614 pages (at 99 pages/min), scraped 2613 items (at 99 items/min)
+2020-05-05 15:33:32 [scrapy.extensions.logstats] INFO: Crawled 2706 pages (at 92 pages/min), scraped 2705 items (at 92 items/min)
+2020-05-05 15:33:36 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103749982.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:34:32 [scrapy.extensions.logstats] INFO: Crawled 2799 pages (at 93 pages/min), scraped 2797 items (at 92 items/min)
+2020-05-05 15:34:41 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103793970.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:34:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103813537.html save CSV Field error
+2020-05-05 15:34:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103817994.html save CSV Field error
+2020-05-05 15:34:51 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103799976.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:35:15 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103829040.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:35:32 [scrapy.extensions.logstats] INFO: Crawled 2891 pages (at 92 pages/min), scraped 2890 items (at 93 items/min)
+2020-05-05 15:36:32 [scrapy.extensions.logstats] INFO: Crawled 2989 pages (at 98 pages/min), scraped 2988 items (at 98 items/min)
+2020-05-05 15:37:32 [scrapy.extensions.logstats] INFO: Crawled 3086 pages (at 97 pages/min), scraped 3084 items (at 96 items/min)
+2020-05-05 15:37:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104103994501.html save CSV Field error
+2020-05-05 15:38:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104104013131.html save CSV Field error
+2020-05-05 15:38:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104104026393.html save CSV Field error
+2020-05-05 15:38:32 [scrapy.extensions.logstats] INFO: Crawled 3180 pages (at 94 pages/min), scraped 3178 items (at 94 items/min)
+2020-05-05 15:39:32 [scrapy.extensions.logstats] INFO: Crawled 3274 pages (at 94 pages/min), scraped 3273 items (at 95 items/min)
+2020-05-05 15:40:32 [scrapy.extensions.logstats] INFO: Crawled 3368 pages (at 94 pages/min), scraped 3367 items (at 94 items/min)
+2020-05-05 15:41:32 [scrapy.extensions.logstats] INFO: Crawled 3465 pages (at 97 pages/min), scraped 3464 items (at 97 items/min)
+2020-05-05 15:42:32 [scrapy.extensions.logstats] INFO: Crawled 3563 pages (at 98 pages/min), scraped 3562 items (at 98 items/min)
+2020-05-05 15:43:12 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101968120.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:43:30 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102022172.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:43:32 [scrapy.extensions.logstats] INFO: Crawled 3654 pages (at 91 pages/min), scraped 3653 items (at 91 items/min)
+2020-05-05 15:43:40 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102101931.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:43:55 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102093121.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:44:33 [scrapy.extensions.logstats] INFO: Crawled 3749 pages (at 95 pages/min), scraped 3748 items (at 95 items/min)
+2020-05-05 15:45:32 [scrapy.extensions.logstats] INFO: Crawled 3845 pages (at 96 pages/min), scraped 3844 items (at 96 items/min)
+2020-05-05 15:46:32 [scrapy.extensions.logstats] INFO: Crawled 3937 pages (at 92 pages/min), scraped 3936 items (at 92 items/min)
+2020-05-05 15:47:32 [scrapy.extensions.logstats] INFO: Crawled 4031 pages (at 94 pages/min), scraped 4030 items (at 94 items/min)
+2020-05-05 15:48:05 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102729468.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:48:11 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102739872.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:48:32 [scrapy.extensions.logstats] INFO: Crawled 4129 pages (at 98 pages/min), scraped 4128 items (at 98 items/min)
+2020-05-05 15:49:32 [scrapy.extensions.logstats] INFO: Crawled 4227 pages (at 98 pages/min), scraped 4226 items (at 98 items/min)
+2020-05-05 15:50:32 [scrapy.extensions.logstats] INFO: Crawled 4318 pages (at 91 pages/min), scraped 4317 items (at 91 items/min)
+2020-05-05 15:50:48 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103052674.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:51:22 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103111154.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:51:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104103168492.html save CSV Field error
+2020-05-05 15:51:32 [scrapy.extensions.logstats] INFO: Crawled 4411 pages (at 93 pages/min), scraped 4410 items (at 93 items/min)
+2020-05-05 15:52:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103246727.html save CSV Field error
+2020-05-05 15:52:32 [scrapy.extensions.logstats] INFO: Crawled 4508 pages (at 97 pages/min), scraped 4507 items (at 97 items/min)
+2020-05-05 15:52:55 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103281098.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:53:32 [scrapy.extensions.logstats] INFO: Crawled 4603 pages (at 95 pages/min), scraped 4602 items (at 95 items/min)
+2020-05-05 15:53:40 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103369732.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:53:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103408163.html save CSV Field error
+2020-05-05 15:54:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104103469911.html save CSV Field error
+2020-05-05 15:54:32 [scrapy.extensions.logstats] INFO: Crawled 4698 pages (at 95 pages/min), scraped 4697 items (at 95 items/min)
+2020-05-05 15:55:32 [scrapy.extensions.logstats] INFO: Crawled 4786 pages (at 88 pages/min), scraped 4785 items (at 88 items/min)
+2020-05-05 15:55:45 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103625001.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:56:32 [scrapy.extensions.logstats] INFO: Crawled 4878 pages (at 92 pages/min), scraped 4877 items (at 92 items/min)
+2020-05-05 15:56:57 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103684658.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 15:57:32 [scrapy.extensions.logstats] INFO: Crawled 4973 pages (at 95 pages/min), scraped 4972 items (at 95 items/min)
+2020-05-05 15:58:32 [scrapy.extensions.logstats] INFO: Crawled 5073 pages (at 100 pages/min), scraped 5072 items (at 100 items/min)
+2020-05-05 15:59:32 [scrapy.extensions.logstats] INFO: Crawled 5171 pages (at 98 pages/min), scraped 5170 items (at 98 items/min)
+2020-05-05 16:00:32 [scrapy.extensions.logstats] INFO: Crawled 5262 pages (at 91 pages/min), scraped 5261 items (at 91 items/min)
+2020-05-05 16:01:32 [scrapy.extensions.logstats] INFO: Crawled 5355 pages (at 93 pages/min), scraped 5354 items (at 93 items/min)
+2020-05-05 16:02:32 [scrapy.extensions.logstats] INFO: Crawled 5451 pages (at 96 pages/min), scraped 5450 items (at 96 items/min)
+2020-05-05 16:03:32 [scrapy.extensions.logstats] INFO: Crawled 5542 pages (at 91 pages/min), scraped 5541 items (at 91 items/min)
+2020-05-05 16:04:32 [scrapy.extensions.logstats] INFO: Crawled 5632 pages (at 90 pages/min), scraped 5631 items (at 90 items/min)
+2020-05-05 16:05:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104101734241.html save CSV Field error
+2020-05-05 16:05:32 [scrapy.extensions.logstats] INFO: Crawled 5723 pages (at 91 pages/min), scraped 5721 items (at 90 items/min)
+2020-05-05 16:06:32 [scrapy.extensions.logstats] INFO: Crawled 5822 pages (at 99 pages/min), scraped 5821 items (at 100 items/min)
+2020-05-05 16:07:09 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102825541.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:07:32 [scrapy.extensions.logstats] INFO: Crawled 5919 pages (at 97 pages/min), scraped 5918 items (at 97 items/min)
+2020-05-05 16:08:03 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103203339.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:08:07 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103244962.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:08:32 [scrapy.extensions.logstats] INFO: Crawled 6009 pages (at 90 pages/min), scraped 6008 items (at 90 items/min)
+2020-05-05 16:08:35 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103416859.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:08:38 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103479489.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:09:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103738727.html save CSV Field error
+2020-05-05 16:09:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103738757.html save CSV Field error
+2020-05-05 16:09:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103742485.html save CSV Field error
+2020-05-05 16:09:32 [scrapy.extensions.logstats] INFO: Crawled 6104 pages (at 95 pages/min), scraped 6102 items (at 94 items/min)
+2020-05-05 16:09:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103758431.html save CSV Field error
+2020-05-05 16:09:45 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103739372.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:09:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103796364.html save CSV Field error
+2020-05-05 16:10:32 [scrapy.extensions.logstats] INFO: Crawled 6192 pages (at 88 pages/min), scraped 6191 items (at 89 items/min)
+2020-05-05 16:11:17 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104104024164.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:11:32 [scrapy.extensions.logstats] INFO: Crawled 6288 pages (at 96 pages/min), scraped 6237 items (at 46 items/min)
+2020-05-05 16:12:09 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/ertonggongyuan/pg3/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:12:32 [scrapy.extensions.logstats] INFO: Crawled 6378 pages (at 90 pages/min), scraped 6237 items (at 0 items/min)
+2020-05-05 16:13:04 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/wenboguangchang/pg15/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:13:32 [scrapy.extensions.logstats] INFO: Crawled 6468 pages (at 90 pages/min), scraped 6237 items (at 0 items/min)
+2020-05-05 16:14:06 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/jiaojingerdadui/pg14/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:14:32 [scrapy.extensions.logstats] INFO: Crawled 6562 pages (at 94 pages/min), scraped 6237 items (at 0 items/min)
+2020-05-05 16:15:09 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/zhengzhouwanbaoshe/pg8/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:15:32 [scrapy.extensions.logstats] INFO: Crawled 6656 pages (at 94 pages/min), scraped 6237 items (at 0 items/min)
+2020-05-05 16:16:32 [scrapy.extensions.logstats] INFO: Crawled 6756 pages (at 100 pages/min), scraped 6286 items (at 49 items/min)
+2020-05-05 16:16:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101861776.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:17:32 [scrapy.extensions.logstats] INFO: Crawled 6849 pages (at 93 pages/min), scraped 6379 items (at 93 items/min)
+2020-05-05 16:17:36 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102897115.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:18:32 [scrapy.extensions.logstats] INFO: Crawled 6942 pages (at 93 pages/min), scraped 6472 items (at 93 items/min)
+2020-05-05 16:19:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104101189437.html save CSV Field error
+2020-05-05 16:19:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104101293276.html save CSV Field error
+2020-05-05 16:19:10 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103984546.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:19:32 [scrapy.extensions.logstats] INFO: Crawled 7033 pages (at 91 pages/min), scraped 6563 items (at 91 items/min)
+2020-05-05 16:20:23 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101921823.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:20:32 [scrapy.extensions.logstats] INFO: Crawled 7130 pages (at 97 pages/min), scraped 6660 items (at 97 items/min)
+2020-05-05 16:21:13 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102513942.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:21:32 [scrapy.extensions.logstats] INFO: Crawled 7224 pages (at 94 pages/min), scraped 6754 items (at 94 items/min)
+2020-05-05 16:21:36 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102718413.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:21:53 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102827077.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:22:32 [scrapy.extensions.logstats] INFO: Crawled 7316 pages (at 92 pages/min), scraped 6846 items (at 92 items/min)
+2020-05-05 16:23:33 [scrapy.extensions.logstats] INFO: Crawled 7413 pages (at 97 pages/min), scraped 6943 items (at 97 items/min)
+2020-05-05 16:23:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103420769.html save CSV Field error
+2020-05-05 16:23:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103429072.html save CSV Field error
+2020-05-05 16:24:32 [scrapy.extensions.logstats] INFO: Crawled 7507 pages (at 94 pages/min), scraped 7037 items (at 94 items/min)
+2020-05-05 16:24:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103702147.html save CSV Field error
+2020-05-05 16:25:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103747079.html save CSV Field error
+2020-05-05 16:25:32 [scrapy.extensions.logstats] INFO: Crawled 7600 pages (at 93 pages/min), scraped 7130 items (at 93 items/min)
+2020-05-05 16:26:32 [scrapy.extensions.logstats] INFO: Crawled 7697 pages (at 97 pages/min), scraped 7227 items (at 97 items/min)
+2020-05-05 16:27:03 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101513491.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:27:27 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101891651.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:27:32 [scrapy.extensions.logstats] INFO: Crawled 7790 pages (at 93 pages/min), scraped 7320 items (at 93 items/min)
+2020-05-05 16:28:33 [scrapy.extensions.logstats] INFO: Crawled 7885 pages (at 95 pages/min), scraped 7415 items (at 95 items/min)
+2020-05-05 16:29:32 [scrapy.extensions.logstats] INFO: Crawled 7980 pages (at 95 pages/min), scraped 7510 items (at 95 items/min)
+2020-05-05 16:30:32 [scrapy.extensions.logstats] INFO: Crawled 8077 pages (at 97 pages/min), scraped 7607 items (at 97 items/min)
+2020-05-05 16:31:32 [scrapy.extensions.logstats] INFO: Crawled 8174 pages (at 97 pages/min), scraped 7704 items (at 97 items/min)
+2020-05-05 16:31:56 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104100895247.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:32:01 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101101279.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:32:32 [scrapy.extensions.logstats] INFO: Crawled 8265 pages (at 91 pages/min), scraped 7795 items (at 91 items/min)
+2020-05-05 16:33:22 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102660364.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:33:32 [scrapy.extensions.logstats] INFO: Crawled 8357 pages (at 92 pages/min), scraped 7886 items (at 91 items/min)
+2020-05-05 16:33:40 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102843242.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:34:32 [scrapy.extensions.logstats] INFO: Crawled 8452 pages (at 95 pages/min), scraped 7981 items (at 95 items/min)
+2020-05-05 16:34:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103653338.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:35:32 [scrapy.extensions.logstats] INFO: Crawled 8545 pages (at 93 pages/min), scraped 8074 items (at 93 items/min)
+2020-05-05 16:36:32 [scrapy.extensions.logstats] INFO: Crawled 8643 pages (at 98 pages/min), scraped 8173 items (at 99 items/min)
+2020-05-05 16:37:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101037259.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:37:32 [scrapy.extensions.logstats] INFO: Crawled 8739 pages (at 96 pages/min), scraped 8269 items (at 96 items/min)
+2020-05-05 16:38:16 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103590132.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:38:32 [scrapy.extensions.logstats] INFO: Crawled 8833 pages (at 94 pages/min), scraped 8363 items (at 94 items/min)
+2020-05-05 16:39:32 [scrapy.extensions.logstats] INFO: Crawled 8931 pages (at 98 pages/min), scraped 8461 items (at 98 items/min)
+2020-05-05 16:40:17 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104100961276.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:40:32 [scrapy.extensions.logstats] INFO: Crawled 9029 pages (at 98 pages/min), scraped 8559 items (at 98 items/min)
+2020-05-05 16:41:19 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101274140.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:41:32 [scrapy.extensions.logstats] INFO: Crawled 9117 pages (at 88 pages/min), scraped 8647 items (at 88 items/min)
+2020-05-05 16:42:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104101882226.html save CSV Field error
+2020-05-05 16:42:32 [scrapy.extensions.logstats] INFO: Crawled 9212 pages (at 95 pages/min), scraped 8742 items (at 95 items/min)
+2020-05-05 16:42:38 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101830426.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:43:32 [scrapy.extensions.logstats] INFO: Crawled 9303 pages (at 91 pages/min), scraped 8832 items (at 90 items/min)
+2020-05-05 16:43:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104102101714.html save CSV Field error
+2020-05-05 16:43:47 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102059216.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:43:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104102147593.html save CSV Field error
+2020-05-05 16:44:32 [scrapy.extensions.logstats] INFO: Crawled 9400 pages (at 97 pages/min), scraped 8929 items (at 97 items/min)
+2020-05-05 16:45:32 [scrapy.extensions.logstats] INFO: Crawled 9497 pages (at 97 pages/min), scraped 9025 items (at 96 items/min)
+2020-05-05 16:46:17 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102549236.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:46:33 [scrapy.extensions.logstats] INFO: Crawled 9592 pages (at 95 pages/min), scraped 9122 items (at 97 items/min)
+2020-05-05 16:47:32 [scrapy.extensions.logstats] INFO: Crawled 9686 pages (at 94 pages/min), scraped 9215 items (at 93 items/min)
+2020-05-05 16:47:35 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102770630.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:47:39 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102774084.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:48:32 [scrapy.extensions.logstats] INFO: Crawled 9780 pages (at 94 pages/min), scraped 9309 items (at 94 items/min)
+2020-05-05 16:48:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103020970.html save CSV Field error
+2020-05-05 16:48:57 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103018943.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:49:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104103122315.html save CSV Field error
+2020-05-05 16:49:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103097784.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:49:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103137040.html save CSV Field error
+2020-05-05 16:49:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104103151420.html save CSV Field error
+2020-05-05 16:49:32 [scrapy.extensions.logstats] INFO: Crawled 9870 pages (at 90 pages/min), scraped 9399 items (at 90 items/min)
+2020-05-05 16:49:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103178126.html save CSV Field error
+2020-05-05 16:49:42 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103121217.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:49:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103207389.html save CSV Field error
+2020-05-05 16:50:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103226733.html save CSV Field error
+2020-05-05 16:50:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103271330.html save CSV Field error
+2020-05-05 16:50:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103297450.html save CSV Field error
+2020-05-05 16:50:32 [scrapy.extensions.logstats] INFO: Crawled 9960 pages (at 90 pages/min), scraped 9490 items (at 91 items/min)
+2020-05-05 16:50:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103301588.html save CSV Field error
+2020-05-05 16:51:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103360235.html save CSV Field error
+2020-05-05 16:51:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103366965.html save CSV Field error
+2020-05-05 16:51:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103383674.html save CSV Field error
+2020-05-05 16:51:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103391295.html save CSV Field error
+2020-05-05 16:51:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104103396463.html save CSV Field error
+2020-05-05 16:51:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103412317.html save CSV Field error
+2020-05-05 16:51:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103412372.html save CSV Field error
+2020-05-05 16:51:32 [scrapy.extensions.logstats] INFO: Crawled 10051 pages (at 91 pages/min), scraped 9581 items (at 91 items/min)
+2020-05-05 16:52:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104103523420.html save CSV Field error
+2020-05-05 16:52:32 [scrapy.extensions.logstats] INFO: Crawled 10145 pages (at 94 pages/min), scraped 9675 items (at 94 items/min)
+2020-05-05 16:53:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103613236.html save CSV Field error
+2020-05-05 16:53:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103654646.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:53:32 [scrapy.extensions.logstats] INFO: Crawled 10241 pages (at 96 pages/min), scraped 9771 items (at 96 items/min)
+2020-05-05 16:53:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103665707.html save CSV Field error
+2020-05-05 16:54:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104103725668.html save CSV Field error
+2020-05-05 16:54:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103729256.html save CSV Field error
+2020-05-05 16:54:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103740320.html save CSV Field error
+2020-05-05 16:54:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103740330.html save CSV Field error
+2020-05-05 16:54:32 [scrapy.extensions.logstats] INFO: Crawled 10340 pages (at 99 pages/min), scraped 9869 items (at 98 items/min)
+2020-05-05 16:54:51 [root] ERROR: https://zz.lianjia.com/ershoufang/104103760698.html save CSV Field error
+2020-05-05 16:54:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103769787.html save CSV Field error
+2020-05-05 16:55:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104103816936.html save CSV Field error
+2020-05-05 16:55:32 [scrapy.extensions.logstats] INFO: Crawled 10433 pages (at 93 pages/min), scraped 9963 items (at 94 items/min)
+2020-05-05 16:55:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103862244.html save CSV Field error
+2020-05-05 16:56:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104103914549.html save CSV Field error
+2020-05-05 16:56:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103940945.html save CSV Field error
+2020-05-05 16:56:32 [scrapy.extensions.logstats] INFO: Crawled 10524 pages (at 91 pages/min), scraped 10054 items (at 91 items/min)
+2020-05-05 16:56:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103987309.html save CSV Field error
+2020-05-05 16:56:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103989165.html save CSV Field error
+2020-05-05 16:56:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103989868.html save CSV Field error
+2020-05-05 16:56:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103991494.html save CSV Field error
+2020-05-05 16:56:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104103993242.html save CSV Field error
+2020-05-05 16:56:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104104008167.html save CSV Field error
+2020-05-05 16:56:58 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103981022.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:57:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104104029331.html save CSV Field error
+2020-05-05 16:57:32 [scrapy.extensions.logstats] INFO: Crawled 10622 pages (at 98 pages/min), scraped 10151 items (at 97 items/min)
+2020-05-05 16:57:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104100949078.html save CSV Field error
+2020-05-05 16:58:32 [scrapy.extensions.logstats] INFO: Crawled 10718 pages (at 96 pages/min), scraped 10247 items (at 96 items/min)
+2020-05-05 16:58:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104101768728.html save CSV Field error
+2020-05-05 16:59:01 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101826741.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 16:59:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104102282825.html save CSV Field error
+2020-05-05 16:59:32 [scrapy.extensions.logstats] INFO: Crawled 10811 pages (at 93 pages/min), scraped 10341 items (at 94 items/min)
+2020-05-05 17:00:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104102660241.html save CSV Field error
+2020-05-05 17:00:32 [scrapy.extensions.logstats] INFO: Crawled 10908 pages (at 97 pages/min), scraped 10437 items (at 96 items/min)
+2020-05-05 17:01:07 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102940015.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:01:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103246359.html save CSV Field error
+2020-05-05 17:01:32 [scrapy.extensions.logstats] INFO: Crawled 10999 pages (at 91 pages/min), scraped 10529 items (at 92 items/min)
+2020-05-05 17:02:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103522634.html save CSV Field error
+2020-05-05 17:02:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103535100.html save CSV Field error
+2020-05-05 17:02:23 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103473676.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:02:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103588278.html save CSV Field error
+2020-05-05 17:02:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103591067.html save CSV Field error
+2020-05-05 17:02:32 [scrapy.extensions.logstats] INFO: Crawled 11098 pages (at 99 pages/min), scraped 10628 items (at 99 items/min)
+2020-05-05 17:02:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103625031.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:03:32 [scrapy.extensions.logstats] INFO: Crawled 11191 pages (at 93 pages/min), scraped 10721 items (at 93 items/min)
+2020-05-05 17:03:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103749796.html save CSV Field error
+2020-05-05 17:03:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103779793.html save CSV Field error
+2020-05-05 17:03:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103779777.html save CSV Field error
+2020-05-05 17:03:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104103785758.html save CSV Field error
+2020-05-05 17:04:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103831180.html save CSV Field error
+2020-05-05 17:04:32 [scrapy.extensions.logstats] INFO: Crawled 11284 pages (at 93 pages/min), scraped 10814 items (at 93 items/min)
+2020-05-05 17:04:46 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103902322.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:04:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103954277.html save CSV Field error
+2020-05-05 17:04:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103932761.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:04:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103932880.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:05:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103966721.html save CSV Field error
+2020-05-05 17:05:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103967498.html save CSV Field error
+2020-05-05 17:05:32 [scrapy.extensions.logstats] INFO: Crawled 11372 pages (at 88 pages/min), scraped 10902 items (at 88 items/min)
+2020-05-05 17:05:48 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101054247.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:05:53 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101116702.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:06:15 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101659702.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:06:32 [scrapy.extensions.logstats] INFO: Crawled 11462 pages (at 90 pages/min), scraped 10992 items (at 90 items/min)
+2020-05-05 17:06:33 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102088353.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:07:32 [scrapy.extensions.logstats] INFO: Crawled 11552 pages (at 90 pages/min), scraped 11082 items (at 90 items/min)
+2020-05-05 17:07:36 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103656029.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:08:32 [scrapy.extensions.logstats] INFO: Crawled 11650 pages (at 98 pages/min), scraped 11179 items (at 97 items/min)
+2020-05-05 17:09:32 [scrapy.extensions.logstats] INFO: Crawled 11749 pages (at 99 pages/min), scraped 11279 items (at 100 items/min)
+2020-05-05 17:10:32 [scrapy.extensions.logstats] INFO: Crawled 11845 pages (at 96 pages/min), scraped 11375 items (at 96 items/min)
+2020-05-05 17:11:32 [scrapy.extensions.logstats] INFO: Crawled 11943 pages (at 98 pages/min), scraped 11473 items (at 98 items/min)
+2020-05-05 17:11:56 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101178637.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:12:32 [scrapy.extensions.logstats] INFO: Crawled 12036 pages (at 93 pages/min), scraped 11565 items (at 92 items/min)
+2020-05-05 17:12:39 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101411999.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:13:32 [scrapy.extensions.logstats] INFO: Crawled 12130 pages (at 94 pages/min), scraped 11660 items (at 95 items/min)
+2020-05-05 17:14:01 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101862524.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:14:32 [scrapy.extensions.logstats] INFO: Crawled 12218 pages (at 88 pages/min), scraped 11748 items (at 88 items/min)
+2020-05-05 17:14:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104102091659.html save CSV Field error
+2020-05-05 17:15:33 [scrapy.extensions.logstats] INFO: Crawled 12317 pages (at 99 pages/min), scraped 11846 items (at 98 items/min)
+2020-05-05 17:15:59 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102406627.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:16:32 [scrapy.extensions.logstats] INFO: Crawled 12409 pages (at 92 pages/min), scraped 11939 items (at 93 items/min)
+2020-05-05 17:17:32 [scrapy.extensions.logstats] INFO: Crawled 12501 pages (at 92 pages/min), scraped 12031 items (at 92 items/min)
+2020-05-05 17:18:04 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102848746.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:18:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104102956566.html save CSV Field error
+2020-05-05 17:18:33 [scrapy.extensions.logstats] INFO: Crawled 12595 pages (at 94 pages/min), scraped 12125 items (at 94 items/min)
+2020-05-05 17:18:50 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102952931.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:19:33 [scrapy.extensions.logstats] INFO: Crawled 12686 pages (at 91 pages/min), scraped 12216 items (at 91 items/min)
+2020-05-05 17:20:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103193806.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:20:32 [scrapy.extensions.logstats] INFO: Crawled 12776 pages (at 90 pages/min), scraped 12306 items (at 90 items/min)
+2020-05-05 17:21:33 [scrapy.extensions.logstats] INFO: Crawled 12870 pages (at 94 pages/min), scraped 12400 items (at 94 items/min)
+2020-05-05 17:21:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103521657.html save CSV Field error
+2020-05-05 17:22:32 [scrapy.extensions.logstats] INFO: Crawled 12965 pages (at 95 pages/min), scraped 12495 items (at 95 items/min)
+2020-05-05 17:23:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103692220.html save CSV Field error
+2020-05-05 17:23:32 [scrapy.extensions.logstats] INFO: Crawled 13057 pages (at 92 pages/min), scraped 12587 items (at 92 items/min)
+2020-05-05 17:24:32 [scrapy.extensions.logstats] INFO: Crawled 13152 pages (at 95 pages/min), scraped 12682 items (at 95 items/min)
+2020-05-05 17:24:37 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103763475.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:25:32 [scrapy.extensions.logstats] INFO: Crawled 13247 pages (at 95 pages/min), scraped 12777 items (at 95 items/min)
+2020-05-05 17:26:33 [scrapy.extensions.logstats] INFO: Crawled 13340 pages (at 93 pages/min), scraped 12870 items (at 93 items/min)
+2020-05-05 17:27:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103988188.html save CSV Field error
+2020-05-05 17:27:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103989877.html save CSV Field error
+2020-05-05 17:27:32 [scrapy.extensions.logstats] INFO: Crawled 13433 pages (at 93 pages/min), scraped 12963 items (at 93 items/min)
+2020-05-05 17:28:32 [scrapy.extensions.logstats] INFO: Crawled 13527 pages (at 94 pages/min), scraped 13057 items (at 94 items/min)
+2020-05-05 17:29:31 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102752569.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:29:32 [scrapy.extensions.logstats] INFO: Crawled 13620 pages (at 93 pages/min), scraped 13149 items (at 92 items/min)
+2020-05-05 17:30:32 [scrapy.extensions.logstats] INFO: Crawled 13717 pages (at 97 pages/min), scraped 13246 items (at 97 items/min)
+2020-05-05 17:30:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104103385777.html save CSV Field error
+2020-05-05 17:31:32 [scrapy.extensions.logstats] INFO: Crawled 13811 pages (at 94 pages/min), scraped 13341 items (at 95 items/min)
+2020-05-05 17:31:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103755435.html save CSV Field error
+2020-05-05 17:32:32 [scrapy.extensions.logstats] INFO: Crawled 13908 pages (at 97 pages/min), scraped 13438 items (at 97 items/min)
+2020-05-05 17:33:32 [scrapy.extensions.logstats] INFO: Crawled 14003 pages (at 95 pages/min), scraped 13533 items (at 95 items/min)
+2020-05-05 17:33:44 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101125876.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:34:00 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101129898.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:34:32 [scrapy.extensions.logstats] INFO: Crawled 14099 pages (at 96 pages/min), scraped 13629 items (at 96 items/min)
+2020-05-05 17:35:32 [scrapy.extensions.logstats] INFO: Crawled 14194 pages (at 95 pages/min), scraped 13724 items (at 95 items/min)
+2020-05-05 17:36:32 [scrapy.extensions.logstats] INFO: Crawled 14288 pages (at 94 pages/min), scraped 13818 items (at 94 items/min)
+2020-05-05 17:37:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102116371.html save CSV Field error
+2020-05-05 17:37:14 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102086211.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:37:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104102219561.html save CSV Field error
+2020-05-05 17:37:32 [scrapy.extensions.logstats] INFO: Crawled 14385 pages (at 97 pages/min), scraped 13915 items (at 97 items/min)
+2020-05-05 17:37:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102267802.html save CSV Field error
+2020-05-05 17:37:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104102301478.html save CSV Field error
+2020-05-05 17:38:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104102346201.html save CSV Field error
+2020-05-05 17:38:32 [scrapy.extensions.logstats] INFO: Crawled 14482 pages (at 97 pages/min), scraped 14012 items (at 97 items/min)
+2020-05-05 17:39:32 [scrapy.extensions.logstats] INFO: Crawled 14581 pages (at 99 pages/min), scraped 14111 items (at 99 items/min)
+2020-05-05 17:39:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104102610643.html save CSV Field error
+2020-05-05 17:39:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102613515.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:40:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104102741280.html save CSV Field error
+2020-05-05 17:40:32 [scrapy.extensions.logstats] INFO: Crawled 14672 pages (at 91 pages/min), scraped 14202 items (at 91 items/min)
+2020-05-05 17:40:41 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102720608.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:41:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104102816271.html save CSV Field error
+2020-05-05 17:41:26 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102829861.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:41:32 [scrapy.extensions.logstats] INFO: Crawled 14767 pages (at 95 pages/min), scraped 14297 items (at 95 items/min)
+2020-05-05 17:41:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104102887926.html save CSV Field error
+2020-05-05 17:41:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104102896551.html save CSV Field error
+2020-05-05 17:42:32 [scrapy.extensions.logstats] INFO: Crawled 14860 pages (at 93 pages/min), scraped 14390 items (at 93 items/min)
+2020-05-05 17:43:00 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102950655.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:43:16 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102989269.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:43:32 [scrapy.extensions.logstats] INFO: Crawled 14953 pages (at 93 pages/min), scraped 14483 items (at 93 items/min)
+2020-05-05 17:43:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103060882.html save CSV Field error
+2020-05-05 17:44:09 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103090514.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:44:22 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103119477.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:44:32 [scrapy.extensions.logstats] INFO: Crawled 15046 pages (at 93 pages/min), scraped 14576 items (at 93 items/min)
+2020-05-05 17:44:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104103183797.html save CSV Field error
+2020-05-05 17:45:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103270609.html save CSV Field error
+2020-05-05 17:45:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103286931.html save CSV Field error
+2020-05-05 17:45:32 [scrapy.extensions.logstats] INFO: Crawled 15138 pages (at 92 pages/min), scraped 14667 items (at 91 items/min)
+2020-05-05 17:46:32 [scrapy.extensions.logstats] INFO: Crawled 15233 pages (at 95 pages/min), scraped 14763 items (at 96 items/min)
+2020-05-05 17:46:49 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103409995.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:47:07 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103438798.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:47:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103489505.html save CSV Field error
+2020-05-05 17:47:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103519695.html save CSV Field error
+2020-05-05 17:47:32 [scrapy.extensions.logstats] INFO: Crawled 15332 pages (at 99 pages/min), scraped 14861 items (at 98 items/min)
+2020-05-05 17:47:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104103560683.html save CSV Field error
+2020-05-05 17:48:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103634255.html save CSV Field error
+2020-05-05 17:48:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103634517.html save CSV Field error
+2020-05-05 17:48:32 [scrapy.extensions.logstats] INFO: Crawled 15432 pages (at 100 pages/min), scraped 14961 items (at 100 items/min)
+2020-05-05 17:49:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103665740.html save CSV Field error
+2020-05-05 17:49:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103678642.html save CSV Field error
+2020-05-05 17:49:32 [scrapy.extensions.logstats] INFO: Crawled 15529 pages (at 97 pages/min), scraped 15059 items (at 98 items/min)
+2020-05-05 17:49:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103700784.html save CSV Field error
+2020-05-05 17:49:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103717044.html save CSV Field error
+2020-05-05 17:50:33 [scrapy.extensions.logstats] INFO: Crawled 15624 pages (at 95 pages/min), scraped 15154 items (at 95 items/min)
+2020-05-05 17:50:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103755587.html save CSV Field error
+2020-05-05 17:51:22 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103786464.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:51:32 [scrapy.extensions.logstats] INFO: Crawled 15718 pages (at 94 pages/min), scraped 15248 items (at 94 items/min)
+2020-05-05 17:51:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103868101.html save CSV Field error
+2020-05-05 17:52:32 [scrapy.extensions.logstats] INFO: Crawled 15813 pages (at 95 pages/min), scraped 15343 items (at 95 items/min)
+2020-05-05 17:52:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103939223.html save CSV Field error
+2020-05-05 17:53:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103998314.html save CSV Field error
+2020-05-05 17:53:32 [scrapy.extensions.logstats] INFO: Crawled 15907 pages (at 94 pages/min), scraped 15437 items (at 94 items/min)
+2020-05-05 17:53:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104104003768.html save CSV Field error
+2020-05-05 17:53:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104104004201.html save CSV Field error
+2020-05-05 17:53:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104104006655.html save CSV Field error
+2020-05-05 17:54:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104101657382.html save CSV Field error
+2020-05-05 17:54:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104101818851.html save CSV Field error
+2020-05-05 17:54:32 [scrapy.extensions.logstats] INFO: Crawled 16002 pages (at 95 pages/min), scraped 15532 items (at 95 items/min)
+2020-05-05 17:54:44 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101658709.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:55:32 [scrapy.extensions.logstats] INFO: Crawled 16092 pages (at 90 pages/min), scraped 15622 items (at 90 items/min)
+2020-05-05 17:56:13 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103147868.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 17:56:32 [scrapy.extensions.logstats] INFO: Crawled 16191 pages (at 99 pages/min), scraped 15721 items (at 99 items/min)
+2020-05-05 17:56:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104103659040.html save CSV Field error
+2020-05-05 17:57:32 [scrapy.extensions.logstats] INFO: Crawled 16284 pages (at 93 pages/min), scraped 15814 items (at 93 items/min)
+2020-05-05 17:58:32 [scrapy.extensions.logstats] INFO: Crawled 16374 pages (at 90 pages/min), scraped 15904 items (at 90 items/min)
+2020-05-05 17:59:32 [scrapy.extensions.logstats] INFO: Crawled 16472 pages (at 98 pages/min), scraped 16002 items (at 98 items/min)
+2020-05-05 18:00:32 [scrapy.extensions.logstats] INFO: Crawled 16569 pages (at 97 pages/min), scraped 16099 items (at 97 items/min)
+2020-05-05 18:01:32 [scrapy.extensions.logstats] INFO: Crawled 16664 pages (at 95 pages/min), scraped 16194 items (at 95 items/min)
+2020-05-05 18:01:43 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103830643.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 18:01:58 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103939383.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 18:02:32 [scrapy.extensions.logstats] INFO: Crawled 16758 pages (at 94 pages/min), scraped 16288 items (at 94 items/min)
+2020-05-05 18:03:32 [scrapy.extensions.logstats] INFO: Crawled 16855 pages (at 97 pages/min), scraped 16385 items (at 97 items/min)
+2020-05-05 18:03:46 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101706433.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 18:03:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101738670.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-05 18:04:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 44 pages/min), scraped 16429 items (at 44 items/min)
+2020-05-05 18:05:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:06:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:07:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:08:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:09:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:10:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:11:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:12:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:13:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:14:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:15:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:16:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:17:32 [scrapy.extensions.logstats] INFO: Crawled 16899 pages (at 0 pages/min), scraped 16429 items (at 0 items/min)
+2020-05-05 18:18:11 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-05 18:18:11 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-05 18:18:12 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

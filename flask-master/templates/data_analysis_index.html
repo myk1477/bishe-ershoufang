@@ -1,0 +1,350 @@
+﻿{% extends "layout.html" %}
+
+
+{% block nav %}
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li class="active" ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li><a href="/housetype">户型和建筑类型</a></li>
+                  <li><a href="/realtime">二手房面积</a></li>
+                  <li><a href="/contrast">二手房箱线图</a></li>
+                  <li><a href="/area_price" >面积和房价的关系</a></li>
+                  <li><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+        
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <!--<h1 class="page-header">房源数据图</h1>-->
+
+  <div class="row placeholders">
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-10 col-sm-10 col-lg-10 placeholder" style="height:400px;" id="main">
+    <!--<div class="col-xs-8 col-sm-7 col-lg-8 placeholder" style="height:500px;" id="main">-->
+
+    </div>
+
+    <!--<div class="col-xs-4 col-sm-5 col-lg-4 placeholder_pie" style="height:500px;" id="pie">-->
+
+    <!--</div>-->
+  </div>
+  <!-- 装修占比 和 楼层占比的饼状图所在的div 情况  -->
+  <div class="row placeholders">
+    <div class="col-xs-6 col-sm-6 col-lg-6 placeholder_pie" style="height:400px;" id="pie">
+
+    </div>
+    <div class="col-xs-6 col-sm-6 col-lg-6 placeholder_pie" style="height:400px;" id="pie_floor">
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block echarts_js %}
+
+<script type="text/javascript" >
+         $(function (ec) {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            var pieChart = echarts.init(document.getElementById('pie'));
+            var floorChart = echarts.init(document.getElementById('pie_floor'));
+
+            window.addEventListener("resize",function(){
+                    myChart.resize();
+                    pieChart.resize();
+                    floorChart.resize();
+            });
+
+            // 指定图表的配置项和数据 指定各区域房源你的数量
+            var option = {
+
+
+          title: {
+                        text: '郑州各区域的房源',
+                        textStyle:{color:'#561766'},
+                        // 控制标题 的位置 距离容器的上下左右的距离
+//                        left:120,
+                        top:-10
+                    },
+           grid:{
+              top:60,
+              right:20,
+              bottom:30,
+              left:60
+          },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+//                        left:300,
+                        data:['房屋总数']
+                    },
+                    toolbox: {
+                        show: true,
+                        itemGap: 15,
+                        showTitle: true,
+                        feature: {
+                          right:20,
+                            magicType: {
+                                show:true,
+                                title:{
+                                    line:'切换为折线图',
+                                    bar:'切换为柱状图',
+                                },
+                                type: ['line', 'bar']
+                            },
+                            restore: {show:true, title:'重置'},
+                            saveAsImage: {show:true, title:'保存为图片图'}
+                        }
+                    },
+                    xAxis:  {
+                        type: 'category',
+                        boundaryGap: false,
+                        // 设置 全部显示 x轴坐标
+                        axisLabel:{interval: 0},
+                        data: []
+                    },
+                    yAxis: {
+                          // y 轴的名字
+                          name:" 房  源  数  量  (套)",
+                          nameLocation:"middle",
+                          // 坐标轴名称与轴线之间的距离。
+                          nameGap:35,
+                          // 坐标轴名字旋转，是个角度值
+                          nameRotate:90,
+                          nameTextStyle:{
+                              fontSize: 16
+                          },
+
+
+//                        top:100,
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value}'
+                        }
+                    },
+                    series: [
+                        {
+                            name:'房屋总数',
+                            type:'line',
+                            data:[],
+                            barGap: 0,
+                            markPoint: {
+                                // 显示出最大值和最小值
+                                data: [
+                                    {type: 'max', name: '最大值'},
+                                    {type: 'min', name: '最小值'}
+                                ]
+                            },
+
+                            markLine: {
+                                data: [
+//                                    {type: 'average', name: '平均值'}
+                                ]
+                            }
+                        }
+                    ]
+
+                };
+
+            // 饼状图
+            var option_pie = {
+                title:{
+                    text:'装修占比情况',
+                    textStyle:{color:'#561766'},
+                      left:50,
+                      top:20
+                },
+
+                // 鼠标放到饼状图上显示的内容
+                tooltip:{
+                    trigger:'item',
+//                    position:'inner',
+                      showDelay: 20,   // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
+                      hideDelay: 20,   // 隐藏延迟，单位ms
+                      backgroundColor: 'rgba(156,180,0,0.7)',  // 提示框背景颜色
+                      textStyle: {
+                        fontSize: '16px',
+                        color: '#000'  // 设置文本颜色 默认#FFF
+                      },
+                    formatter:"{a}<br/>{b}:{c} ({d}%)"
+                },
+                // 显示饼状图的 图例
+                   legend: {
+                        // 图例的垂直位置
+                        y: 30,
+                        orient: 'vertical',
+                        left: 'right',
+                        data: []
+                    },
+                toolbox: {
+                                        show: true,
+                                        itemGap: 15,
+                                        showTitle: true,
+                                        feature: {
+                                            restore: {show:true, title:'重置'},
+                                            saveAsImage: {show:true, title:'保存为图片图'}
+                                        }
+                                    },
+
+              // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{b}\n{d}%'
+                }
+              },
+                  series : [
+                      {
+                          name: '装修情况',
+                          type: 'pie',
+                          // 饼图的半径大小
+                          radius: '60%',
+                          center: ["50%", "65%"], 　　　　//这个属性调整图像的位置
+                          data: []
+
+                      }
+    ]};
+
+            var option_floor = {
+                title:{
+                    text:'楼层占比情况',
+                    textStyle:{color:'#561766'},
+                      left:50,
+                      top:20
+                },
+
+                // 鼠标放到饼状图上显示的内容
+                tooltip:{
+                    trigger:'item',
+//                    position:'inner',
+                      showDelay: 20,   // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
+                      hideDelay: 20,   // 隐藏延迟，单位ms
+                      backgroundColor: 'rgba(156,180,0,0.7)',  // 提示框背景颜色
+                      textStyle: {
+                        fontSize: '16px',
+                        color: '#000'  // 设置文本颜色 默认#FFF
+                      },
+                    formatter:"{a}<br/>{b}:{c} ({d}%)"
+                },
+                // 显示饼状图的 图例
+                   legend: {
+                        // 图例的垂直位置
+                        y: 30,
+                        orient: 'vertical',
+                        left: 'right',
+                        data: []
+                    },
+                toolbox: {
+                                        show: true,
+                                        itemGap: 15,
+                                        showTitle: true,
+                                        feature: {
+                                            restore: {show:true, title:'重置'},
+                                            saveAsImage: {show:true, title:'保存为图片图'}
+                                        }
+                                    },
+
+              // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{b}\n{d}%'
+                }
+              },
+                  series : [
+                      {
+                          name: '楼层情况',
+                          type: 'pie',
+                          // 饼图的半径大小
+                          radius: '60%',
+                          center: ["50%", "65%"], 　　　　//这个属性调整图像的位置
+                          data: []
+
+                      }
+    ]};
+
+             myChart.showLoading(); // 加载动画
+             pieChart.showLoading();
+             floorChart.showLoading();
+             // 异步加载数据
+//            $.get('data.json').done(function (data) {
+//                // 填入数据
+//                myChart.setOption({
+//                    xAxis: {
+//                        data: data.categories
+//                    }
+//                });
+//            });
+                $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "/get_date", //把表单数据发送到/weather
+                    data: null, // 发送的数据
+                    dataType : "json",  //返回数据形式为json
+                    async: false,
+                    error: function(request) {
+                        alert("发送请求失败！");
+                    },
+                    success: function(result) {
+                        //console.log(result);
+                        // 添加 x 轴数据
+                        option.xAxis.data = result.x_data;
+                        // 添加 y 轴数据
+                        for (i = 0, max = result.data.length; i < max; i++) { //注意：result.data.length
+                            option.series[0].data.push(result.data[i]);
+                        };
+                        // 构造 饼状图所需的数据
+                        for (i = 0 ,max = result.pie_data.key.length;i<max;i++){
+                            option_pie.series[0].data.push({"value":result.pie_data.value[i],"name":result.pie_data.key[i]})
+                        };
+                        option_pie.legend.data = result.pie_data.key;
+
+                         for (i = 0 ,max = result.floor.length;i<max;i++){
+                            option_floor.series[0].data.push({"value":result.floor[i].value,
+                                "name":result.floor[i].name}),
+                            option_floor.legend.data.push(result.floor[i].name)
+                        };
+
+                        // 为echarts对象加载数据--------------
+                        myChart.hideLoading(); // 隐藏加载动画
+                        pieChart.hideLoading();
+                        floorChart.hideLoading()
+                        myChart.setOption(option);
+                        pieChart.setOption(option_pie)
+                        floorChart.setOption(option_floor)
+                    }
+                 });
+
+                // 使用刚指定的配置项和数据显示图表。-
+                myChart.setOption(option);
+                pieChart.setOption(option_pie);
+                floorChart.setOption(option_floor);
+
+
+                myChart.on('click', function(param){
+                    console.log(123);
+                    console.log(param.name);
+//                    window.location.href="/source_data/" + param;
+//                    var date_list = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];
+//                    var name = param.name
+//                    if (date_list.indexOf(name) > -1){
+//                        window.location.href="/source_data/" + name;
+//                    }
+                })
+
+        });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,256 @@
+﻿{% extends "layout.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block nav %}
+ <script src="../static/js/dataTool.js" type="text/javascript"></script>
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li><a href="/housetype">户型和建筑类型</a></li>
+                  <li><a href="/realtime">二手房面积</a></li>
+                  <li class="active" ><a href="/contrast">二手房箱线图</a></li>
+                  <li><a href="/area_price" >面积和房价的关系</a></li>
+                  <li><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+
+
+
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+  <div class="row placeholders">
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-11 col-sm-10 col-lg-10 placeholder" style="height: 800px;" id="main">
+
+    </div>
+      <div class="col-xs-1 col-sm-2 col-lg-2 placeholder" style="left: 800px;position: absolute">
+            <select id="select" style="width:100px">
+                <option selected value="unitPriceValue">单价</option>
+                <option value="total">总价</option>
+          </select>
+      </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block echarts_js %}
+
+<script type="text/javascript" >
+         $(function (ec) {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            myChart.showLoading(); // 加载动画
+            window.addEventListener("resize",function() {
+                myChart.resize();
+            });
+//          var data_total = [];
+
+
+            // 指定图表的配置项和数据
+            var option = {
+              // 箱线图
+              // 标题的设置
+              title: [
+                  {
+                      text: '',
+                      left: 'center'
+                  }
+        ],
+
+        tooltip: {
+            trigger: 'item',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+
+        toolbox: {
+                        show: true,
+                        itemGap: 15,
+                        showTitle: true,
+                        feature: {
+                          right:20,
+
+                            restore: {show:true, title:'重置'},
+                            saveAsImage: {show:true, title:'保存为图片图'}
+                        }
+        },
+
+        grid: {
+            left: '10%',
+            right: '10%',
+            bottom: '15%'
+        },
+        xAxis: {
+            type: 'category',
+//            data: data.axisData,
+            data:[],
+            boundaryGap: true,
+            nameGap: 30,
+            splitArea: {
+                show: false
+            },
+//            axisLabel: {
+//                formatter: "{value}"
+//            },
+            splitLine: {
+                show: false
+            },
+          axisLabel:{
+           interval: 0,//标签设置为全部显示
+          formatter:function(params){
+           var newParamsName = "";// 最终拼接成的字符串
+              var paramsNameNumber = params.length;// 实际标签的个数
+              var provideNumber = 4;// 每行能显示的字的个数
+              var rowNumber = Math.ceil(paramsNameNumber / provideNumber);// 换行的话，需要显示几行，向上取整
+
+              // 条件等同于rowNumber>1
+              if (paramsNameNumber > provideNumber) {
+
+                 for (var p = 0; p < rowNumber; p++) {
+                     var tempStr = "";// 表示每一次截取的字符串
+                     var start = p * provideNumber;// 开始截取的位置
+                     var end = start + provideNumber;// 结束截取的位置
+                     // 此处特殊处理最后一行的索引值
+                     if (p == rowNumber - 1) {
+                        // 最后一次不换行
+                        tempStr = params.substring(start, paramsNameNumber);
+                     } else {
+                        // 每一次拼接字符串并换行
+                        tempStr = params.substring(start, end) + "\n";
+                     }
+                    newParamsName += tempStr;// 最终拼成的字符串
+                 }
+
+              } else {
+                 // 将旧标签的值赋给新标签
+                 newParamsName = params;
+              }
+              //将最终的字符串返回
+              return newParamsName
+           }
+       }
+
+        },
+        yAxis: {
+            type: 'value',
+            name: '',
+            splitArea: {
+                show: true
+            },
+            // 控住 y 轴 刻度 分成多少份显示
+            splitNumber:15
+        },
+        series: [
+            {
+                name: 'boxplot',
+                type: 'boxplot',
+//                data: data.boxData,
+                data:[],
+                tooltip: {
+                    // 定义 提示框显示的内容
+                    formatter: function (param) {
+                        return [
+                            '区域 ' + param.name + ': ',
+                            '上边界: ' + param.data[4],
+                            '75%分位数: ' + param.data[3],
+                            '中位数: ' + param.data[2],
+                            '25%分位数: ' + param.data[1],
+                            '下边界: ' + param.data[0]
+                        ].join('<br/>');
+                    }
+                }
+            },
+            {
+                // 异常值显示的信息
+                name: '异常值',
+                type: 'scatter',
+//                data: data.outliers
+                data:[]
+            }
+        ]
+
+                };
+
+
+
+          function get_data() {
+
+               var price = $('#select').val();
+                var data_price = JSON.stringify({"price":price});
+               $.ajax({
+                    cache: false,
+                    type: "POST",
+                    url: "/get_contrast", //把表单数据发送到/weather
+                   contentType: "application/json",
+                    data: data_price, // 发送的数据
+                    dataType : "json",  //返回数据形式为json
+                    async: false,
+                    error: function(request) {
+                        alert("发送请求失败！");
+                    },
+                    success: function(result) {
+                        //console.log(result);
+                        // 设置 一个 数组 存储 后端发送的每一个区域的 单价
+                        if (result.data == 0){
+                            alert("缺少参数");
+                            return
+                        }
+                        var data = [];
+                        var data_i = [];
+                        for (i = 0, max = result.data.length; i < max; i++) { //注意：result.data.length
+                            data_i.push(result.data[i].value);
+                        }
+                        // 把 保存单价的 数组 使用 echarts.dataTool.prepareBoxplotData 处理这个大数组
+                        data = echarts.dataTool.prepareBoxplotData(data_i);
+
+                        for (i = 0, max = result.data.length; i < max; i++) {
+                            // 把 这个 数据类型中的 axisData 数组 替换成 区域的名字
+                           data.axisData[i] = result.data[i].name
+
+                        }
+                        // 设置 option 里面对应属性的值
+                        option.xAxis.data = data.axisData;
+                        option.series[0].data = data.boxData;
+                        option.series[1].data = data.outliers;
+                        // 设置 标题 和 y 轴 名字
+                        if (price === 'total'){
+                            option.title[0].text = '郑州各区域二手房总价箱线图';
+                            option.yAxis.name = '总价(万元)'
+                        }
+                        else {
+                          option.title[0].text = '郑州各区域二手房单价箱线图';
+                          option.yAxis.name = '单价(元/平米)';
+                        }
+
+                       // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                        // 隐藏加载动画
+                        myChart.hideLoading()
+
+
+                    }
+                 });
+           }
+          // 异步 获取箱线图所需要的数据
+           get_data();
+
+           // 根据下拉框的值 异步刷新数据
+            $('#select').change(function () {
+                get_data()
+            });
+
+
+
+
+
+        });
+</script>        
+{% endblock %}

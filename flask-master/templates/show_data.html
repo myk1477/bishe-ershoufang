@@ -1,0 +1,270 @@
+
+
+<title>数据展示</title>
+
+{% include "analyse/importCSS.html" %}
+{% include "analyse/importJS.html" %}
+{% include "analyse/header.html" %}
+
+<section id="home-slider">
+    <div class="container">
+        <div class="row placeholders">
+            <div class="main-slider">
+              <div class="col-xs-12 col-sm-12 col-lg-12 placeholder"    id="main">
+
+                  <span style="position:relative;left: 30px">所在区域</span>
+                  <select class="combobox"  id = 'select_district' style="position:relative;left: 30px">
+                    <option selected value="">-----</option>
+                  </select>
+
+                <span style="position:relative;left: 60px">所在街道</span>
+                <select class="combobox" style="position:relative;left: 60px" id="select_street">
+                    <option selected value="">-----</option>
+
+                  </select>
+
+                <span style="position:relative;left: 90px">所在小区</span>
+                <select class="combobox" style="position:relative;left: 90px" id="select_plot">
+                    <option selected value="">-----</option>
+                  </select>
+
+                  <span style="position:relative;left: 120px">排序方式</span>
+                  <select class="combobox" style="position:relative;left: 120px" id="sort">
+                      <option selected value="_id">默认</option>
+                      <option >单价</option>
+                      <option>总价</option>
+                      <option >建筑面积</option>
+                    </select>
+                    <button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..."
+                       type="button" style="position:relative;left: 150px"  onclick="btn_query_click()" > 查询</button>
+
+                  <table id="exampleTableEvents" class="table table-striped">
+
+                  </table>
+
+          </div>
+                <!--<img src="{{ url_for('static',filename='img/home/analyse.png') }}" class="slider-hill" alt="slider image">-->
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>-->
+</section>
+
+<script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}" ></script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap-table-mobile.min.js') }}" ></script>
+<script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap-table-zh-CN.min.js') }}" ></script>
+
+<script type="text/javascript" >
+
+$(document).ready(function () {
+    $("#ul_header").find("li").each(function () {
+      var a = $(this).find("a:first")[0];
+      if ($(a).attr("href") === location.pathname) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+
+});
+
+   $.ajax({
+                 cache: false,
+                  type: "GET",
+                  url: "/get_district",
+                  contentType: "application/json",
+                  data: null, // 发送的数据
+                  dataType : "json",  //返回数据形式为json
+                  async: false,
+                 success: function(result) {
+                     // 异步获取 所在城区下来框中的值
+                     //console.log(result);
+                     // 获取 下来框标签
+                     for (i = 0, max = result.area.length; i < max; i++) {
+                         // 添加 option 属性
+                         $("#select_district").append("<option>" + result.area[i] + "</option>")
+                     }
+                 },
+                  error: function(request) {
+                      alert("发送请求失败！");
+                  }
+            });
+
+   $('#select_district').change(function () {
+//       当下来框郑州区发生改变的时候 调用 该函数 发送ajax请求
+             var areaName = $('#select_district').val();
+              var data = JSON.stringify({"areaName":areaName,'street':'0'});
+       $.ajax({
+                 cache: false,
+                  type: "POST",
+                  url: "/get_district/areas",
+                  contentType: "application/json",
+                  data: data, // 发送的数据
+                  dataType : "json",  //返回数据形式为json
+                  async: false,
+                 success: function(result) {
+                     // 异步获取 所在城区下来框中的值
+                     //console.log(result);
+                     // 删除 除第一个外的其他options
+                      $('#select_street').children().not(':eq(0)').remove();
+                      if (result.area.length===0){
+                          $('#select_plot').children().not(':eq(0)').remove();
+                      }
+                      // 获取 下来框标签
+                     for (i = 0, max = result.area.length; i < max; i++) {
+                         // 添加 option 属性
+                         $("#select_street").append("<option>" + result.area[i] + "</option>")
+                     }
+                 },
+                  error: function(request) {
+                      alert("发送请求失败！");
+                  }
+            });
+   });
+
+   $('#select_street').change(function () {
+//       当下来框郑州区发生改变的时候 调用 该函数 发送ajax请求
+             var areaName = $('#select_district').val();
+             var street = $('#select_street').val();
+              var data = JSON.stringify({"areaName":areaName,'street':street});
+             $.ajax({
+                       cache: false,
+                        type: "POST",
+                        url: "/get_district/areas",
+                        contentType: "application/json",
+                        data: data, // 发送的数据
+                        dataType : "json",  //返回数据形式为json
+                        async: false,
+                       success: function(result) {
+                           // 异步获取 所在城区下来框中的值
+                           //console.log(result);
+                            $('#select_plot').children().not(':eq(0)').remove();
+                           // 获取 下来框标签
+                           for (i = 0, max = result.area.length; i < max; i++) {
+                               // 添加 option 属性
+                               $("#select_plot").append("<option>" + result.area[i] + "</option>")
+                           }
+                       },
+                        error: function(request) {
+                            alert("发送请求失败！");
+                        }
+                  });
+   });
+
+$(function(){
+			$('#exampleTableEvents').bootstrapTable({
+			      /* url: "queryDev.json", */
+			      url: "/home/getHomeInfo",  // 请求书数据的路径
+			      method:"get",
+			      search: false,
+			      cache: false,
+			      clickToSelect:false, //是否启用点击选中行
+			      pagination: true,  // 是否分页
+			      showRefresh: true,   // 刷新按钮
+			      showToggle: true,
+			      showColumns: true,
+			      pageNumber: 1,
+			      pageSize: 20,   // 单页记录数
+		          pageList: [10, 25, 50, 100],  //分页步进值
+			      sidePagination: 'server',   // 指定 服务器端进行分页
+			      iconSize: 'outline',
+			      idField: "devId",
+			      toolbar: '#exampleTableEventsToolbar',
+			      columns: [{
+	                    field: 'state',
+	                    radio: true
+	                },{
+	                    field: 'communityName',
+	                    title: '小区名称',
+//	                    visible: false,
+	                    align:"center",
+	                    halign:"center",
+                        formatter:yongHuBangDing
+	                }, {
+	                    field: 'areaName',
+	                    title: '城区',
+	                    align:"center",
+	                    halign:"center"
+	                }, {
+	                    field: 'street',
+	                    title: '街道',
+	                    align:"center",
+	                    halign:"center"
+	                }, {
+	                    field: 'unitPriceValue',
+	                    title: '单价',
+	                    align:"center",
+	                    halign:"center"
+	                }, {
+	                    field: 'total',
+	                    title: '总价',
+	                    align:"center",
+	                    halign:"center"
+	                }, {
+	                    field: 'jzmj',
+	                    title: '建筑面积',
+	                    align:"center",
+	                    halign:"center"
+	                },{
+	                    field: 'fwhx',
+	                    title: '房屋户型',
+	                    align:"center",
+	                    halign:"center"
+
+	                },{
+	                    field: 'szlc',
+	                    title: '所在楼层',
+	                    align:"center",
+	                    halign:"center"
+	                },{
+	                    field: 'fwcx',
+	                    title: '朝向',
+	                    align:"center",
+	                    halign:"center"
+	                },{
+	                    field: 'zxqk',
+	                    title: '装修情况',
+	                    align:"center",
+	                    halign:"center"
+	                },{
+	                    field: 'thbl',
+	                    title: '梯户比例',
+	                    align:"center",
+	                    halign:"center"
+	                }],
+		          queryParams : function (params) {
+		            //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+		            var temp = {
+		                pageSize: params.limit,                         //页面大小
+		                page: (params.offset / params.limit) + 1,   //页码
+
+                        select_district:$("#select_district").val(),
+                        select_street:$("#select_street").val(),
+                        select_plot:$("#select_plot").val(),
+                        sort:$("#sort").val()
+		            };
+		            return temp;
+		        },
+			      icons: {
+			        refresh: 'glyphicon-repeat',
+			        toggle: 'glyphicon-list-alt',
+			        columns: 'glyphicon-list'
+			      }
+			    });
+		});
+        function yongHuBangDing(value,row,index){
+				return "<a href= " + row.detail_url  +"  class='btn btn-xs green'  target='_blank' style='font-size:15px'>"+value+"</a>";
+		}
+       function btn_query_click(){
+           $('#exampleTableEvents').bootstrapTable('selectPage', 1);
+           $('#exampleTableEvents').bootstrapTable('refresh');
+
+//           console.log($("#city").val());
+//           console.log($("#job_experience").val());
+//           console.log($("#education").val());
+//           console.log($("#postType").val());
+       }
+
+</script>
+{% include "analyse/footer.html" %}

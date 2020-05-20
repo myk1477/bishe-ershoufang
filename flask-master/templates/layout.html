@@ -1,0 +1,57 @@
+﻿<title>数据分析</title>
+{% include "analyse/importCSS.html" %}
+{% include "analyse/importJS.html" %}
+<link href="../static/css/dashboard.css" rel="stylesheet">
+{% block head %}
+{% endblock %}
+<style type="text/css">
+    body {
+        position: relative;
+        top: -55px;
+    }
+</style>
+<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="../static/js/echarts.js" charset="utf-8"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+{% include "analyse/header.html" %}
+<section id="home-slider">
+    <!-- 导航栏 -->
+    {% block nav%}
+
+      {% endblock %}
+
+    <div class="container-fluid">
+        <div class="row ">
+
+
+          <!--右边展示-->
+          {% block right%}
+
+          {% endblock %}
+
+        </div>
+    </div>
+    <!--<div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>-->
+</section>
+<script>
+    $(document).ready(function () {
+    $("#ul_header").find("li").each(function () {
+        $('#ul_header li').removeClass("active");
+        $(this).addClass('active')
+//      var a = $(this).find("a:first")[0];
+//      if ($(a).attr("href") === location.pathname) {
+//        $(this).addClass("active");
+//      } else {
+//        $(this).removeClass("active");
+//      }
+    });
+
+});
+</script>
+
+<!--echarts 内容-->
+{% block echarts_js %}
+{% endblock %}

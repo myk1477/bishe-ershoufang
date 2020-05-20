@@ -1,0 +1,18 @@
+{% for attention in attentions%}
+<div class="col-xs-6 col-sm-4 col-md-2 portfolio-item computer">
+    <div class="portfolio-wrapper">
+        <div class="portfolio-single">
+            <div class="portfolio-view">
+                <ul class="nav nav-pills">
+                    <li ><a href="" style='width: 100px;height: 80px'>{{attention.counts}}</a></li>
+                    <!---->
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-info " style="position: relative;top: 40px">
+            <h2 style="position: relative;left: -5px">{{attention.plot}}</h2>
+        </div>
+    </div>
+</div>
+{% endfor %}

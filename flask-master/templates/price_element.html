@@ -1,0 +1,518 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block nav %}
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li><a href="/housetype">户型和建筑类型</a></li>
+                  <li><a href="/realtime">二手房面积</a></li>
+                  <li><a href="/contrast">二手房箱线图</a></li>
+                  <li><a href="/area_price" >面积和房价的关系</a></li>
+                  <li class="active" ><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  style="color: #707070">
+
+  <div class="row placeholders">
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-12 col-sm-12 col-lg-12 placeholder"  style="height:400px;"  id="main">
+
+    </div>
+  <!--<div class="col-xs-4 col-sm-4 col-lg-4 placeholder"  style="height:700px;"  id="jz_main">-->
+  <!--</div>-->
+
+
+  </div>
+</div>
+{% endblock %}
+
+
+{% block echarts_js %}
+
+<script type="text/javascript" >
+
+  // 定义变量 保存切换图例后 柱状图所需要的数据
+  var house_type = null;
+  var jz_area = null;
+  var floor = null;
+  var fitment = null;
+  var area = null;
+
+    $(function (ec) {
+
+        var myChart = echarts.init(document.getElementById('main'));
+        myChart.showLoading(); // 加载动画
+        window.addEventListener("resize",function() {
+            myChart.resize();
+        });
+        var option = {
+
+            title: {
+                text: '对郑州二手房的影响',
+                textStyle: {color: '#561766'},
+                // 控制标题 的位置 距离容器的上下左右的距离
+//                left: 'center',
+                top: -10
+            },
+            grid: {
+                top: 60,
+                right: 20,
+                bottom: 30,
+                left: 60
+            },
+
+            legend: {
+//                        left:300,
+                data:['户型','建筑面积','楼层','装修情况','区域'],
+                 selected:{
+                    '户型':true,
+                    '建筑面积':false,
+                    '楼层':false,
+                    '装修情况':false,
+                    '区域':false
+
+//                'Growth':false
+            },
+            itemGap: 5
+            },
+            // 提示框组件
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+              // 鼠标移动到柱状图的位置 显示的内容
+              formatter:"{b}<br/>每平米价格:{c}"
+            },
+            label: {
+                normal: {
+                    show: true,
+                    textStyle: {color: '#000', fontSize: "18"},
+                    position: 'top'
+                }
+            },
+
+            toolbox: {
+                show: true,
+                itemGap: 15,
+                showTitle: true,
+                feature: {
+                    right: 20,
+                   magicType: {
+                            show:true,
+                            title:{
+                                line:'切换为折线图',
+                                bar:'切换为柱状图'
+                            },
+                            type: ['line', 'bar']
+                        },
+                    restore: {show:true, title:'重置'},
+                    saveAsImage: {show: true, title: '保存为图片图'}
+                }
+            },
+            xAxis: {
+                top:20,
+                // x 轴 的类型 value 表示的是 数值轴
+                type: 'category',
+                boundaryGap: true,
+                data: []
+                // 设置 全部显示 x轴坐标
+//                axisLabel: {
+//                    textStyle: {
+//                        color: '#000',
+//                        fontSize: '12'
+//                    }
+//
+//                }
+            },
+            yAxis: {
+                type: 'value',
+                nameLocation: "middle",
+                top:20,
+                nameGap:36,
+
+                axisTick: false,
+                // y 轴的名字
+                name: "平 均 单 价 (元/平米)",
+
+                nameTextStyle: {
+                    fontSize: 16
+                },
+
+//               axisLabel:{interval: 0},
+                splitLine: {show: false}
+
+            },
+            series: [
+                {
+                    name: '户型',
+                    type: 'bar',
+                    data: [],
+//                    barGap: 0,
+
+                    barWidth: 50,
+
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    {offset: 0, color: '#fff'},
+                                    {offset: 0.5, color: '#5E9DD6'},
+                                    {offset: 1, color: '#5E9DD6'}
+
+                                ]
+                            )
+                        }
+                    }
+
+                },
+
+                {
+                    name: '建筑面积',
+                    type: 'bar',
+                    data: [],
+//                    barGap: 0,
+
+                    barWidth: 50,
+
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+//                            offset: [5, -2],
+                            textStyle: {
+                                color: '#000',
+                                fontSize: 13
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    {offset: 0, color: '#fff'},
+                                    {offset: 0.5, color: '#5E9DD6'},
+                                    {offset: 1, color: '#5E9DD6'}
+
+                                ]
+                            )
+                        }
+                    }
+
+                },
+
+                 {
+                    name: '楼层',
+                    type: 'bar',
+                    data: [],
+//                    barGap: 0,
+
+                    barWidth: 50,
+
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+//                            offset: [5, -2],
+                            textStyle: {
+                                color: '#000',
+                                fontSize: 13
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    {offset: 0, color: '#fff'},
+                                    {offset: 0.5, color: '#5E9DD6'},
+                                    {offset: 1, color: '#5E9DD6'}
+
+                                ]
+                            )
+                        }
+                    }
+
+                },
+                {
+                    name: '装修情况',
+                    type: 'bar',
+                    data: [],
+//                    barGap: 0,
+
+                    barWidth: 50,
+
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+//                            offset: [5, -2],
+                            textStyle: {
+                                color: '#000',
+                                fontSize: 13
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    {offset: 0, color: '#fff'},
+                                    {offset: 0.5, color: '#5E9DD6'},
+                                    {offset: 1, color: '#5E9DD6'}
+
+                                ]
+                            )
+                        }
+                    }
+
+                },
+
+                {
+                    name: '区域',
+                    type: 'bar',
+                    data: [],
+//                    barGap: 0,
+
+                    barWidth: 50,
+
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+//                            offset: [5, -2],
+                            textStyle: {
+                                color: '#000',
+                                fontSize: 13
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    {offset: 0, color: '#fff'},
+                                    {offset: 0.5, color: '#5E9DD6'},
+                                    {offset: 1, color: '#5E9DD6'}
+
+                                ]
+                            )
+                        }
+                    }
+
+                }
+
+            ]
+
+        };
+
+        // 点击图例触发的事件
+        myChart.on('legendselectchanged', function(obj) {
+            var selected = {};
+            var element = null;
+            var category = "户型";
+            if(obj.name=="户型"){
+                selected["户型"] = true;
+                selected['楼层'] = false;
+                selected["建筑面积"] = false;
+                selected["装修情况"] = false;
+                selected["区域"] = false;
+                category = "户型";
+                element = 'fwhx'
+
+            }else if(obj.name=="建筑面积"){
+                selected["户型"] = false;
+                selected['楼层'] = false;
+                selected['装修情况'] = false;
+                selected['区域'] = false;
+                selected["建筑面积"] = true;
+                category = "面积";
+                element = 'jzmj'
+
+            }else if(obj.name=="楼层"){
+                selected["户型"] = false;
+                selected["建筑面积"] = false;
+                selected["装修情况"] = false;
+                selected["区域"] = false;
+                selected['楼层'] = true;
+                category = "楼层";
+                element = 'szlc'
+            }else if(obj.name=="装修情况"){
+                selected["户型"] = false;
+                selected["建筑面积"] = false;
+                selected["区域"] = false;
+                selected["装修情况"] = true;
+                selected['楼层'] = false;
+                category = "装修";
+                element = 'zxqk'
+            }else if(obj.name=="区域"){
+                selected["户型"] = false;
+                selected["建筑面积"] = false;
+                selected["区域"] = true;
+                selected["装修情况"] = false;
+                selected['楼层'] = false;
+                category = "区域";
+                element = 'areaName'
+            }
+
+
+            if(category == "户型"){
+                 if(house_type!=null && typeof house_type=="object"){
+                         option.series[0].data = house_type.data;
+                         option.series[1].data = house_type.data;
+                         option.series[2].data = house_type.data;
+                         option.series[3].data = house_type.data;
+                         option.series[4].data = house_type.data;
+                         option.xAxis.data = house_type.names;
+                         option.legend.selected = selected;
+                         this.setOption(option);
+                         this.hideLoading();
+                         return;
+                 }
+            }else if(category == "面积"){
+                if(jz_area!=null && typeof  jz_area == "object"){
+                         option.series[0].data = jz_area.data;
+                         option.series[1].data = jz_area.data;
+                         option.series[2].data = jz_area.data;
+                         option.series[3].data = jz_area.data;
+                         option.series[4].data = jz_area.data;
+                         option.xAxis.data = jz_area.names;
+                         option.legend.selected = selected;
+                         this.setOption(option);
+                         this.hideLoading();
+                         return;
+                }
+        }else if(category == "楼层"){
+                if(floor!=null && typeof  floor == "object"){
+                         option.series[0].data = floor.data;
+                         option.series[1].data = floor.data;
+                         option.series[2].data = floor.data;
+                         option.series[3].data = floor.data;
+                         option.series[4].data = floor.data;
+                         option.xAxis.data = floor.names;
+                         option.legend.selected = selected;
+                         this.setOption(option);
+                         this.hideLoading();
+                         return;
+                }
+        }else if(category == "楼层") {
+                if (fitment != null && typeof  fitment == "object") {
+                    option.series[0].data = fitment.data;
+                    option.series[1].data = fitment.data;
+                    option.series[2].data = fitment.data;
+                    option.series[3].data = fitment.data;
+                    option.series[4].data = fitment.data;
+                    option.xAxis.data = fitment.names;
+                    option.legend.selected = selected;
+                    this.setOption(option);
+                    this.hideLoading();
+                    return;
+                }
+            } else if(category == "区域") {
+                if (area != null && typeof  area == "object") {
+                    option.series[0].data = area.data;
+                    option.series[1].data = area.data;
+                    option.series[2].data = area.data;
+                    option.series[3].data = area.data;
+                    option.series[4].data = area.data;
+                    option.xAxis.data = area.names;
+                    option.legend.selected = selected;
+                    this.setOption(option);
+                    this.hideLoading();
+                    return;
+                }
+            }
+
+
+
+        var element_json = JSON.stringify({"element":element});
+        $.ajax({
+                async : false,    //表示请求是否异步处理
+                type : "POST",    //请求类型
+                url : "/get_element",//请求的 URL地址
+                contentType: "application/json",
+                data: element_json, // 发送的数据
+                dataType : "json",//返回的数据类型
+                success: function (request){
+                     if (request.data == 0){
+                        alert("缺少参数");
+                        return
+                     }
+                     option.series[0].data = request.data;
+                     option.series[1].data = request.data;
+                     option.series[2].data = request.data;
+                     option.series[3].data = request.data;
+                     option.series[4].data = request.data;
+                     option.xAxis.data = request.names;
+                     if(category == "面积"){
+                         jz_area = request;
+                     }
+                     else if(category == "楼层") {
+                         floor = request
+                     }
+                    else if(category == "楼层") {
+                         fitment = request
+                     }else if(category == "区域") {
+                         area = request
+                     }
+
+                },
+
+                error:function (data) {
+
+                }
+            });
+
+        option.legend.selected = selected;
+        this.setOption(option);
+        this.hideLoading()
+
+
+});
+
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+
+        // 异步获取数据
+        $.ajax({
+            cache: false,
+            type: "GET",
+            url: "/get_element", //把表单数据发送到/weather
+            data: null, // 发送的数据
+            dataType : "json",  //返回数据形式为json
+            async: false,
+            error: function(request) {
+                alert("发送请求失败！");
+            },
+            success: function(result) {
+                //console.log(result);
+                option.series[0].data = result.data;
+                option.xAxis.data = result.names;
+                house_type = result;
+                myChart.setOption(option);
+                myChart.hideLoading()
+            }
+         });
+
+})
+
+</script>
+
+{% endblock %}
+

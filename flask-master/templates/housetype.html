@@ -1,0 +1,360 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li class="active" ><a href="/housetype">户型和建筑类型</a></li>
+                  <li><a href="/realtime">二手房面积</a></li>
+                  <li ><a href="/contrast">二手房箱线图</a></li>
+                  <li><a href="/area_price" >面积和房价的关系</a></li>
+                  <li><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+  <div class="row placeholders">
+        <div>
+          <select id="select" style="width:100px;left: 20px">
+              <option selected>郑州</option>
+        <!--<option value="10">1</option>-->
+        <!--<option value="20">2</option>-->
+        <!--<option value="30">3</option>-->
+        <!--<option value="40">4</option>-->
+        </select>
+    </div>
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-6 col-sm-6 col-lg-6 placeholder" style="height:700px;" id="main">
+    <!--<div class="col-xs-5.5 col-sm-5.5 col-lg-5.5 placeholder" style="height:700px;" id="main">-->
+
+    </div>
+
+      <div class="col-xs-1 col-sm-1 col-lg-1 placeholder"  id="select_main">
+
+
+  </div>
+
+    <div class="col-xs-6 col-sm-6 col-lg-6 placeholder" style="height:700px;" id="jz_main">
+    <!--<div class="col-xs-5.5 col-sm-5.5 col-lg-5.5 placeholder" style="height:700px;" id="jz_main">-->
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}
+
+{% block echarts_js %}
+<script src="../static/js/worldcloud.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+   $(function (ec) {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            var jz_myChart = echarts.init(document.getElementById('jz_main'));
+
+            window.addEventListener("resize",function(){
+                    myChart.resize();
+                    jz_myChart.resize();
+            });
+
+            // 词云图显示
+//            var maskImage = new Image();
+//            maskImage.src = './static/img/house1.png';
+            // 指定图表的配置项和数据
+            var option = {
+     // 饼状图
+
+                  title:{
+                      text:'户型占比情况',
+                      textStyle:{color:'#561766'},
+                        left:180,
+                        top:20
+
+
+                  },
+
+                  // 鼠标放到饼状图上显示的内容
+                  tooltip:{
+                      trigger:'item',
+  //                    position:'inner',
+                        showDelay: 20,   // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
+                        hideDelay: 20,   // 隐藏延迟，单位ms
+                        backgroundColor: 'rgba(156,180,0,0.7)',  // 提示框背景颜色
+                        textStyle: {
+                          fontSize: '16px',
+                          color: '#000'  // 设置文本颜色 默认#FFF
+                        },
+                      formatter:"{a} <br/>{b} : {c} ({d}%)"
+                  },
+                  // 显示饼状图的 图例
+                 legend: {
+                      // 图例的垂直位置
+//                      right:10,
+
+                     type: 'scroll',
+                     x:100,
+                      y: 30,
+                      orient: 'vertical',
+                      left: 'left',
+                      data: []
+                  },
+                  toolbox: {
+                                  show: true,
+                                  itemGap: 15,
+                                  showTitle: true,
+//                                  top:10,
+                                  x:10,
+                                  feature: {
+                                      restore: {show:true, title:'重置'},
+                                      saveAsImage: {show:true, title:'保存为图片图'}
+                                          }
+                                      },
+
+                // 设置值域的标签
+                label: {
+                  normal: {
+                    position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                    // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                    // {a}指series.name  {b}指series.data的name
+                    // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                    formatter: "{b}\n{d}%"
+                  }
+                },
+
+                    series : [
+                        {
+                            name: '房屋户型',
+                            type: 'pie',
+                            // 饼图的半径大小
+                            radius: '50%',
+                            center: ["50%", "60%"], 　　　　//这个属性调整图像的位置
+                            data: []
+
+
+                        }]
+            };
+            var jz_option = {
+     // 饼状图
+
+                          title:{
+                      text:'建筑类型占比情况',
+                      textStyle:{color:'#561766'},
+                        left:180,
+                        top:0
+                  },
+
+                  // 鼠标放到饼状图上显示的内容
+                  tooltip:{
+                      trigger:'item',
+  //                    position:'inner',
+                        showDelay: 20,   // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
+                        hideDelay: 20,   // 隐藏延迟，单位ms
+                        backgroundColor: 'rgba(156,180,0,0.7)',  // 提示框背景颜色
+                        textStyle: {
+                          fontSize: '16px',
+                          color: '#000'  // 设置文本颜色 默认#FFF
+                        },
+                      formatter:"{a} <br/>{b} : {c} ({d}%)"
+                  },
+                  // 显示饼状图的 图例
+                 legend: {
+                      type: 'scroll',
+                      // 图例的垂直位置
+                      y: 30,
+                      orient: 'vertical',
+                      left: 'right',
+                      data: []
+                  },
+                  toolbox: {
+                                  show: true,
+                                  itemGap: 15,
+                                  showTitle: true,
+                                  feature: {
+                                      restore: {show:true, title:'重置'},
+                                      saveAsImage: {show:true, title:'保存为图片图'}
+                                          }
+                                      },
+
+                // 设置值域的标签
+                label: {
+                  normal: {
+                    position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                    // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                    // {a}指series.name  {b}指series.data的name
+                    // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                    formatter: "{b}\n{d}%"
+                  }
+                },
+
+                    series : [
+                        {
+                            name: '建筑类型',
+                            type: 'pie',
+                            // 饼图的半径大小
+                            radius: '50%',
+                            center: ["50%", "60%"], 　　　　//这个属性调整图像的位置
+                            data: []
+
+
+                        }]
+            };
+          // 异步 获取下来框中所填的元素
+            $.ajax({
+                 cache: false,
+                  type: "GET",
+                  url: "/get_select",
+                  contentType: "application/json",
+                  data: null, // 发送的数据
+                  dataType : "json",  //返回数据形式为json
+                  async: false,
+                 success: function(result) {
+                     //console.log(result);
+                     // 获取 下来框标签
+                     for (i = 0, max = result.area.length; i < max; i++) {
+                         // 添加 option 属性
+                         $("#select").append("<option>" + result.area[i] + "</option>")
+                     }
+                 },
+                  error: function(request) {
+                      alert("发送请求失败！");
+                  }
+            });
+
+            get_data();
+
+            function get_data() {
+                myChart.showLoading();
+                jz_myChart.showLoading();
+                var title = $('#select').val();
+                var data = JSON.stringify({"title":title});
+          // 使用刚指定的配置项和数据显示图表。
+            // 异步加载数据
+              $.ajax({
+                  cache: false,
+                  type: "POST",
+                  url: "/get_housetype",
+                  contentType: "application/json",
+                  data: data, // 发送的数据
+                  dataType : "json",  //返回数据形式为json
+                  async: false,
+                  success: function(result) {
+                      //console.log(result);
+                      if (result.data == 0){
+                              alert("缺少参数");
+                              return
+                }
+                      option.series[0].data = [];
+                      option.legend.data = [];
+
+                      for (i = 0, max = result.house_type_data.length; i < max; i++) { //注意：result.data.length
+                          option.series[0].data.push({"name":result.house_type_data[i].name,
+                              "value":result.house_type_data[i].value});
+                          option.legend.data.push(result.house_type_data[i].name)
+                      };
+
+                      jz_option.series[0].data = [];
+                      jz_option.legend.data = [];
+
+                       for (i = 0, max = result.architecture_type_data.length; i < max; i++) { //注意：result.data.length
+                          jz_option.series[0].data.push({"name":result.architecture_type_data[i].name,
+                              "value":result.architecture_type_data[i].value});
+                          jz_option.legend.data.push(result.architecture_type_data[i].name)
+                      };
+
+                      // 为echarts对象加载数据--------------
+                      myChart.hideLoading(); // 隐藏加载动画
+                      jz_myChart.hideLoading();
+//                      myChart.setOption(option);
+//                      jz_myChart.setOption(jz_option);
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+
+                    if (jz_option && typeof jz_option === "object") {
+                        jz_myChart.setOption(jz_option, true);
+                    }
+
+                  },
+                 error: function(request) {
+                  alert("发送请求失败！");
+              }
+
+               });
+            };
+//            myChart.showLoading();
+//
+//          // 使用刚指定的配置项和数据显示图表。
+//            // 异步加载数据
+//              $.ajax({
+//                  cache: false,
+//                  type: "POST",
+//                  url: "/get_housetype",
+//                  data: null, // 发送的数据
+//                  dataType : "json",  //返回数据形式为json
+//                  async: false,
+//                  error: function(request) {
+//                      alert("发送请求失败！");
+//                  },
+//                  success: function(result) {
+//                      //console.log(result);
+//                      // 获取 下来框标签
+//
+//                      for (i = 0, max = result.area.length; i < max; i++){
+//                          // 添加 option 属性
+//                          $("#select").append("<option>" + result.area[i] + "</option>")
+//                      }
+//
+//
+//                      for (i = 0, max = result.house_type_data.length; i < max; i++) { //注意：result.data.length
+//                          option.series[0].data.push({"name":result.house_type_data[i].name,
+//                              "value":result.house_type_data[i].value});
+//                          option.legend.data.push(result.house_type_data[i].name)
+//                      };
+//                       for (i = 0, max = result.architecture_type_data.length; i < max; i++) { //注意：result.data.length
+//                          jz_option.series[0].data.push({"name":result.architecture_type_data[i].name,
+//                              "value":result.architecture_type_data[i].value});
+//                          jz_option.legend.data.push(result.architecture_type_data[i].name)
+//                      };
+//
+//                      // 为echarts对象加载数据--------------
+//                      myChart.hideLoading(); // 隐藏加载动画
+//                      jz_myChart.hideLoading();
+//                      myChart.setOption(option);
+//                      jz_myChart.setOption(jz_option)
+//
+//                  }
+//               });
+
+            // 根据下拉框的值 异步刷新数据
+            $('#select').change(function () {
+                get_data()
+            });
+
+//            myChart.setOption(option);
+//            jz_myChart.setOption(jz_option);
+            // 多个图形自适应屏幕
+//             window.addEventListener("resize",function(){
+//                        myChart.resize();
+//                        jz_myChart.resize();
+//                });
+//             window.addEventListener("resize",function(){
+//
+//
+//                });
+//            window.onresize = jz_myChart.resize;
+//            myChart.on('click', function(param){
+//                // var date_list = {{ name_list|safe }};
+//                var name = param.name;
+//                // if (date_list.indexOf(name) > -1){
+//                    window.location.href="/worldcloud_data/" + name;
+//                // }
+//            })
+
+        });
+</script>
+{% endblock %}}

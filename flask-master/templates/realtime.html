@@ -1,0 +1,322 @@
+﻿{% extends "layout.html" %}
+
+{% block head %}
+    <!--<link rel="stylesheet" type="text/css" href="../static/css/style.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="../static/css/barrager.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../static/css/pick-a-color-1.2.3.min.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="../static/css/shCoreDefault.css"/>-->
+{% endblock %}
+
+{% block nav %}
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li><a href="/housetype">户型和建筑类型</a></li>
+                  <li class="active" ><a href="/realtime">二手房面积</a></li>
+                  <li><a href="/contrast">二手房箱线图</a></li>
+                  <li><a href="/area_price" >面积和房价的关系</a></li>
+                  <li><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+        
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  style="color: #707070">
+
+  <div class="row placeholders">
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-6 col-sm-6 col-lg-6 placeholder"  style="height:700px;"  id="main">
+
+    </div>
+
+  <div class="col-xs-6 col-sm-6 col-lg-6 placeholder"  style="height:700px;"  id="jz_main">
+  </div>
+
+
+  </div>
+</div>
+{% endblock %}
+
+{% block echarts_js %}
+<!--<script type="text/javascript" src="../static/js/tinycolor-0.9.15.min.js"></script>-->
+<!--<script type="text/javascript" src="../static/js/jquery.barrager.js"></script>-->
+<!--<script type="text/javascript" src="../static/js/shCore.js"></script>-->
+<!--<script type="text/javascript" src="../static/js/shBrushJScript.js"></script>-->
+<!--<script type="text/javascript" src="../static/js/shBrushPhp.js"></script>-->
+<!--<script type="text/javascript" src="../static/pick-a-color/js/pick-a-color-1.2.3.min.js"></script>-->
+<script type="text/javascript" >
+    $(function (ec) {
+        var myChart = echarts.init(document.getElementById('main'));
+        var jz_myChart = echarts.init(document.getElementById('jz_main'));
+        jz_myChart.showLoading();
+        myChart.hideLoading();
+        window.addEventListener("resize",function(){
+                myChart.resize();
+                jz_myChart.resize();
+        });
+      var option = {
+
+          title: {
+                        text: '郑州各区二手平均房建筑面积',
+                        textStyle:{color:'#561766'},
+                        // 控制标题 的位置 距离容器的上下左右的距离
+                        left:'center',
+                        top:-10
+                    },
+             grid:{
+                top:60,
+                right:20,
+                bottom:30,
+                left:60
+            },
+                tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                   label:{
+                        normal:{
+                            show: true,
+                            textStyle:{color:'#000',fontSize:"18"},
+                            position: 'top'
+                        }
+                    },
+
+                    toolbox: {
+                        show: true,
+                        itemGap: 15,
+                        showTitle: true,
+                        feature: {
+                          right:20,
+
+                            restore: {show:true, title:'重置'},
+                            saveAsImage: {show:true, title:'保存为图片图'}
+                        }
+                    },
+                    xAxis:  {
+
+                        // x 轴 的类型 value 表示的是 数值轴
+                        type: 'value',
+//                        offset:-10,
+                        boundaryGap: false,
+                        // 设置 全部显示 x轴坐标
+                        axisLabel:{
+                            textStyle: {
+                                color: '#000',
+                                fontSize:'12'
+                            },
+                            formatter:function(val){
+                            return val
+                        }
+                        }
+                    },
+                    yAxis: {
+                          type: 'category',
+                          nameLocation:"middle",
+                          axisTick:false,
+                          // y 轴的名字
+                          name:"城区",
+
+                          // 坐标轴名称与轴线之间的距离。
+                          nameGap:35,
+//                           坐标轴名字旋转，是个角度值
+//                          nameRotate:90,
+                          nameTextStyle:{
+                              fontSize: 16
+                          },
+//                       axisLabel:{interval: 0},
+                        data: [].reverse(),
+                        splitLine: {show: false}
+
+                    },
+                    series: [
+                        {
+                            name:'平均面积',
+                            type:'bar',
+                            data:[],
+                            barGap: 0,
+
+                             barWidth: 30,
+
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'right',
+                                    offset: [5, -2],
+                                    textStyle: {
+                                        color: '#000',
+                                        fontSize: 13
+                                    }
+                                }
+                            },
+
+                            markLine: {
+                                data: [
+//                                    {type: 'average', name: '平均值'}
+                                ]
+                            }
+                        }
+                    ]
+
+                };
+
+      var jz_option = {
+
+          title: {
+                        text: '郑州二手房建筑面积分布',
+                        textStyle:{color:'#561766'},
+                        // 控制标题 的位置 距离容器的上下左右的距离
+                        left:'center',
+                        top:-10
+                    },
+             grid:{
+                top:60,
+                right:20,
+                bottom:30,
+                left:60
+            },
+                tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                   label:{
+                        normal:{
+                            show: true,
+                            textStyle:{color:'#000',fontSize:"18"},
+                            position: 'top'
+                        }
+                    },
+
+                    toolbox: {
+                        show: true,
+                        itemGap: 15,
+                        showTitle: true,
+                        feature: {
+                          right:20,
+
+                            restore: {show:true, title:'重置'},
+                            saveAsImage: {show:true, title:'保存为图片图'}
+                        }
+                    },
+                    xAxis:  {
+
+
+                        // x 轴 的类型 value 表示的是 数值轴
+                        type: 'value',
+//                        offset:-10,
+                        boundaryGap: false,
+                        // 设置 全部显示 x轴坐标
+                        axisLabel:{
+                            textStyle: {
+                                color: '#000',
+                                fontSize:'12'
+                            },
+                            formatter:function(val){
+                            return val
+                        }
+                        }
+                    },
+                    yAxis: {
+                          type: 'category',
+                          nameLocation:"middle",
+                          axisTick:false,
+                          // y 轴的名字
+                          name:" 建 筑面积  区 间 (㎡)",
+
+                          // 坐标轴名称与轴线之间的距离。
+                          nameGap:35,
+//                           坐标轴名字旋转，是个角度值
+                          nameRotate:90,
+                          nameTextStyle:{
+                              fontSize: 16
+                          },
+//                       axisLabel:{interval: 0},
+                        data: [].reverse(),
+                        splitLine: {show: false}
+
+                    },
+                    series: [
+                        {
+                            name:'房屋总数',
+                            type:'bar',
+                            data:[],
+                            barGap: 0,
+
+                             barWidth: 30,
+
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'right',
+                                    offset: [5, -2],
+                                    textStyle: {
+                                        color: '#000',
+                                        fontSize: 13
+                                    }
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: new echarts.graphic.LinearGradient(
+                                        0, 0, 1, 0,
+                                        [
+                                            {offset: 0, color: '#fff'},
+                                            {offset: 0.5, color: '#5E9DD6'},
+                                            {offset: 1, color: '#5E9DD6'}
+
+                                        ]
+                                    )
+                                }
+                            },
+
+                            markLine: {
+                                data: [
+//                                    {type: 'average', name: '平均值'}
+                                ]
+                            }
+                        }
+                    ]
+
+                };
+
+      // 异步获取数据
+        //      获取
+      $.ajax({
+            cache: false,
+            type: "POST",
+            url: "/get_item", //把表单数据发送到/weather
+            data: null, // 发送的数据
+            dataType : "json",  //返回数据形式为json
+            async: false,
+            error: function(request) {
+                alert("发送请求失败！");
+            },
+            success: function(result) {
+                //console.log(result);
+                for (i = 0, max = result.data_jz.length; i < max; i++) { //注意：result.data.length
+                    jz_option.series[0].data.push({"name":result.data_jz[i].name,"value":result.data_jz[i].value})
+                    jz_option.yAxis.data.push(result.data_jz[i].name);
+//                    jz_option.xAxis.data.push(result.data_jz[i].value)
+                }
+                for (i = 0, max = result.data_mean_jzmj.length; i < max; i++) { //注意：result.data.length
+                    option.series[0].data.push({"name":result.data_mean_jzmj[i].name,"value":result.data_mean_jzmj[i].value})
+                    option.yAxis.data.push(result.data_mean_jzmj[i].name);
+//                    jz_option.xAxis.data.push(result.data_jz[i].value)
+                }
+                jz_myChart.setOption(jz_option);
+                myChart.setOption(option);
+                myChart.hideLoading();
+                jz_myChart.hideLoading()
+            }
+         });
+});
+
+
+
+</script>        
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+{% endblock %}
+{% block nav %}
+<div class="col-md-12" >
+              <ul id="tab2" class="nav nav-pills" style="position:relative;left:320px;">
+                  <li ><a href="/data_analysis" >地区房源数量</a></li>
+                 <li><a href="/housetype">户型和建筑类型</a></li>
+                  <li><a href="/realtime">二手房面积</a></li>
+                  <li><a href="/contrast">二手房箱线图</a></li>
+                  <li class="active" > <a href="/area_price" >面积和房价的关系</a></li>
+                  <li  ><a href="/price_element">影响价格的因素</a></li>
+              </ul>
+      </div>
+{% endblock %}
+
+{% block right %}
+<!--右边展示-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  style="color: #707070">
+
+  <div class="row placeholders">
+        <!--展示区-->
+        <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div class="col-xs-12 col-sm-12 col-lg-12 placeholder"  style="height:700px;"  id="main">
+
+    </div>
+  <!--<div class="col-xs-4 col-sm-4 col-lg-4 placeholder"  style="height:700px;"  id="jz_main">-->
+  <!--</div>-->
+
+
+  </div>
+</div>
+{% endblock %}
+
+
+{% block echarts_js %}
+
+<script type="text/javascript" >
+        $(function (ec) {
+            var myChart = echarts.init(document.getElementById('main'));
+            myChart.showLoading(); // 加载动画
+            window.addEventListener("resize", function () {
+                myChart.resize();
+            });
+
+
+            // 控制直线的
+            var markLineOpt = {
+                animation: false,
+
+                lineStyle: {
+                    type: 'solid'
+                },
+
+                data: [[{
+                    coord: [0, 3],
+                    symbol: 'none'
+                }, {
+                    coord: [20, 13],
+                    symbol: 'none'
+                }]]
+            };
+
+            var option = {
+                title: {
+                    text: '单价\\总价散点图',
+                    left: 'center',
+                    top: -10
+                },
+                grid: [
+                    {x: '7%', y: '7%', width: '38%', height: '80%'},
+                    {x2: '7%', y: '7%', width: '38%', height: '80%'}
+
+                ],
+                tooltip: {
+                    formatter: 'Group {a}: ({c})'
+                },
+                        toolbox: {
+                        show: true,
+                        itemGap: 15,
+                        showTitle: true,
+                        feature: {
+                          right:20,
+
+                            restore: {show:true, title:'重置'},
+                            saveAsImage: {show:true, title:'保存为图片图'}
+                        }
+        },
+                xAxis: [
+                    {
+                        gridIndex: 0,
+                        // x 轴 的类型 value 表示的是 数值轴
+                        type: 'value',
+                        splitNumber:15
+
+//                        boundaryGap: true,
+//                        data: []
+                    },
+                    {
+                        gridIndex: 1,
+                        // x 轴 的类型 value 表示的是 数值轴
+                        type: 'value',
+                        splitNumber:15
+
+//                        boundaryGap: true,
+//                        data: []
+                    }
+
+                ],
+                yAxis: [
+                    {
+                         // y 轴的名字
+                        name:"单价(元/平米)",
+                        type: 'value',
+                        gridIndex: 0,
+//                        min: 0,
+//                        max: 15,
+                        nameLocation: "middle",
+                        top:20,
+                        nameGap:36,
+
+                        axisTick: false,
+                        nameTextStyle: {
+                            fontSize: 16
+                        }
+
+                    },
+                    {
+                        name:"总价(万元)",
+                        gridIndex: 1,
+//                        min: 0,
+//                        max: 15,
+                        nameLocation: "middle",
+                        top:20,
+                        nameGap:36,
+
+                        axisTick: false,
+                        nameTextStyle: {
+                            fontSize: 16
+                        }
+                    }
+
+                ],
+                series: [
+                    {
+                        name: 'I',
+                        type: 'scatter',
+                        xAxisIndex: 0,
+                        yAxisIndex: 0,
+                        data: []
+
+                    },
+                    {
+                        name: 'II',
+                        type: 'scatter',
+                        xAxisIndex: 1,
+                        yAxisIndex: 1,
+                        data: []
+
+                    }
+
+                ]
+            };
+
+
+
+            function scater_asy_data() {
+                            // 异步获取数据
+            $.ajax({
+            cache: false,
+            type: "GET",
+            url: "/get_area_price", //把表单数据发送到/weather
+            data: null, // 发送的数据
+            dataType : "json",  //返回数据形式为json
+            async: false,
+            error: function(request) {
+                alert("发送请求失败！");
+            },
+            success: function(result) {
+                //console.log(result);
+                // 设置浏览器端的缓存
+                if(window.localStorage){
+
+                    option.series[0].data = result.unit_price;
+                    option.series[1].data = result.total_price;
+                    unit = result.unit_price;
+                    total = result.total_price;
+//                    scatter = {
+//                        "unit_price":result.unit_price,
+//                        "total_price":result.total_price
+//                    };
+//                    localStorage.setItem('scatter',result)
+                    localStorage.setItem('unit_price',JSON.stringify(unit));
+                    localStorage.setItem('total_price',JSON.stringify(total))
+                }
+                else {
+                    option.series[0].data = result.unit_price;
+                    option.series[1].data = result.total_price;
+                }
+
+//                option.xAxis.data = result.names;
+
+            }
+         });
+            }
+
+            // 定义一个函数
+            function scatter_data() {
+              if(window.localStorage){
+                      unit_price = JSON.parse(localStorage.getItem('unit_price'));
+//                      scatter = localStorage.getItem('scatter');
+                      total_price = JSON.parse(localStorage.getItem('total_price'));
+                    if(unit_price&&total_price){
+                        option.series[0].data = unit_price;
+                        option.series[1].data = total_price;
+//                        option.series[1].data = scatter.total_price;
+//                        option.series[0].data = scatter.unit_price;
+                    }
+                    else {
+                        scater_asy_data()
+                    }
+                }
+              else {
+                    // 发送异步请求获取数据
+                      scater_asy_data()
+                }
+              myChart.setOption(option);
+              myChart.hideLoading()
+            }
+
+            scatter_data()
+
+
+
+        })
+</script>
+
+{% endblock %}

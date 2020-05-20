@@ -1,0 +1,1136 @@
+2020-05-06 09:56:40 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-06 09:56:40 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-06 09:56:40 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 2, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200506.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-06 09:56:40 [scrapy.extensions.telnet] INFO: Telnet Password: ec35ea3e418f53b4
+2020-05-06 09:56:40 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-06 09:56:40 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-06 09:56:40 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-06 09:56:40 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-06 09:56:40 [scrapy.core.engine] INFO: Spider opened
+2020-05-06 09:56:40 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 09:56:40 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-06 09:57:40 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 25 pages/min), scraped 25 items (at 25 items/min)
+2020-05-06 09:58:40 [scrapy.extensions.logstats] INFO: Crawled 52 pages (at 27 pages/min), scraped 52 items (at 27 items/min)
+2020-05-06 09:59:40 [scrapy.extensions.logstats] INFO: Crawled 75 pages (at 23 pages/min), scraped 75 items (at 23 items/min)
+2020-05-06 10:00:40 [scrapy.extensions.logstats] INFO: Crawled 100 pages (at 25 pages/min), scraped 100 items (at 25 items/min)
+2020-05-06 10:01:40 [scrapy.extensions.logstats] INFO: Crawled 125 pages (at 25 pages/min), scraped 125 items (at 25 items/min)
+2020-05-06 10:02:40 [scrapy.extensions.logstats] INFO: Crawled 150 pages (at 25 pages/min), scraped 150 items (at 25 items/min)
+2020-05-06 10:03:40 [scrapy.extensions.logstats] INFO: Crawled 176 pages (at 26 pages/min), scraped 176 items (at 26 items/min)
+2020-05-06 10:04:40 [scrapy.extensions.logstats] INFO: Crawled 199 pages (at 23 pages/min), scraped 199 items (at 23 items/min)
+2020-05-06 10:05:40 [scrapy.extensions.logstats] INFO: Crawled 224 pages (at 25 pages/min), scraped 224 items (at 25 items/min)
+2020-05-06 10:06:40 [scrapy.extensions.logstats] INFO: Crawled 249 pages (at 25 pages/min), scraped 249 items (at 25 items/min)
+2020-05-06 10:07:40 [scrapy.extensions.logstats] INFO: Crawled 272 pages (at 23 pages/min), scraped 272 items (at 23 items/min)
+2020-05-06 10:08:40 [scrapy.extensions.logstats] INFO: Crawled 297 pages (at 25 pages/min), scraped 297 items (at 25 items/min)
+2020-05-06 10:09:40 [scrapy.extensions.logstats] INFO: Crawled 322 pages (at 25 pages/min), scraped 322 items (at 25 items/min)
+2020-05-06 10:10:40 [scrapy.extensions.logstats] INFO: Crawled 345 pages (at 23 pages/min), scraped 345 items (at 23 items/min)
+2020-05-06 10:11:40 [scrapy.extensions.logstats] INFO: Crawled 369 pages (at 24 pages/min), scraped 369 items (at 24 items/min)
+2020-05-06 10:12:40 [scrapy.extensions.logstats] INFO: Crawled 395 pages (at 26 pages/min), scraped 395 items (at 26 items/min)
+2020-05-06 10:13:40 [scrapy.extensions.logstats] INFO: Crawled 418 pages (at 23 pages/min), scraped 418 items (at 23 items/min)
+2020-05-06 10:14:40 [scrapy.extensions.logstats] INFO: Crawled 443 pages (at 25 pages/min), scraped 443 items (at 25 items/min)
+2020-05-06 10:15:40 [scrapy.extensions.logstats] INFO: Crawled 466 pages (at 23 pages/min), scraped 466 items (at 23 items/min)
+2020-05-06 10:16:40 [scrapy.extensions.logstats] INFO: Crawled 491 pages (at 25 pages/min), scraped 490 items (at 24 items/min)
+2020-05-06 10:17:40 [scrapy.extensions.logstats] INFO: Crawled 515 pages (at 24 pages/min), scraped 515 items (at 25 items/min)
+2020-05-06 10:18:40 [scrapy.extensions.logstats] INFO: Crawled 541 pages (at 26 pages/min), scraped 541 items (at 26 items/min)
+2020-05-06 10:19:40 [scrapy.extensions.logstats] INFO: Crawled 565 pages (at 24 pages/min), scraped 565 items (at 24 items/min)
+2020-05-06 10:20:40 [scrapy.extensions.logstats] INFO: Crawled 590 pages (at 25 pages/min), scraped 590 items (at 25 items/min)
+2020-05-06 10:21:40 [scrapy.extensions.logstats] INFO: Crawled 615 pages (at 25 pages/min), scraped 615 items (at 25 items/min)
+2020-05-06 10:22:40 [scrapy.extensions.logstats] INFO: Crawled 641 pages (at 26 pages/min), scraped 641 items (at 26 items/min)
+2020-05-06 10:23:40 [scrapy.extensions.logstats] INFO: Crawled 667 pages (at 26 pages/min), scraped 667 items (at 26 items/min)
+2020-05-06 10:24:40 [scrapy.extensions.logstats] INFO: Crawled 692 pages (at 25 pages/min), scraped 691 items (at 24 items/min)
+2020-05-06 10:25:40 [scrapy.extensions.logstats] INFO: Crawled 717 pages (at 25 pages/min), scraped 717 items (at 26 items/min)
+2020-05-06 10:26:40 [scrapy.extensions.logstats] INFO: Crawled 740 pages (at 23 pages/min), scraped 740 items (at 23 items/min)
+2020-05-06 10:27:40 [scrapy.extensions.logstats] INFO: Crawled 766 pages (at 26 pages/min), scraped 766 items (at 26 items/min)
+2020-05-06 10:28:40 [scrapy.extensions.logstats] INFO: Crawled 791 pages (at 25 pages/min), scraped 791 items (at 25 items/min)
+2020-05-06 10:29:40 [scrapy.extensions.logstats] INFO: Crawled 816 pages (at 25 pages/min), scraped 816 items (at 25 items/min)
+2020-05-06 10:30:40 [scrapy.extensions.logstats] INFO: Crawled 842 pages (at 26 pages/min), scraped 842 items (at 26 items/min)
+2020-05-06 10:31:40 [scrapy.extensions.logstats] INFO: Crawled 867 pages (at 25 pages/min), scraped 867 items (at 25 items/min)
+2020-05-06 10:32:40 [scrapy.extensions.logstats] INFO: Crawled 893 pages (at 26 pages/min), scraped 893 items (at 26 items/min)
+2020-05-06 10:33:40 [scrapy.extensions.logstats] INFO: Crawled 919 pages (at 26 pages/min), scraped 919 items (at 26 items/min)
+2020-05-06 10:34:40 [scrapy.extensions.logstats] INFO: Crawled 943 pages (at 24 pages/min), scraped 943 items (at 24 items/min)
+2020-05-06 10:35:40 [scrapy.extensions.logstats] INFO: Crawled 967 pages (at 24 pages/min), scraped 967 items (at 24 items/min)
+2020-05-06 10:36:40 [scrapy.extensions.logstats] INFO: Crawled 992 pages (at 25 pages/min), scraped 992 items (at 25 items/min)
+2020-05-06 10:37:40 [scrapy.extensions.logstats] INFO: Crawled 1017 pages (at 25 pages/min), scraped 1017 items (at 25 items/min)
+2020-05-06 10:38:40 [scrapy.extensions.logstats] INFO: Crawled 1043 pages (at 26 pages/min), scraped 1043 items (at 26 items/min)
+2020-05-06 10:39:40 [scrapy.extensions.logstats] INFO: Crawled 1068 pages (at 25 pages/min), scraped 1068 items (at 25 items/min)
+2020-05-06 10:40:40 [scrapy.extensions.logstats] INFO: Crawled 1094 pages (at 26 pages/min), scraped 1094 items (at 26 items/min)
+2020-05-06 10:41:40 [scrapy.extensions.logstats] INFO: Crawled 1118 pages (at 24 pages/min), scraped 1118 items (at 24 items/min)
+2020-05-06 10:42:40 [scrapy.extensions.logstats] INFO: Crawled 1143 pages (at 25 pages/min), scraped 1143 items (at 25 items/min)
+2020-05-06 10:43:40 [scrapy.extensions.logstats] INFO: Crawled 1167 pages (at 24 pages/min), scraped 1167 items (at 24 items/min)
+2020-05-06 10:44:40 [scrapy.extensions.logstats] INFO: Crawled 1192 pages (at 25 pages/min), scraped 1192 items (at 25 items/min)
+2020-05-06 10:45:40 [scrapy.extensions.logstats] INFO: Crawled 1216 pages (at 24 pages/min), scraped 1216 items (at 24 items/min)
+2020-05-06 10:46:40 [scrapy.extensions.logstats] INFO: Crawled 1242 pages (at 26 pages/min), scraped 1242 items (at 26 items/min)
+2020-05-06 10:47:40 [scrapy.extensions.logstats] INFO: Crawled 1266 pages (at 24 pages/min), scraped 1266 items (at 24 items/min)
+2020-05-06 10:48:40 [scrapy.extensions.logstats] INFO: Crawled 1291 pages (at 25 pages/min), scraped 1291 items (at 25 items/min)
+2020-05-06 10:49:40 [scrapy.extensions.logstats] INFO: Crawled 1317 pages (at 26 pages/min), scraped 1317 items (at 26 items/min)
+2020-05-06 10:50:40 [scrapy.extensions.logstats] INFO: Crawled 1341 pages (at 24 pages/min), scraped 1341 items (at 24 items/min)
+2020-05-06 10:51:40 [scrapy.extensions.logstats] INFO: Crawled 1365 pages (at 24 pages/min), scraped 1365 items (at 24 items/min)
+2020-05-06 10:52:40 [scrapy.extensions.logstats] INFO: Crawled 1389 pages (at 24 pages/min), scraped 1389 items (at 24 items/min)
+2020-05-06 10:53:40 [scrapy.extensions.logstats] INFO: Crawled 1414 pages (at 25 pages/min), scraped 1414 items (at 25 items/min)
+2020-05-06 10:54:40 [scrapy.extensions.logstats] INFO: Crawled 1438 pages (at 24 pages/min), scraped 1438 items (at 24 items/min)
+2020-05-06 10:55:40 [scrapy.extensions.logstats] INFO: Crawled 1464 pages (at 26 pages/min), scraped 1464 items (at 26 items/min)
+2020-05-06 10:56:40 [scrapy.extensions.logstats] INFO: Crawled 1488 pages (at 24 pages/min), scraped 1488 items (at 24 items/min)
+2020-05-06 10:57:40 [scrapy.extensions.logstats] INFO: Crawled 1514 pages (at 26 pages/min), scraped 1514 items (at 26 items/min)
+2020-05-06 10:58:40 [scrapy.extensions.logstats] INFO: Crawled 1539 pages (at 25 pages/min), scraped 1539 items (at 25 items/min)
+2020-05-06 10:59:40 [scrapy.extensions.logstats] INFO: Crawled 1564 pages (at 25 pages/min), scraped 1564 items (at 25 items/min)
+2020-05-06 11:00:40 [scrapy.extensions.logstats] INFO: Crawled 1589 pages (at 25 pages/min), scraped 1589 items (at 25 items/min)
+2020-05-06 11:01:40 [scrapy.extensions.logstats] INFO: Crawled 1615 pages (at 26 pages/min), scraped 1615 items (at 26 items/min)
+2020-05-06 11:02:40 [scrapy.extensions.logstats] INFO: Crawled 1640 pages (at 25 pages/min), scraped 1640 items (at 25 items/min)
+2020-05-06 11:03:40 [scrapy.extensions.logstats] INFO: Crawled 1664 pages (at 24 pages/min), scraped 1664 items (at 24 items/min)
+2020-05-06 11:04:40 [scrapy.extensions.logstats] INFO: Crawled 1688 pages (at 24 pages/min), scraped 1671 items (at 7 items/min)
+2020-05-06 11:05:40 [scrapy.extensions.logstats] INFO: Crawled 1713 pages (at 25 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:06:40 [scrapy.extensions.logstats] INFO: Crawled 1737 pages (at 24 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:07:40 [scrapy.extensions.logstats] INFO: Crawled 1761 pages (at 24 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:08:40 [scrapy.extensions.logstats] INFO: Crawled 1786 pages (at 25 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:09:40 [scrapy.extensions.logstats] INFO: Crawled 1810 pages (at 24 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:10:40 [scrapy.extensions.logstats] INFO: Crawled 1835 pages (at 25 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:11:40 [scrapy.extensions.logstats] INFO: Crawled 1860 pages (at 25 pages/min), scraped 1671 items (at 0 items/min)
+2020-05-06 11:12:40 [scrapy.extensions.logstats] INFO: Crawled 1884 pages (at 24 pages/min), scraped 1676 items (at 5 items/min)
+2020-05-06 11:13:40 [scrapy.extensions.logstats] INFO: Crawled 1908 pages (at 24 pages/min), scraped 1700 items (at 24 items/min)
+2020-05-06 11:14:40 [scrapy.extensions.logstats] INFO: Crawled 1933 pages (at 25 pages/min), scraped 1725 items (at 25 items/min)
+2020-05-06 11:15:40 [scrapy.extensions.logstats] INFO: Crawled 1958 pages (at 25 pages/min), scraped 1750 items (at 25 items/min)
+2020-05-06 11:16:40 [scrapy.extensions.logstats] INFO: Crawled 1982 pages (at 24 pages/min), scraped 1774 items (at 24 items/min)
+2020-05-06 11:17:40 [scrapy.extensions.logstats] INFO: Crawled 2007 pages (at 25 pages/min), scraped 1799 items (at 25 items/min)
+2020-05-06 11:18:40 [scrapy.extensions.logstats] INFO: Crawled 2033 pages (at 26 pages/min), scraped 1825 items (at 26 items/min)
+2020-05-06 11:19:40 [scrapy.extensions.logstats] INFO: Crawled 2057 pages (at 24 pages/min), scraped 1849 items (at 24 items/min)
+2020-05-06 11:20:40 [scrapy.extensions.logstats] INFO: Crawled 2083 pages (at 26 pages/min), scraped 1875 items (at 26 items/min)
+2020-05-06 11:21:40 [scrapy.extensions.logstats] INFO: Crawled 2109 pages (at 26 pages/min), scraped 1901 items (at 26 items/min)
+2020-05-06 11:22:40 [scrapy.extensions.logstats] INFO: Crawled 2133 pages (at 24 pages/min), scraped 1925 items (at 24 items/min)
+2020-05-06 11:23:40 [scrapy.extensions.logstats] INFO: Crawled 2158 pages (at 25 pages/min), scraped 1950 items (at 25 items/min)
+2020-05-06 11:24:40 [scrapy.extensions.logstats] INFO: Crawled 2183 pages (at 25 pages/min), scraped 1971 items (at 21 items/min)
+2020-05-06 11:25:40 [scrapy.extensions.logstats] INFO: Crawled 2209 pages (at 26 pages/min), scraped 1971 items (at 0 items/min)
+2020-05-06 11:26:40 [scrapy.extensions.logstats] INFO: Crawled 2235 pages (at 26 pages/min), scraped 1971 items (at 0 items/min)
+2020-05-06 11:27:40 [scrapy.extensions.logstats] INFO: Crawled 2258 pages (at 23 pages/min), scraped 1994 items (at 23 items/min)
+2020-05-06 11:27:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104101497574.html save CSV Field error
+2020-05-06 11:27:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104101510104.html save CSV Field error
+2020-05-06 11:27:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104101511334.html save CSV Field error
+2020-05-06 11:27:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104101623240.html save CSV Field error
+2020-05-06 11:28:40 [scrapy.extensions.logstats] INFO: Crawled 2284 pages (at 26 pages/min), scraped 2020 items (at 26 items/min)
+2020-05-06 11:29:40 [scrapy.extensions.logstats] INFO: Crawled 2308 pages (at 24 pages/min), scraped 2044 items (at 24 items/min)
+2020-05-06 11:30:40 [scrapy.extensions.logstats] INFO: Crawled 2332 pages (at 24 pages/min), scraped 2068 items (at 24 items/min)
+2020-05-06 11:31:40 [scrapy.extensions.logstats] INFO: Crawled 2356 pages (at 24 pages/min), scraped 2092 items (at 24 items/min)
+2020-05-06 11:32:40 [scrapy.extensions.logstats] INFO: Crawled 2380 pages (at 24 pages/min), scraped 2116 items (at 24 items/min)
+2020-05-06 11:33:40 [scrapy.extensions.logstats] INFO: Crawled 2406 pages (at 26 pages/min), scraped 2142 items (at 26 items/min)
+2020-05-06 11:34:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103846571.html save CSV Field error
+2020-05-06 11:34:40 [scrapy.extensions.logstats] INFO: Crawled 2428 pages (at 22 pages/min), scraped 2164 items (at 22 items/min)
+2020-05-06 11:35:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103888103.html save CSV Field error
+2020-05-06 11:35:40 [scrapy.extensions.logstats] INFO: Crawled 2453 pages (at 25 pages/min), scraped 2189 items (at 25 items/min)
+2020-05-06 11:36:40 [scrapy.extensions.logstats] INFO: Crawled 2477 pages (at 24 pages/min), scraped 2213 items (at 24 items/min)
+2020-05-06 11:37:40 [scrapy.extensions.logstats] INFO: Crawled 2502 pages (at 25 pages/min), scraped 2237 items (at 24 items/min)
+2020-05-06 11:37:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104100695148.html save CSV Field error
+2020-05-06 11:38:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104100698162.html save CSV Field error
+2020-05-06 11:38:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104100708804.html save CSV Field error
+2020-05-06 11:38:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104100741692.html save CSV Field error
+2020-05-06 11:38:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104100755605.html save CSV Field error
+2020-05-06 11:38:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104100796265.html save CSV Field error
+2020-05-06 11:38:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104100796270.html save CSV Field error
+2020-05-06 11:38:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104100814278.html save CSV Field error
+2020-05-06 11:38:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104100819375.html save CSV Field error
+2020-05-06 11:38:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104100844632.html save CSV Field error
+2020-05-06 11:38:40 [scrapy.extensions.logstats] INFO: Crawled 2528 pages (at 26 pages/min), scraped 2264 items (at 27 items/min)
+2020-05-06 11:38:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104100874963.html save CSV Field error
+2020-05-06 11:38:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104100880121.html save CSV Field error
+2020-05-06 11:39:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104100913023.html save CSV Field error
+2020-05-06 11:39:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104100935097.html save CSV Field error
+2020-05-06 11:39:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104100936322.html save CSV Field error
+2020-05-06 11:39:40 [scrapy.extensions.logstats] INFO: Crawled 2551 pages (at 23 pages/min), scraped 2287 items (at 23 items/min)
+2020-05-06 11:39:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104100968881.html save CSV Field error
+2020-05-06 11:40:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104101003878.html save CSV Field error
+2020-05-06 11:40:40 [scrapy.extensions.logstats] INFO: Crawled 2574 pages (at 23 pages/min), scraped 2310 items (at 23 items/min)
+2020-05-06 11:40:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104101047276.html save CSV Field error
+2020-05-06 11:40:51 [root] ERROR: https://zz.lianjia.com/ershoufang/104101049960.html save CSV Field error
+2020-05-06 11:40:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104101050276.html save CSV Field error
+2020-05-06 11:41:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104101087072.html save CSV Field error
+2020-05-06 11:41:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104101089833.html save CSV Field error
+2020-05-06 11:41:40 [scrapy.extensions.logstats] INFO: Crawled 2600 pages (at 26 pages/min), scraped 2336 items (at 26 items/min)
+2020-05-06 11:41:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104101115036.html save CSV Field error
+2020-05-06 11:41:51 [root] ERROR: https://zz.lianjia.com/ershoufang/104101119421.html save CSV Field error
+2020-05-06 11:41:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104101120941.html save CSV Field error
+2020-05-06 11:42:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104101133779.html save CSV Field error
+2020-05-06 11:42:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104101136755.html save CSV Field error
+2020-05-06 11:42:16 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-06 11:42:16 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-06 11:42:17 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-05-06 11:43:25 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-06 11:43:25 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-06 11:43:25 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.5, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200506.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-06 11:43:25 [scrapy.extensions.telnet] INFO: Telnet Password: 4a9c0d00c0c5b047
+2020-05-06 11:43:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-06 11:43:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-06 11:43:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-06 11:43:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-06 11:43:25 [scrapy.core.engine] INFO: Spider opened
+2020-05-06 11:43:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 11:43:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-06 11:43:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104101256314.html save CSV Field error
+2020-05-06 11:43:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104101260355.html save CSV Field error
+2020-05-06 11:43:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104101357978.html save CSV Field error
+2020-05-06 11:43:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104101375472.html save CSV Field error
+2020-05-06 11:43:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104101425475.html save CSV Field error
+2020-05-06 11:43:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104101431060.html save CSV Field error
+2020-05-06 11:43:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104101475586.html save CSV Field error
+2020-05-06 11:44:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104101515213.html save CSV Field error
+2020-05-06 11:44:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104101578812.html save CSV Field error
+2020-05-06 11:44:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104101585566.html save CSV Field error
+2020-05-06 11:44:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104101620039.html save CSV Field error
+2020-05-06 11:44:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104101622213.html save CSV Field error
+2020-05-06 11:44:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104101624347.html save CSV Field error
+2020-05-06 11:44:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104101655880.html save CSV Field error
+2020-05-06 11:44:25 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 97 pages/min), scraped 97 items (at 97 items/min)
+2020-05-06 11:44:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104101810508.html save CSV Field error
+2020-05-06 11:44:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104101835012.html save CSV Field error
+2020-05-06 11:44:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104101841212.html save CSV Field error
+2020-05-06 11:44:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104101850622.html save CSV Field error
+2020-05-06 11:44:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104101851995.html save CSV Field error
+2020-05-06 11:44:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104101882037.html save CSV Field error
+2020-05-06 11:44:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104101884043.html save CSV Field error
+2020-05-06 11:44:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104101912884.html save CSV Field error
+2020-05-06 11:44:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104101916857.html save CSV Field error
+2020-05-06 11:45:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104101999184.html save CSV Field error
+2020-05-06 11:45:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102010652.html save CSV Field error
+2020-05-06 11:45:25 [scrapy.extensions.logstats] INFO: Crawled 196 pages (at 99 pages/min), scraped 196 items (at 99 items/min)
+2020-05-06 11:45:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104102043150.html save CSV Field error
+2020-05-06 11:45:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104102052059.html save CSV Field error
+2020-05-06 11:45:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104102075018.html save CSV Field error
+2020-05-06 11:45:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104102091456.html save CSV Field error
+2020-05-06 11:45:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104102093373.html save CSV Field error
+2020-05-06 11:45:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104102117461.html save CSV Field error
+2020-05-06 11:45:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104102135247.html save CSV Field error
+2020-05-06 11:45:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104102141910.html save CSV Field error
+2020-05-06 11:45:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104102152187.html save CSV Field error
+2020-05-06 11:45:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104102164784.html save CSV Field error
+2020-05-06 11:45:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104102173886.html save CSV Field error
+2020-05-06 11:45:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104102178007.html save CSV Field error
+2020-05-06 11:46:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104102197464.html save CSV Field error
+2020-05-06 11:46:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104102211395.html save CSV Field error
+2020-05-06 11:46:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104102223536.html save CSV Field error
+2020-05-06 11:46:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102238799.html save CSV Field error
+2020-05-06 11:46:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104102241612.html save CSV Field error
+2020-05-06 11:46:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104102253847.html save CSV Field error
+2020-05-06 11:46:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104102254018.html save CSV Field error
+2020-05-06 11:46:25 [scrapy.extensions.logstats] INFO: Crawled 295 pages (at 99 pages/min), scraped 294 items (at 98 items/min)
+2020-05-06 11:46:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104102261681.html save CSV Field error
+2020-05-06 11:46:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104102273295.html save CSV Field error
+2020-05-06 11:46:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104102302502.html save CSV Field error
+2020-05-06 11:46:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104102320488.html save CSV Field error
+2020-05-06 11:46:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102345373.html save CSV Field error
+2020-05-06 11:46:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104102376005.html save CSV Field error
+2020-05-06 11:46:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104102402414.html save CSV Field error
+2020-05-06 11:47:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104102452668.html save CSV Field error
+2020-05-06 11:47:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104102462831.html save CSV Field error
+2020-05-06 11:47:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104102471258.html save CSV Field error
+2020-05-06 11:47:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104102472579.html save CSV Field error
+2020-05-06 11:47:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104102492031.html save CSV Field error
+2020-05-06 11:47:25 [scrapy.extensions.logstats] INFO: Crawled 393 pages (at 98 pages/min), scraped 393 items (at 99 items/min)
+2020-05-06 11:47:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104102508322.html save CSV Field error
+2020-05-06 11:47:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104102529167.html save CSV Field error
+2020-05-06 11:47:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104102547596.html save CSV Field error
+2020-05-06 11:48:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104102681150.html save CSV Field error
+2020-05-06 11:48:25 [scrapy.extensions.logstats] INFO: Crawled 488 pages (at 95 pages/min), scraped 488 items (at 95 items/min)
+2020-05-06 11:48:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104102722577.html save CSV Field error
+2020-05-06 11:48:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104102722730.html save CSV Field error
+2020-05-06 11:48:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104102725038.html save CSV Field error
+2020-05-06 11:48:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104102736101.html save CSV Field error
+2020-05-06 11:48:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104102736193.html save CSV Field error
+2020-05-06 11:48:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102743576.html save CSV Field error
+2020-05-06 11:48:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104102781940.html save CSV Field error
+2020-05-06 11:48:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104102792160.html save CSV Field error
+2020-05-06 11:49:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104102808186.html save CSV Field error
+2020-05-06 11:49:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102853984.html save CSV Field error
+2020-05-06 11:49:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104102858156.html save CSV Field error
+2020-05-06 11:49:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104102858186.html save CSV Field error
+2020-05-06 11:49:25 [scrapy.extensions.logstats] INFO: Crawled 588 pages (at 100 pages/min), scraped 588 items (at 100 items/min)
+2020-05-06 11:49:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104102863545.html save CSV Field error
+2020-05-06 11:49:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104102880174.html save CSV Field error
+2020-05-06 11:49:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104102884540.html save CSV Field error
+2020-05-06 11:49:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102884679.html save CSV Field error
+2020-05-06 11:49:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104102898523.html save CSV Field error
+2020-05-06 11:49:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104102898603.html save CSV Field error
+2020-05-06 11:49:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104102899134.html save CSV Field error
+2020-05-06 11:49:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104102900057.html save CSV Field error
+2020-05-06 11:49:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104102901863.html save CSV Field error
+2020-05-06 11:50:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104102959580.html save CSV Field error
+2020-05-06 11:50:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102959962.html save CSV Field error
+2020-05-06 11:50:25 [scrapy.extensions.logstats] INFO: Crawled 685 pages (at 97 pages/min), scraped 685 items (at 97 items/min)
+2020-05-06 11:50:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103012720.html save CSV Field error
+2020-05-06 11:50:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103023060.html save CSV Field error
+2020-05-06 11:50:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103028309.html save CSV Field error
+2020-05-06 11:50:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103049356.html save CSV Field error
+2020-05-06 11:50:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103059297.html save CSV Field error
+2020-05-06 11:50:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103080261.html save CSV Field error
+2020-05-06 11:51:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104103090109.html save CSV Field error
+2020-05-06 11:51:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103103182.html save CSV Field error
+2020-05-06 11:51:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103111377.html save CSV Field error
+2020-05-06 11:51:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103162665.html save CSV Field error
+2020-05-06 11:51:25 [scrapy.extensions.logstats] INFO: Crawled 785 pages (at 100 pages/min), scraped 785 items (at 100 items/min)
+2020-05-06 11:51:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103183562.html save CSV Field error
+2020-05-06 11:51:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103200291.html save CSV Field error
+2020-05-06 11:51:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104103221161.html save CSV Field error
+2020-05-06 11:51:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103224578.html save CSV Field error
+2020-05-06 11:51:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104103257598.html save CSV Field error
+2020-05-06 11:52:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103296095.html save CSV Field error
+2020-05-06 11:52:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103302631.html save CSV Field error
+2020-05-06 11:52:12 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103269438.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 11:52:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104103347959.html save CSV Field error
+2020-05-06 11:52:25 [scrapy.extensions.logstats] INFO: Crawled 872 pages (at 87 pages/min), scraped 872 items (at 87 items/min)
+2020-05-06 11:52:25 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103306663.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 11:52:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103379489.html save CSV Field error
+2020-05-06 11:52:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103379865.html save CSV Field error
+2020-05-06 11:52:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103381422.html save CSV Field error
+2020-05-06 11:52:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103383627.html save CSV Field error
+2020-05-06 11:52:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103384020.html save CSV Field error
+2020-05-06 11:52:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103389815.html save CSV Field error
+2020-05-06 11:52:39 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103347288.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 11:52:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103394069.html save CSV Field error
+2020-05-06 11:52:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104103402326.html save CSV Field error
+2020-05-06 11:53:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104103449269.html save CSV Field error
+2020-05-06 11:53:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103454381.html save CSV Field error
+2020-05-06 11:53:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103454878.html save CSV Field error
+2020-05-06 11:53:25 [scrapy.extensions.logstats] INFO: Crawled 975 pages (at 103 pages/min), scraped 975 items (at 103 items/min)
+2020-05-06 11:53:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103494575.html save CSV Field error
+2020-05-06 11:53:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103503619.html save CSV Field error
+2020-05-06 11:53:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104103530068.html save CSV Field error
+2020-05-06 11:53:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103538709.html save CSV Field error
+2020-05-06 11:53:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103567411.html save CSV Field error
+2020-05-06 11:53:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104103570230.html save CSV Field error
+2020-05-06 11:54:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103587173.html save CSV Field error
+2020-05-06 11:54:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103595476.html save CSV Field error
+2020-05-06 11:54:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103597763.html save CSV Field error
+2020-05-06 11:54:25 [scrapy.extensions.logstats] INFO: Crawled 1074 pages (at 99 pages/min), scraped 1074 items (at 99 items/min)
+2020-05-06 11:54:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103627528.html save CSV Field error
+2020-05-06 11:54:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104103659049.html save CSV Field error
+2020-05-06 11:54:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104103660320.html save CSV Field error
+2020-05-06 11:55:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104103661979.html save CSV Field error
+2020-05-06 11:55:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103667663.html save CSV Field error
+2020-05-06 11:55:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103678186.html save CSV Field error
+2020-05-06 11:55:25 [scrapy.extensions.logstats] INFO: Crawled 1174 pages (at 100 pages/min), scraped 1174 items (at 100 items/min)
+2020-05-06 11:56:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103719950.html save CSV Field error
+2020-05-06 11:56:25 [scrapy.extensions.logstats] INFO: Crawled 1272 pages (at 98 pages/min), scraped 1272 items (at 98 items/min)
+2020-05-06 11:56:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103736803.html save CSV Field error
+2020-05-06 11:57:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103757045.html save CSV Field error
+2020-05-06 11:57:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103760066.html save CSV Field error
+2020-05-06 11:57:25 [scrapy.extensions.logstats] INFO: Crawled 1369 pages (at 97 pages/min), scraped 1368 items (at 96 items/min)
+2020-05-06 11:57:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103774259.html save CSV Field error
+2020-05-06 11:58:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103809302.html save CSV Field error
+2020-05-06 11:58:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103814748.html save CSV Field error
+2020-05-06 11:58:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104103817081.html save CSV Field error
+2020-05-06 11:58:25 [scrapy.extensions.logstats] INFO: Crawled 1460 pages (at 91 pages/min), scraped 1460 items (at 92 items/min)
+2020-05-06 11:58:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103852291.html save CSV Field error
+2020-05-06 11:59:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103882843.html save CSV Field error
+2020-05-06 11:59:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103893672.html save CSV Field error
+2020-05-06 11:59:25 [scrapy.extensions.logstats] INFO: Crawled 1558 pages (at 98 pages/min), scraped 1558 items (at 98 items/min)
+2020-05-06 11:59:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104103931033.html save CSV Field error
+2020-05-06 12:00:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103950587.html save CSV Field error
+2020-05-06 12:00:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103954196.html save CSV Field error
+2020-05-06 12:00:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104103973998.html save CSV Field error
+2020-05-06 12:00:25 [scrapy.extensions.logstats] INFO: Crawled 1661 pages (at 103 pages/min), scraped 1661 items (at 103 items/min)
+2020-05-06 12:00:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103974284.html save CSV Field error
+2020-05-06 12:00:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103991812.html save CSV Field error
+2020-05-06 12:00:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103997210.html save CSV Field error
+2020-05-06 12:00:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104104003139.html save CSV Field error
+2020-05-06 12:00:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104104003559.html save CSV Field error
+2020-05-06 12:00:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104104007649.html save CSV Field error
+2020-05-06 12:01:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104104009256.html save CSV Field error
+2020-05-06 12:01:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104104025866.html save CSV Field error
+2020-05-06 12:01:25 [scrapy.extensions.logstats] INFO: Crawled 1759 pages (at 98 pages/min), scraped 1759 items (at 98 items/min)
+2020-05-06 12:01:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104104033576.html save CSV Field error
+2020-05-06 12:02:25 [scrapy.extensions.logstats] INFO: Crawled 1854 pages (at 95 pages/min), scraped 1853 items (at 94 items/min)
+2020-05-06 12:03:25 [scrapy.extensions.logstats] INFO: Crawled 1953 pages (at 99 pages/min), scraped 1953 items (at 100 items/min)
+2020-05-06 12:04:25 [scrapy.extensions.logstats] INFO: Crawled 2051 pages (at 98 pages/min), scraped 2050 items (at 97 items/min)
+2020-05-06 12:04:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104100791452.html save CSV Field error
+2020-05-06 12:05:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104100883613.html save CSV Field error
+2020-05-06 12:05:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104100929537.html save CSV Field error
+2020-05-06 12:05:25 [scrapy.extensions.logstats] INFO: Crawled 2150 pages (at 99 pages/min), scraped 2150 items (at 100 items/min)
+2020-05-06 12:05:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104100972220.html save CSV Field error
+2020-05-06 12:05:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104101014801.html save CSV Field error
+2020-05-06 12:05:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104101016749.html save CSV Field error
+2020-05-06 12:06:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104101110306.html save CSV Field error
+2020-05-06 12:06:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104101150471.html save CSV Field error
+2020-05-06 12:06:25 [scrapy.extensions.logstats] INFO: Crawled 2250 pages (at 100 pages/min), scraped 2250 items (at 100 items/min)
+2020-05-06 12:06:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104101172327.html save CSV Field error
+2020-05-06 12:06:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104101279820.html save CSV Field error
+2020-05-06 12:07:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104101310803.html save CSV Field error
+2020-05-06 12:07:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104101310875.html save CSV Field error
+2020-05-06 12:07:25 [scrapy.extensions.logstats] INFO: Crawled 2348 pages (at 98 pages/min), scraped 2348 items (at 98 items/min)
+2020-05-06 12:07:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104101486595.html save CSV Field error
+2020-05-06 12:07:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104101497172.html save CSV Field error
+2020-05-06 12:07:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104101507771.html save CSV Field error
+2020-05-06 12:07:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104101519137.html save CSV Field error
+2020-05-06 12:08:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104101617294.html save CSV Field error
+2020-05-06 12:08:25 [scrapy.extensions.logstats] INFO: Crawled 2444 pages (at 96 pages/min), scraped 2444 items (at 96 items/min)
+2020-05-06 12:08:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104101692595.html save CSV Field error
+2020-05-06 12:09:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104101736274.html save CSV Field error
+2020-05-06 12:09:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104101742167.html save CSV Field error
+2020-05-06 12:09:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104101757133.html save CSV Field error
+2020-05-06 12:09:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104101759901.html save CSV Field error
+2020-05-06 12:09:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104101759902.html save CSV Field error
+2020-05-06 12:09:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104101803242.html save CSV Field error
+2020-05-06 12:09:25 [scrapy.extensions.logstats] INFO: Crawled 2543 pages (at 99 pages/min), scraped 2543 items (at 99 items/min)
+2020-05-06 12:09:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104101851620.html save CSV Field error
+2020-05-06 12:09:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104101864449.html save CSV Field error
+2020-05-06 12:09:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104101865733.html save CSV Field error
+2020-05-06 12:09:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104101870789.html save CSV Field error
+2020-05-06 12:09:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104101894722.html save CSV Field error
+2020-05-06 12:09:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104101897811.html save CSV Field error
+2020-05-06 12:09:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104101918365.html save CSV Field error
+2020-05-06 12:10:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104101934669.html save CSV Field error
+2020-05-06 12:10:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104101968664.html save CSV Field error
+2020-05-06 12:10:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104101979696.html save CSV Field error
+2020-05-06 12:10:19 [root] ERROR: https://zz.lianjia.com/ershoufang/104101988550.html save CSV Field error
+2020-05-06 12:10:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104101998409.html save CSV Field error
+2020-05-06 12:10:25 [scrapy.extensions.logstats] INFO: Crawled 2639 pages (at 96 pages/min), scraped 2639 items (at 96 items/min)
+2020-05-06 12:10:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104101998417.html save CSV Field error
+2020-05-06 12:10:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104102001476.html save CSV Field error
+2020-05-06 12:10:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104102006738.html save CSV Field error
+2020-05-06 12:10:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104102016114.html save CSV Field error
+2020-05-06 12:10:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104102018708.html save CSV Field error
+2020-05-06 12:10:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102036535.html save CSV Field error
+2020-05-06 12:10:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104102043320.html save CSV Field error
+2020-05-06 12:10:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102045953.html save CSV Field error
+2020-05-06 12:10:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104102053579.html save CSV Field error
+2020-05-06 12:10:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104102054387.html save CSV Field error
+2020-05-06 12:11:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102078364.html save CSV Field error
+2020-05-06 12:11:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104102089996.html save CSV Field error
+2020-05-06 12:11:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104102111337.html save CSV Field error
+2020-05-06 12:11:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104102139826.html save CSV Field error
+2020-05-06 12:11:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104102140432.html save CSV Field error
+2020-05-06 12:11:25 [scrapy.extensions.logstats] INFO: Crawled 2738 pages (at 99 pages/min), scraped 2738 items (at 99 items/min)
+2020-05-06 12:11:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104102221981.html save CSV Field error
+2020-05-06 12:12:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104102229787.html save CSV Field error
+2020-05-06 12:12:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104102245757.html save CSV Field error
+2020-05-06 12:12:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104102255541.html save CSV Field error
+2020-05-06 12:12:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104102255558.html save CSV Field error
+2020-05-06 12:12:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104102255567.html save CSV Field error
+2020-05-06 12:12:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104102255574.html save CSV Field error
+2020-05-06 12:12:25 [scrapy.extensions.logstats] INFO: Crawled 2835 pages (at 97 pages/min), scraped 2834 items (at 96 items/min)
+2020-05-06 12:12:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104102302671.html save CSV Field error
+2020-05-06 12:12:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104102375806.html save CSV Field error
+2020-05-06 12:13:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104102405411.html save CSV Field error
+2020-05-06 12:13:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104102443398.html save CSV Field error
+2020-05-06 12:13:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102448725.html save CSV Field error
+2020-05-06 12:13:25 [scrapy.extensions.logstats] INFO: Crawled 2931 pages (at 96 pages/min), scraped 2931 items (at 97 items/min)
+2020-05-06 12:13:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104102462536.html save CSV Field error
+2020-05-06 12:13:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104102473597.html save CSV Field error
+2020-05-06 12:13:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104102513834.html save CSV Field error
+2020-05-06 12:14:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104102553284.html save CSV Field error
+2020-05-06 12:14:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104102554755.html save CSV Field error
+2020-05-06 12:14:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104102554782.html save CSV Field error
+2020-05-06 12:14:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104102554815.html save CSV Field error
+2020-05-06 12:14:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104102554841.html save CSV Field error
+2020-05-06 12:14:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104102570107.html save CSV Field error
+2020-05-06 12:14:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104102570139.html save CSV Field error
+2020-05-06 12:14:25 [scrapy.extensions.logstats] INFO: Crawled 3029 pages (at 98 pages/min), scraped 3029 items (at 98 items/min)
+2020-05-06 12:14:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104102595994.html save CSV Field error
+2020-05-06 12:14:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104102607025.html save CSV Field error
+2020-05-06 12:14:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104102621402.html save CSV Field error
+2020-05-06 12:14:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104102623188.html save CSV Field error
+2020-05-06 12:15:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104102664390.html save CSV Field error
+2020-05-06 12:15:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104102693668.html save CSV Field error
+2020-05-06 12:15:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104102705779.html save CSV Field error
+2020-05-06 12:15:25 [scrapy.extensions.logstats] INFO: Crawled 3128 pages (at 99 pages/min), scraped 3128 items (at 99 items/min)
+2020-05-06 12:15:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104102714721.html save CSV Field error
+2020-05-06 12:15:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104102724893.html save CSV Field error
+2020-05-06 12:15:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104102731288.html save CSV Field error
+2020-05-06 12:16:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102791091.html save CSV Field error
+2020-05-06 12:16:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102795741.html save CSV Field error
+2020-05-06 12:16:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104102803414.html save CSV Field error
+2020-05-06 12:16:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102825497.html save CSV Field error
+2020-05-06 12:16:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104102829271.html save CSV Field error
+2020-05-06 12:16:25 [scrapy.extensions.logstats] INFO: Crawled 3227 pages (at 99 pages/min), scraped 3226 items (at 98 items/min)
+2020-05-06 12:16:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102862852.html save CSV Field error
+2020-05-06 12:17:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104102889267.html save CSV Field error
+2020-05-06 12:17:25 [scrapy.extensions.logstats] INFO: Crawled 3324 pages (at 97 pages/min), scraped 3324 items (at 98 items/min)
+2020-05-06 12:17:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104102960353.html save CSV Field error
+2020-05-06 12:18:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102982083.html save CSV Field error
+2020-05-06 12:18:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104102982300.html save CSV Field error
+2020-05-06 12:18:03 [root] ERROR: https://zz.lianjia.com/ershoufang/104102982631.html save CSV Field error
+2020-05-06 12:18:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104102998934.html save CSV Field error
+2020-05-06 12:18:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104103030733.html save CSV Field error
+2020-05-06 12:18:25 [scrapy.extensions.logstats] INFO: Crawled 3421 pages (at 97 pages/min), scraped 3421 items (at 97 items/min)
+2020-05-06 12:18:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103031948.html save CSV Field error
+2020-05-06 12:18:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103037197.html save CSV Field error
+2020-05-06 12:18:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103039874.html save CSV Field error
+2020-05-06 12:18:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103040993.html save CSV Field error
+2020-05-06 12:18:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103061098.html save CSV Field error
+2020-05-06 12:18:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103069352.html save CSV Field error
+2020-05-06 12:18:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103069822.html save CSV Field error
+2020-05-06 12:18:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103092533.html save CSV Field error
+2020-05-06 12:19:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103124346.html save CSV Field error
+2020-05-06 12:19:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103124419.html save CSV Field error
+2020-05-06 12:19:25 [scrapy.extensions.logstats] INFO: Crawled 3520 pages (at 99 pages/min), scraped 3520 items (at 99 items/min)
+2020-05-06 12:19:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103181354.html save CSV Field error
+2020-05-06 12:19:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103192478.html save CSV Field error
+2020-05-06 12:19:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104103193440.html save CSV Field error
+2020-05-06 12:19:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103205872.html save CSV Field error
+2020-05-06 12:20:25 [scrapy.extensions.logstats] INFO: Crawled 3615 pages (at 95 pages/min), scraped 3615 items (at 95 items/min)
+2020-05-06 12:20:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104103263626.html save CSV Field error
+2020-05-06 12:20:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103263642.html save CSV Field error
+2020-05-06 12:20:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103266885.html save CSV Field error
+2020-05-06 12:20:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103294758.html save CSV Field error
+2020-05-06 12:20:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103301254.html save CSV Field error
+2020-05-06 12:20:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104103310185.html save CSV Field error
+2020-05-06 12:21:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104103317801.html save CSV Field error
+2020-05-06 12:21:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103319424.html save CSV Field error
+2020-05-06 12:21:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103322856.html save CSV Field error
+2020-05-06 12:21:25 [scrapy.extensions.logstats] INFO: Crawled 3685 pages (at 70 pages/min), scraped 3685 items (at 70 items/min)
+2020-05-06 12:21:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103362538.html save CSV Field error
+2020-05-06 12:21:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103365225.html save CSV Field error
+2020-05-06 12:21:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103369839.html save CSV Field error
+2020-05-06 12:21:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103374304.html save CSV Field error
+2020-05-06 12:21:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103385969.html save CSV Field error
+2020-05-06 12:21:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103386035.html save CSV Field error
+2020-05-06 12:22:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103422963.html save CSV Field error
+2020-05-06 12:22:25 [scrapy.extensions.logstats] INFO: Crawled 3788 pages (at 103 pages/min), scraped 3788 items (at 103 items/min)
+2020-05-06 12:22:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103448452.html save CSV Field error
+2020-05-06 12:22:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103473647.html save CSV Field error
+2020-05-06 12:22:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103480013.html save CSV Field error
+2020-05-06 12:23:25 [scrapy.extensions.logstats] INFO: Crawled 3884 pages (at 96 pages/min), scraped 3884 items (at 96 items/min)
+2020-05-06 12:23:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103535870.html save CSV Field error
+2020-05-06 12:23:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103543293.html save CSV Field error
+2020-05-06 12:23:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103547124.html save CSV Field error
+2020-05-06 12:24:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103602689.html save CSV Field error
+2020-05-06 12:24:25 [scrapy.extensions.logstats] INFO: Crawled 3980 pages (at 96 pages/min), scraped 3980 items (at 96 items/min)
+2020-05-06 12:25:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103646562.html save CSV Field error
+2020-05-06 12:25:25 [scrapy.extensions.logstats] INFO: Crawled 4081 pages (at 101 pages/min), scraped 4080 items (at 100 items/min)
+2020-05-06 12:25:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103666092.html save CSV Field error
+2020-05-06 12:26:25 [scrapy.extensions.logstats] INFO: Crawled 4179 pages (at 98 pages/min), scraped 4178 items (at 98 items/min)
+2020-05-06 12:26:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103714961.html save CSV Field error
+2020-05-06 12:26:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103727476.html save CSV Field error
+2020-05-06 12:26:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103727677.html save CSV Field error
+2020-05-06 12:26:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103728899.html save CSV Field error
+2020-05-06 12:26:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103728914.html save CSV Field error
+2020-05-06 12:26:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103734899.html save CSV Field error
+2020-05-06 12:27:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103745293.html save CSV Field error
+2020-05-06 12:27:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103745303.html save CSV Field error
+2020-05-06 12:27:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103750369.html save CSV Field error
+2020-05-06 12:27:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104103750376.html save CSV Field error
+2020-05-06 12:27:25 [scrapy.extensions.logstats] INFO: Crawled 4275 pages (at 96 pages/min), scraped 4274 items (at 96 items/min)
+2020-05-06 12:27:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103762998.html save CSV Field error
+2020-05-06 12:27:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103763167.html save CSV Field error
+2020-05-06 12:27:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103763197.html save CSV Field error
+2020-05-06 12:27:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104103763261.html save CSV Field error
+2020-05-06 12:27:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103770329.html save CSV Field error
+2020-05-06 12:27:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103770983.html save CSV Field error
+2020-05-06 12:27:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103771934.html save CSV Field error
+2020-05-06 12:27:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103772648.html save CSV Field error
+2020-05-06 12:27:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103772660.html save CSV Field error
+2020-05-06 12:28:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103782964.html save CSV Field error
+2020-05-06 12:28:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103783011.html save CSV Field error
+2020-05-06 12:28:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103783057.html save CSV Field error
+2020-05-06 12:28:02 [root] ERROR: https://zz.lianjia.com/ershoufang/104103783097.html save CSV Field error
+2020-05-06 12:28:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103785683.html save CSV Field error
+2020-05-06 12:28:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103785799.html save CSV Field error
+2020-05-06 12:28:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103786709.html save CSV Field error
+2020-05-06 12:28:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103786789.html save CSV Field error
+2020-05-06 12:28:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103789152.html save CSV Field error
+2020-05-06 12:28:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103792561.html save CSV Field error
+2020-05-06 12:28:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104103792982.html save CSV Field error
+2020-05-06 12:28:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103796464.html save CSV Field error
+2020-05-06 12:28:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103796731.html save CSV Field error
+2020-05-06 12:28:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104103797724.html save CSV Field error
+2020-05-06 12:28:25 [scrapy.extensions.logstats] INFO: Crawled 4372 pages (at 97 pages/min), scraped 4372 items (at 98 items/min)
+2020-05-06 12:28:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103798732.html save CSV Field error
+2020-05-06 12:28:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103800118.html save CSV Field error
+2020-05-06 12:28:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104103802717.html save CSV Field error
+2020-05-06 12:28:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103802860.html save CSV Field error
+2020-05-06 12:28:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103804588.html save CSV Field error
+2020-05-06 12:28:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103808139.html save CSV Field error
+2020-05-06 12:28:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103808156.html save CSV Field error
+2020-05-06 12:28:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103808785.html save CSV Field error
+2020-05-06 12:28:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104103808832.html save CSV Field error
+2020-05-06 12:28:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104103809533.html save CSV Field error
+2020-05-06 12:28:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103809574.html save CSV Field error
+2020-05-06 12:28:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104103810552.html save CSV Field error
+2020-05-06 12:28:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104103811656.html save CSV Field error
+2020-05-06 12:28:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104103814690.html save CSV Field error
+2020-05-06 12:28:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103814880.html save CSV Field error
+2020-05-06 12:28:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104103828101.html save CSV Field error
+2020-05-06 12:29:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103838721.html save CSV Field error
+2020-05-06 12:29:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103838964.html save CSV Field error
+2020-05-06 12:29:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104103845996.html save CSV Field error
+2020-05-06 12:29:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103846671.html save CSV Field error
+2020-05-06 12:29:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103846688.html save CSV Field error
+2020-05-06 12:29:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104103850360.html save CSV Field error
+2020-05-06 12:29:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104103854502.html save CSV Field error
+2020-05-06 12:29:25 [scrapy.extensions.logstats] INFO: Crawled 4467 pages (at 95 pages/min), scraped 4467 items (at 95 items/min)
+2020-05-06 12:29:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103869424.html save CSV Field error
+2020-05-06 12:29:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103875381.html save CSV Field error
+2020-05-06 12:29:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104103880551.html save CSV Field error
+2020-05-06 12:29:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104103884021.html save CSV Field error
+2020-05-06 12:29:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104103898539.html save CSV Field error
+2020-05-06 12:29:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103901163.html save CSV Field error
+2020-05-06 12:29:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104103902034.html save CSV Field error
+2020-05-06 12:29:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104103902205.html save CSV Field error
+2020-05-06 12:29:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103906859.html save CSV Field error
+2020-05-06 12:30:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103917746.html save CSV Field error
+2020-05-06 12:30:16 [root] ERROR: https://zz.lianjia.com/ershoufang/104103927752.html save CSV Field error
+2020-05-06 12:30:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103934445.html save CSV Field error
+2020-05-06 12:30:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104103936419.html save CSV Field error
+2020-05-06 12:30:25 [scrapy.extensions.logstats] INFO: Crawled 4565 pages (at 98 pages/min), scraped 4564 items (at 97 items/min)
+2020-05-06 12:30:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103940407.html save CSV Field error
+2020-05-06 12:30:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104103941358.html save CSV Field error
+2020-05-06 12:30:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104103943804.html save CSV Field error
+2020-05-06 12:30:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103956728.html save CSV Field error
+2020-05-06 12:31:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103965207.html save CSV Field error
+2020-05-06 12:31:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103968805.html save CSV Field error
+2020-05-06 12:31:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103969083.html save CSV Field error
+2020-05-06 12:31:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103970936.html save CSV Field error
+2020-05-06 12:31:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103973214.html save CSV Field error
+2020-05-06 12:31:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104103977514.html save CSV Field error
+2020-05-06 12:31:25 [root] ERROR: https://zz.lianjia.com/ershoufang/104103988103.html save CSV Field error
+2020-05-06 12:31:25 [scrapy.extensions.logstats] INFO: Crawled 4657 pages (at 92 pages/min), scraped 4657 items (at 93 items/min)
+2020-05-06 12:31:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103988927.html save CSV Field error
+2020-05-06 12:31:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103993841.html save CSV Field error
+2020-05-06 12:31:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104103999510.html save CSV Field error
+2020-05-06 12:32:25 [scrapy.extensions.logstats] INFO: Crawled 4756 pages (at 99 pages/min), scraped 4756 items (at 99 items/min)
+2020-05-06 12:33:25 [scrapy.extensions.logstats] INFO: Crawled 4850 pages (at 94 pages/min), scraped 4849 items (at 93 items/min)
+2020-05-06 12:34:25 [scrapy.extensions.logstats] INFO: Crawled 4948 pages (at 98 pages/min), scraped 4948 items (at 99 items/min)
+2020-05-06 12:35:25 [scrapy.extensions.logstats] INFO: Crawled 5043 pages (at 95 pages/min), scraped 5043 items (at 95 items/min)
+2020-05-06 12:36:25 [scrapy.extensions.logstats] INFO: Crawled 5140 pages (at 97 pages/min), scraped 5140 items (at 97 items/min)
+2020-05-06 12:37:25 [scrapy.extensions.logstats] INFO: Crawled 5237 pages (at 97 pages/min), scraped 5237 items (at 97 items/min)
+2020-05-06 12:38:25 [scrapy.extensions.logstats] INFO: Crawled 5334 pages (at 97 pages/min), scraped 5334 items (at 97 items/min)
+2020-05-06 12:39:25 [scrapy.extensions.logstats] INFO: Crawled 5429 pages (at 95 pages/min), scraped 5429 items (at 95 items/min)
+2020-05-06 12:40:25 [scrapy.extensions.logstats] INFO: Crawled 5527 pages (at 98 pages/min), scraped 5527 items (at 98 items/min)
+2020-05-06 12:41:25 [scrapy.extensions.logstats] INFO: Crawled 5623 pages (at 96 pages/min), scraped 5623 items (at 96 items/min)
+2020-05-06 12:42:25 [scrapy.extensions.logstats] INFO: Crawled 5720 pages (at 97 pages/min), scraped 5720 items (at 97 items/min)
+2020-05-06 12:43:25 [scrapy.extensions.logstats] INFO: Crawled 5821 pages (at 101 pages/min), scraped 5821 items (at 101 items/min)
+2020-05-06 12:44:25 [scrapy.extensions.logstats] INFO: Crawled 5916 pages (at 95 pages/min), scraped 5916 items (at 95 items/min)
+2020-05-06 12:44:27 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102710973.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 12:45:25 [scrapy.extensions.logstats] INFO: Crawled 6014 pages (at 98 pages/min), scraped 6014 items (at 98 items/min)
+2020-05-06 12:46:25 [scrapy.extensions.logstats] INFO: Crawled 6110 pages (at 96 pages/min), scraped 6109 items (at 95 items/min)
+2020-05-06 12:47:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103366681.html save CSV Field error
+2020-05-06 12:47:25 [scrapy.extensions.logstats] INFO: Crawled 6209 pages (at 99 pages/min), scraped 6209 items (at 100 items/min)
+2020-05-06 12:48:25 [scrapy.extensions.logstats] INFO: Crawled 6304 pages (at 95 pages/min), scraped 6304 items (at 95 items/min)
+2020-05-06 12:49:25 [scrapy.extensions.logstats] INFO: Crawled 6400 pages (at 96 pages/min), scraped 6400 items (at 96 items/min)
+2020-05-06 12:50:25 [scrapy.extensions.logstats] INFO: Crawled 6498 pages (at 98 pages/min), scraped 6498 items (at 98 items/min)
+2020-05-06 12:50:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104103737337.html save CSV Field error
+2020-05-06 12:51:25 [scrapy.extensions.logstats] INFO: Crawled 6591 pages (at 93 pages/min), scraped 6591 items (at 93 items/min)
+2020-05-06 12:52:25 [scrapy.extensions.logstats] INFO: Crawled 6686 pages (at 95 pages/min), scraped 6686 items (at 95 items/min)
+2020-05-06 12:52:32 [root] ERROR: https://zz.lianjia.com/ershoufang/104103884159.html save CSV Field error
+2020-05-06 12:53:25 [scrapy.extensions.logstats] INFO: Crawled 6781 pages (at 95 pages/min), scraped 6781 items (at 95 items/min)
+2020-05-06 12:54:04 [root] ERROR: https://zz.lianjia.com/ershoufang/104103996284.html save CSV Field error
+2020-05-06 12:54:25 [scrapy.extensions.logstats] INFO: Crawled 6875 pages (at 94 pages/min), scraped 6875 items (at 94 items/min)
+2020-05-06 12:55:25 [scrapy.extensions.logstats] INFO: Crawled 6954 pages (at 79 pages/min), scraped 6938 items (at 63 items/min)
+2020-05-06 12:56:25 [scrapy.extensions.logstats] INFO: Crawled 7050 pages (at 96 pages/min), scraped 7034 items (at 96 items/min)
+2020-05-06 12:56:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104102670713.html save CSV Field error
+2020-05-06 12:57:25 [scrapy.extensions.logstats] INFO: Crawled 7143 pages (at 93 pages/min), scraped 7126 items (at 92 items/min)
+2020-05-06 12:58:25 [scrapy.extensions.logstats] INFO: Crawled 7239 pages (at 96 pages/min), scraped 7223 items (at 97 items/min)
+2020-05-06 12:59:25 [scrapy.extensions.logstats] INFO: Crawled 7337 pages (at 98 pages/min), scraped 7321 items (at 98 items/min)
+2020-05-06 13:00:25 [scrapy.extensions.logstats] INFO: Crawled 7434 pages (at 97 pages/min), scraped 7401 items (at 80 items/min)
+2020-05-06 13:00:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104101736823.html save CSV Field error
+2020-05-06 13:00:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104102355742.html save CSV Field error
+2020-05-06 13:01:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104102563871.html save CSV Field error
+2020-05-06 13:01:25 [scrapy.extensions.logstats] INFO: Crawled 7532 pages (at 98 pages/min), scraped 7499 items (at 98 items/min)
+2020-05-06 13:02:25 [scrapy.extensions.logstats] INFO: Crawled 7632 pages (at 100 pages/min), scraped 7599 items (at 100 items/min)
+2020-05-06 13:03:25 [scrapy.extensions.logstats] INFO: Crawled 7728 pages (at 96 pages/min), scraped 7694 items (at 95 items/min)
+2020-05-06 13:04:25 [scrapy.extensions.logstats] INFO: Crawled 7827 pages (at 99 pages/min), scraped 7794 items (at 100 items/min)
+2020-05-06 13:05:25 [scrapy.extensions.logstats] INFO: Crawled 7923 pages (at 96 pages/min), scraped 7889 items (at 95 items/min)
+2020-05-06 13:06:25 [scrapy.extensions.logstats] INFO: Crawled 8023 pages (at 100 pages/min), scraped 7972 items (at 83 items/min)
+2020-05-06 13:07:25 [scrapy.extensions.logstats] INFO: Crawled 8121 pages (at 98 pages/min), scraped 8071 items (at 99 items/min)
+2020-05-06 13:08:25 [scrapy.extensions.logstats] INFO: Crawled 8219 pages (at 98 pages/min), scraped 8169 items (at 98 items/min)
+2020-05-06 13:09:25 [scrapy.extensions.logstats] INFO: Crawled 8318 pages (at 99 pages/min), scraped 8268 items (at 99 items/min)
+2020-05-06 13:09:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104101856443.html save CSV Field error
+2020-05-06 13:09:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104101884288.html save CSV Field error
+2020-05-06 13:09:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102060159.html save CSV Field error
+2020-05-06 13:09:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104102318722.html save CSV Field error
+2020-05-06 13:09:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104102320445.html save CSV Field error
+2020-05-06 13:09:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104102372650.html save CSV Field error
+2020-05-06 13:09:51 [root] ERROR: https://zz.lianjia.com/ershoufang/104102372697.html save CSV Field error
+2020-05-06 13:09:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104102806195.html save CSV Field error
+2020-05-06 13:09:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103012999.html save CSV Field error
+2020-05-06 13:09:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103119701.html save CSV Field error
+2020-05-06 13:09:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104103226005.html save CSV Field error
+2020-05-06 13:10:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104103341850.html save CSV Field error
+2020-05-06 13:10:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103345850.html save CSV Field error
+2020-05-06 13:10:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104103553071.html save CSV Field error
+2020-05-06 13:10:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103681207.html save CSV Field error
+2020-05-06 13:10:25 [scrapy.extensions.logstats] INFO: Crawled 8415 pages (at 97 pages/min), scraped 8365 items (at 97 items/min)
+2020-05-06 13:10:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104103882830.html save CSV Field error
+2020-05-06 13:10:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104103882859.html save CSV Field error
+2020-05-06 13:11:25 [scrapy.extensions.logstats] INFO: Crawled 8513 pages (at 98 pages/min), scraped 8446 items (at 81 items/min)
+2020-05-06 13:12:25 [scrapy.extensions.logstats] INFO: Crawled 8613 pages (at 100 pages/min), scraped 8545 items (at 99 items/min)
+2020-05-06 13:13:25 [scrapy.extensions.logstats] INFO: Crawled 8710 pages (at 97 pages/min), scraped 8641 items (at 96 items/min)
+2020-05-06 13:14:25 [scrapy.extensions.logstats] INFO: Crawled 8806 pages (at 96 pages/min), scraped 8739 items (at 98 items/min)
+2020-05-06 13:15:25 [scrapy.extensions.logstats] INFO: Crawled 8901 pages (at 95 pages/min), scraped 8834 items (at 95 items/min)
+2020-05-06 13:16:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104101223633.html save CSV Field error
+2020-05-06 13:16:25 [scrapy.extensions.logstats] INFO: Crawled 9002 pages (at 101 pages/min), scraped 8918 items (at 84 items/min)
+2020-05-06 13:16:30 [root] ERROR: https://zz.lianjia.com/ershoufang/104101667020.html save CSV Field error
+2020-05-06 13:16:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104102238709.html save CSV Field error
+2020-05-06 13:16:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102555221.html save CSV Field error
+2020-05-06 13:16:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104102799813.html save CSV Field error
+2020-05-06 13:16:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104103107988.html save CSV Field error
+2020-05-06 13:17:25 [scrapy.extensions.logstats] INFO: Crawled 9100 pages (at 98 pages/min), scraped 9015 items (at 97 items/min)
+2020-05-06 13:17:38 [root] ERROR: https://zz.lianjia.com/ershoufang/104103544801.html save CSV Field error
+2020-05-06 13:18:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103690034.html save CSV Field error
+2020-05-06 13:18:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104103728364.html save CSV Field error
+2020-05-06 13:18:25 [scrapy.extensions.logstats] INFO: Crawled 9197 pages (at 97 pages/min), scraped 9113 items (at 98 items/min)
+2020-05-06 13:18:54 [root] ERROR: https://zz.lianjia.com/ershoufang/104103803480.html save CSV Field error
+2020-05-06 13:19:26 [scrapy.extensions.logstats] INFO: Crawled 9295 pages (at 98 pages/min), scraped 9211 items (at 98 items/min)
+2020-05-06 13:20:25 [scrapy.extensions.logstats] INFO: Crawled 9390 pages (at 95 pages/min), scraped 9306 items (at 95 items/min)
+2020-05-06 13:21:25 [scrapy.extensions.logstats] INFO: Crawled 9490 pages (at 100 pages/min), scraped 9400 items (at 94 items/min)
+2020-05-06 13:22:25 [scrapy.extensions.logstats] INFO: Crawled 9587 pages (at 97 pages/min), scraped 9486 items (at 86 items/min)
+2020-05-06 13:23:25 [scrapy.extensions.logstats] INFO: Crawled 9686 pages (at 99 pages/min), scraped 9585 items (at 99 items/min)
+2020-05-06 13:24:25 [scrapy.extensions.logstats] INFO: Crawled 9785 pages (at 99 pages/min), scraped 9684 items (at 99 items/min)
+2020-05-06 13:25:25 [scrapy.extensions.logstats] INFO: Crawled 9884 pages (at 99 pages/min), scraped 9783 items (at 99 items/min)
+2020-05-06 13:26:25 [scrapy.extensions.logstats] INFO: Crawled 9984 pages (at 100 pages/min), scraped 9882 items (at 99 items/min)
+2020-05-06 13:27:25 [scrapy.extensions.logstats] INFO: Crawled 10076 pages (at 92 pages/min), scraped 9958 items (at 76 items/min)
+2020-05-06 13:27:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104101211331.html save CSV Field error
+2020-05-06 13:27:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104101493371.html save CSV Field error
+2020-05-06 13:28:25 [scrapy.extensions.logstats] INFO: Crawled 10172 pages (at 96 pages/min), scraped 10054 items (at 96 items/min)
+2020-05-06 13:28:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104102022608.html save CSV Field error
+2020-05-06 13:28:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104102127075.html save CSV Field error
+2020-05-06 13:28:42 [root] ERROR: https://zz.lianjia.com/ershoufang/104102127110.html save CSV Field error
+2020-05-06 13:29:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104102496394.html save CSV Field error
+2020-05-06 13:29:25 [scrapy.extensions.logstats] INFO: Crawled 10269 pages (at 97 pages/min), scraped 10151 items (at 97 items/min)
+2020-05-06 13:29:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104102855305.html save CSV Field error
+2020-05-06 13:30:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104103025692.html save CSV Field error
+2020-05-06 13:30:13 [root] ERROR: https://zz.lianjia.com/ershoufang/104103025730.html save CSV Field error
+2020-05-06 13:30:25 [scrapy.extensions.logstats] INFO: Crawled 10366 pages (at 97 pages/min), scraped 10248 items (at 97 items/min)
+2020-05-06 13:30:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104103314329.html save CSV Field error
+2020-05-06 13:31:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103586974.html save CSV Field error
+2020-05-06 13:31:25 [scrapy.extensions.logstats] INFO: Crawled 10461 pages (at 95 pages/min), scraped 10343 items (at 95 items/min)
+2020-05-06 13:31:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104103781483.html save CSV Field error
+2020-05-06 13:31:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103905309.html save CSV Field error
+2020-05-06 13:31:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104103916813.html save CSV Field error
+2020-05-06 13:31:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103949614.html save CSV Field error
+2020-05-06 13:31:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103949651.html save CSV Field error
+2020-05-06 13:31:51 [root] ERROR: https://zz.lianjia.com/ershoufang/104103950411.html save CSV Field error
+2020-05-06 13:31:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103950508.html save CSV Field error
+2020-05-06 13:31:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103952847.html save CSV Field error
+2020-05-06 13:31:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103953864.html save CSV Field error
+2020-05-06 13:31:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104103954958.html save CSV Field error
+2020-05-06 13:31:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104103968280.html save CSV Field error
+2020-05-06 13:32:22 [root] ERROR: https://zz.lianjia.com/ershoufang/104100975822.html save CSV Field error
+2020-05-06 13:32:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104100605001.html save CSV Field error
+2020-05-06 13:32:25 [scrapy.extensions.logstats] INFO: Crawled 10562 pages (at 101 pages/min), scraped 10426 items (at 83 items/min)
+2020-05-06 13:32:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104101176405.html save CSV Field error
+2020-05-06 13:32:28 [root] ERROR: https://zz.lianjia.com/ershoufang/104101227608.html save CSV Field error
+2020-05-06 13:32:31 [root] ERROR: https://zz.lianjia.com/ershoufang/104101554839.html save CSV Field error
+2020-05-06 13:32:33 [root] ERROR: https://zz.lianjia.com/ershoufang/104101829350.html save CSV Field error
+2020-05-06 13:32:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104101846315.html save CSV Field error
+2020-05-06 13:32:35 [root] ERROR: https://zz.lianjia.com/ershoufang/104101888461.html save CSV Field error
+2020-05-06 13:32:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104102058278.html save CSV Field error
+2020-05-06 13:32:39 [root] ERROR: https://zz.lianjia.com/ershoufang/104102081080.html save CSV Field error
+2020-05-06 13:32:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104102171808.html save CSV Field error
+2020-05-06 13:32:41 [root] ERROR: https://zz.lianjia.com/ershoufang/104102190155.html save CSV Field error
+2020-05-06 13:32:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102372586.html save CSV Field error
+2020-05-06 13:32:44 [root] ERROR: https://zz.lianjia.com/ershoufang/104102392592.html save CSV Field error
+2020-05-06 13:32:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104102516868.html save CSV Field error
+2020-05-06 13:32:48 [root] ERROR: https://zz.lianjia.com/ershoufang/104102518182.html save CSV Field error
+2020-05-06 13:32:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104102497298.html save CSV Field error
+2020-05-06 13:32:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104102636561.html save CSV Field error
+2020-05-06 13:32:56 [root] ERROR: https://zz.lianjia.com/ershoufang/104102840243.html save CSV Field error
+2020-05-06 13:32:57 [root] ERROR: https://zz.lianjia.com/ershoufang/104102847019.html save CSV Field error
+2020-05-06 13:32:58 [root] ERROR: https://zz.lianjia.com/ershoufang/104102860162.html save CSV Field error
+2020-05-06 13:32:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104102885950.html save CSV Field error
+2020-05-06 13:33:00 [root] ERROR: https://zz.lianjia.com/ershoufang/104102920684.html save CSV Field error
+2020-05-06 13:33:05 [root] ERROR: https://zz.lianjia.com/ershoufang/104102988439.html save CSV Field error
+2020-05-06 13:33:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104103025782.html save CSV Field error
+2020-05-06 13:33:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103078159.html save CSV Field error
+2020-05-06 13:33:08 [root] ERROR: https://zz.lianjia.com/ershoufang/104103120784.html save CSV Field error
+2020-05-06 13:33:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103124061.html save CSV Field error
+2020-05-06 13:33:09 [root] ERROR: https://zz.lianjia.com/ershoufang/104103137345.html save CSV Field error
+2020-05-06 13:33:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103197432.html save CSV Field error
+2020-05-06 13:33:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103212366.html save CSV Field error
+2020-05-06 13:33:11 [root] ERROR: https://zz.lianjia.com/ershoufang/104103221616.html save CSV Field error
+2020-05-06 13:33:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103228456.html save CSV Field error
+2020-05-06 13:33:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103264265.html save CSV Field error
+2020-05-06 13:33:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104103278488.html save CSV Field error
+2020-05-06 13:33:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103312110.html save CSV Field error
+2020-05-06 13:33:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103322056.html save CSV Field error
+2020-05-06 13:33:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104103387426.html save CSV Field error
+2020-05-06 13:33:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103449321.html save CSV Field error
+2020-05-06 13:33:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103461331.html save CSV Field error
+2020-05-06 13:33:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103522243.html save CSV Field error
+2020-05-06 13:33:25 [scrapy.extensions.logstats] INFO: Crawled 10661 pages (at 99 pages/min), scraped 10526 items (at 100 items/min)
+2020-05-06 13:33:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103561572.html save CSV Field error
+2020-05-06 13:33:26 [root] ERROR: https://zz.lianjia.com/ershoufang/104103561604.html save CSV Field error
+2020-05-06 13:33:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103576964.html save CSV Field error
+2020-05-06 13:33:27 [root] ERROR: https://zz.lianjia.com/ershoufang/104103582730.html save CSV Field error
+2020-05-06 13:33:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104103659097.html save CSV Field error
+2020-05-06 13:33:37 [root] ERROR: https://zz.lianjia.com/ershoufang/104103663631.html save CSV Field error
+2020-05-06 13:33:52 [root] ERROR: https://zz.lianjia.com/ershoufang/104103741049.html save CSV Field error
+2020-05-06 13:34:10 [root] ERROR: https://zz.lianjia.com/ershoufang/104103881031.html save CSV Field error
+2020-05-06 13:34:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104103919275.html save CSV Field error
+2020-05-06 13:34:25 [scrapy.extensions.logstats] INFO: Crawled 10759 pages (at 98 pages/min), scraped 10624 items (at 98 items/min)
+2020-05-06 13:35:25 [scrapy.extensions.logstats] INFO: Crawled 10856 pages (at 97 pages/min), scraped 10721 items (at 97 items/min)
+2020-05-06 13:36:25 [scrapy.extensions.logstats] INFO: Crawled 10955 pages (at 99 pages/min), scraped 10819 items (at 98 items/min)
+2020-05-06 13:37:20 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103953747.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:21 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103948736.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:25 [scrapy.extensions.logstats] INFO: Crawled 11019 pages (at 64 pages/min), scraped 10884 items (at 65 items/min)
+2020-05-06 13:37:29 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103956112.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:32 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103971084.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:39 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103981290.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:42 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103985350.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:46 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103974333.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:52 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103989195.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:37:55 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104104000862.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:38:00 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104104028839.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:38:03 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104104038827.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:38:17 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101203862.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 13:38:25 [scrapy.extensions.logstats] INFO: Crawled 11072 pages (at 53 pages/min), scraped 10925 items (at 41 items/min)
+2020-05-06 13:39:25 [scrapy.extensions.logstats] INFO: Crawled 11172 pages (at 100 pages/min), scraped 11025 items (at 100 items/min)
+2020-05-06 13:40:25 [scrapy.extensions.logstats] INFO: Crawled 11266 pages (at 94 pages/min), scraped 11119 items (at 94 items/min)
+2020-05-06 13:41:25 [scrapy.extensions.logstats] INFO: Crawled 11365 pages (at 99 pages/min), scraped 11218 items (at 99 items/min)
+2020-05-06 13:42:25 [scrapy.extensions.logstats] INFO: Crawled 11461 pages (at 96 pages/min), scraped 11297 items (at 79 items/min)
+2020-05-06 13:43:25 [scrapy.extensions.logstats] INFO: Crawled 11559 pages (at 98 pages/min), scraped 11395 items (at 98 items/min)
+2020-05-06 13:44:25 [scrapy.extensions.logstats] INFO: Crawled 11655 pages (at 96 pages/min), scraped 11491 items (at 96 items/min)
+2020-05-06 13:45:25 [scrapy.extensions.logstats] INFO: Crawled 11749 pages (at 94 pages/min), scraped 11584 items (at 93 items/min)
+2020-05-06 13:46:25 [scrapy.extensions.logstats] INFO: Crawled 11848 pages (at 99 pages/min), scraped 11684 items (at 100 items/min)
+2020-05-06 13:47:25 [scrapy.extensions.logstats] INFO: Crawled 11946 pages (at 98 pages/min), scraped 11765 items (at 81 items/min)
+2020-05-06 13:48:26 [scrapy.extensions.logstats] INFO: Crawled 12043 pages (at 97 pages/min), scraped 11862 items (at 97 items/min)
+2020-05-06 13:49:25 [scrapy.extensions.logstats] INFO: Crawled 12140 pages (at 97 pages/min), scraped 11959 items (at 97 items/min)
+2020-05-06 13:50:25 [scrapy.extensions.logstats] INFO: Crawled 12237 pages (at 97 pages/min), scraped 12056 items (at 97 items/min)
+2020-05-06 13:51:25 [scrapy.extensions.logstats] INFO: Crawled 12332 pages (at 95 pages/min), scraped 12151 items (at 95 items/min)
+2020-05-06 13:52:25 [scrapy.extensions.logstats] INFO: Crawled 12431 pages (at 99 pages/min), scraped 12249 items (at 98 items/min)
+2020-05-06 13:53:25 [scrapy.extensions.logstats] INFO: Crawled 12528 pages (at 97 pages/min), scraped 12330 items (at 81 items/min)
+2020-05-06 13:54:25 [scrapy.extensions.logstats] INFO: Crawled 12625 pages (at 97 pages/min), scraped 12427 items (at 97 items/min)
+2020-05-06 13:54:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102958242.html save CSV Field error
+2020-05-06 13:54:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104103032096.html save CSV Field error
+2020-05-06 13:55:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104103290502.html save CSV Field error
+2020-05-06 13:55:25 [scrapy.extensions.logstats] INFO: Crawled 12723 pages (at 98 pages/min), scraped 12525 items (at 98 items/min)
+2020-05-06 13:55:47 [root] ERROR: https://zz.lianjia.com/ershoufang/104103537179.html save CSV Field error
+2020-05-06 13:56:25 [scrapy.extensions.logstats] INFO: Crawled 12822 pages (at 99 pages/min), scraped 12623 items (at 98 items/min)
+2020-05-06 13:56:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104103953240.html save CSV Field error
+2020-05-06 13:57:01 [root] ERROR: https://zz.lianjia.com/ershoufang/104103955392.html save CSV Field error
+2020-05-06 13:57:25 [scrapy.extensions.logstats] INFO: Crawled 12918 pages (at 96 pages/min), scraped 12720 items (at 97 items/min)
+2020-05-06 13:58:25 [scrapy.extensions.logstats] INFO: Crawled 12918 pages (at 0 pages/min), scraped 12720 items (at 0 items/min)
+2020-05-06 13:58:55 [root] ERROR: https://zz.lianjia.com/ershoufang/104102037250.html save CSV Field error
+2020-05-06 13:59:25 [scrapy.extensions.logstats] INFO: Crawled 12964 pages (at 46 pages/min), scraped 12756 items (at 36 items/min)
+2020-05-06 14:00:25 [scrapy.extensions.logstats] INFO: Crawled 12994 pages (at 30 pages/min), scraped 12786 items (at 30 items/min)
+2020-05-06 14:01:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104102301970.html save CSV Field error
+2020-05-06 14:01:20 [root] ERROR: https://zz.lianjia.com/ershoufang/104102341802.html save CSV Field error
+2020-05-06 14:01:25 [scrapy.extensions.logstats] INFO: Crawled 13081 pages (at 87 pages/min), scraped 12873 items (at 87 items/min)
+2020-05-06 14:02:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104103647004.html save CSV Field error
+2020-05-06 14:02:25 [scrapy.extensions.logstats] INFO: Crawled 13179 pages (at 98 pages/min), scraped 12971 items (at 98 items/min)
+2020-05-06 14:03:25 [scrapy.extensions.logstats] INFO: Crawled 13233 pages (at 54 pages/min), scraped 13020 items (at 49 items/min)
+2020-05-06 14:04:25 [scrapy.extensions.logstats] INFO: Crawled 13320 pages (at 87 pages/min), scraped 13107 items (at 87 items/min)
+2020-05-06 14:05:25 [scrapy.extensions.logstats] INFO: Crawled 13419 pages (at 99 pages/min), scraped 13204 items (at 97 items/min)
+2020-05-06 14:05:40 [root] ERROR: https://zz.lianjia.com/ershoufang/104103768402.html save CSV Field error
+2020-05-06 14:05:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104103353831.html save CSV Field error
+2020-05-06 14:06:14 [root] ERROR: https://zz.lianjia.com/ershoufang/104103280482.html save CSV Field error
+2020-05-06 14:06:18 [root] ERROR: https://zz.lianjia.com/ershoufang/104102144477.html save CSV Field error
+2020-05-06 14:06:21 [root] ERROR: https://zz.lianjia.com/ershoufang/104103562393.html save CSV Field error
+2020-05-06 14:06:25 [scrapy.extensions.logstats] INFO: Crawled 13512 pages (at 93 pages/min), scraped 13294 items (at 90 items/min)
+2020-05-06 14:06:46 [root] ERROR: https://zz.lianjia.com/ershoufang/104102237856.html save CSV Field error
+2020-05-06 14:06:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103461440.html save CSV Field error
+2020-05-06 14:07:25 [scrapy.extensions.logstats] INFO: Crawled 13609 pages (at 97 pages/min), scraped 13392 items (at 98 items/min)
+2020-05-06 14:07:29 [root] ERROR: https://zz.lianjia.com/ershoufang/104103721644.html save CSV Field error
+2020-05-06 14:07:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104102839160.html save CSV Field error
+2020-05-06 14:08:12 [root] ERROR: https://zz.lianjia.com/ershoufang/104103864899.html save CSV Field error
+2020-05-06 14:08:25 [scrapy.extensions.logstats] INFO: Crawled 13705 pages (at 96 pages/min), scraped 13488 items (at 96 items/min)
+2020-05-06 14:08:53 [root] ERROR: https://zz.lianjia.com/ershoufang/104102730057.html save CSV Field error
+2020-05-06 14:09:25 [scrapy.extensions.logstats] INFO: Crawled 13803 pages (at 98 pages/min), scraped 13586 items (at 98 items/min)
+2020-05-06 14:10:15 [root] ERROR: https://zz.lianjia.com/ershoufang/104102313069.html save CSV Field error
+2020-05-06 14:10:25 [scrapy.extensions.logstats] INFO: Crawled 13902 pages (at 99 pages/min), scraped 13685 items (at 99 items/min)
+2020-05-06 14:11:25 [scrapy.extensions.logstats] INFO: Crawled 13998 pages (at 96 pages/min), scraped 13781 items (at 96 items/min)
+2020-05-06 14:11:59 [root] ERROR: https://zz.lianjia.com/ershoufang/104103215085.html save CSV Field error
+2020-05-06 14:12:17 [root] ERROR: https://zz.lianjia.com/ershoufang/104103721422.html save CSV Field error
+2020-05-06 14:12:25 [scrapy.extensions.logstats] INFO: Crawled 14095 pages (at 97 pages/min), scraped 13878 items (at 97 items/min)
+2020-05-06 14:13:04 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104101624643.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '共有',
+                     '供暖方式': '自供暖',
+                     '关注人数': '20',
+                     '单价': '14000元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '正商•幸福港湾B区',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '45㎡',
+                     '总价': '63万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '1室1厅1厨1卫',
+                     '房屋朝向': '东北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '管城回族区',
+                     '所在楼层': '中楼层 (共34层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2018-12-14',
+                     '梯户比例': '两梯四户',
+                     '装修情况': '精装',
+                     '配备电梯': '有'},
+ 'street': '管南区域',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/guannanquyu/pg95/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe_websheji\LianjiaSpider\LianjiaSpider\pipelines.py", line 106, in process_item
+    self.writer.writerow(data)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 2: illegal multibyte sequence
+2020-05-06 14:13:07 [root] ERROR: https://zz.lianjia.com/ershoufang/104101866500.html save CSV Field error
+2020-05-06 14:13:25 [scrapy.extensions.logstats] INFO: Crawled 14191 pages (at 96 pages/min), scraped 13971 items (at 93 items/min)
+2020-05-06 14:13:43 [root] ERROR: https://zz.lianjia.com/ershoufang/104102934091.html save CSV Field error
+2020-05-06 14:14:02 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103925809.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '自供暖',
+                     '关注人数': '0',
+                     '单价': '13577元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '正商•幸福港湾',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '58.19㎡',
+                     '总价': '79万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '1室1厅1厨1卫',
+                     '房屋朝向': '西',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '管城回族区',
+                     '所在楼层': '高楼层 (共33层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-04-22',
+                     '梯户比例': '五梯二十一户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '管南区域',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/guannanquyu/pg14/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe_websheji\LianjiaSpider\LianjiaSpider\pipelines.py", line 106, in process_item
+    self.writer.writerow(data)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 2: illegal multibyte sequence
+2020-05-06 14:14:25 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104102814760.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '自供暖',
+                     '关注人数': '4',
+                     '单价': '14517元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '正商•幸福港湾B区',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '124㎡',
+                     '总价': '180万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室1厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '管城回族区',
+                     '所在楼层': '高楼层 (共34层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2019-09-08',
+                     '梯户比例': '两梯五户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '管南区域',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/guannanquyu/pg76/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe_websheji\LianjiaSpider\LianjiaSpider\pipelines.py", line 106, in process_item
+    self.writer.writerow(data)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 2: illegal multibyte sequence
+2020-05-06 14:14:25 [scrapy.extensions.logstats] INFO: Crawled 14293 pages (at 102 pages/min), scraped 14072 items (at 101 items/min)
+2020-05-06 14:14:45 [root] ERROR: https://zz.lianjia.com/ershoufang/104101823519.html save CSV Field error
+2020-05-06 14:15:25 [scrapy.extensions.logstats] INFO: Crawled 14389 pages (at 96 pages/min), scraped 14168 items (at 96 items/min)
+2020-05-06 14:16:25 [scrapy.extensions.logstats] INFO: Crawled 14488 pages (at 99 pages/min), scraped 14267 items (at 99 items/min)
+2020-05-06 14:16:34 [root] ERROR: https://zz.lianjia.com/ershoufang/104102933429.html save CSV Field error
+2020-05-06 14:16:36 [root] ERROR: https://zz.lianjia.com/ershoufang/104102934875.html save CSV Field error
+2020-05-06 14:17:25 [scrapy.extensions.logstats] INFO: Crawled 14587 pages (at 99 pages/min), scraped 14366 items (at 99 items/min)
+2020-05-06 14:18:25 [scrapy.extensions.logstats] INFO: Crawled 14682 pages (at 95 pages/min), scraped 14461 items (at 95 items/min)
+2020-05-06 14:19:25 [scrapy.extensions.logstats] INFO: Crawled 14782 pages (at 100 pages/min), scraped 14561 items (at 100 items/min)
+2020-05-06 14:20:25 [scrapy.extensions.logstats] INFO: Crawled 14879 pages (at 97 pages/min), scraped 14658 items (at 97 items/min)
+2020-05-06 14:20:49 [root] ERROR: https://zz.lianjia.com/ershoufang/104103473676.html save CSV Field error
+2020-05-06 14:21:06 [root] ERROR: https://zz.lianjia.com/ershoufang/104101092455.html save CSV Field error
+2020-05-06 14:21:25 [scrapy.extensions.logstats] INFO: Crawled 14978 pages (at 99 pages/min), scraped 14757 items (at 99 items/min)
+2020-05-06 14:22:25 [scrapy.extensions.logstats] INFO: Crawled 15073 pages (at 95 pages/min), scraped 14852 items (at 95 items/min)
+2020-05-06 14:23:25 [scrapy.extensions.logstats] INFO: Crawled 15171 pages (at 98 pages/min), scraped 14950 items (at 98 items/min)
+2020-05-06 14:24:25 [scrapy.extensions.logstats] INFO: Crawled 15264 pages (at 93 pages/min), scraped 15043 items (at 93 items/min)
+2020-05-06 14:25:25 [scrapy.extensions.logstats] INFO: Crawled 15358 pages (at 94 pages/min), scraped 15137 items (at 94 items/min)
+2020-05-06 14:26:25 [scrapy.extensions.logstats] INFO: Crawled 15454 pages (at 96 pages/min), scraped 15233 items (at 96 items/min)
+2020-05-06 14:27:25 [scrapy.extensions.logstats] INFO: Crawled 15550 pages (at 96 pages/min), scraped 15329 items (at 96 items/min)
+2020-05-06 14:27:41 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102760068.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-05-06 14:28:26 [scrapy.extensions.logstats] INFO: Crawled 15648 pages (at 98 pages/min), scraped 15421 items (at 92 items/min)
+2020-05-06 14:29:25 [scrapy.extensions.logstats] INFO: Crawled 15728 pages (at 80 pages/min), scraped 15501 items (at 80 items/min)
+2020-05-06 14:30:25 [scrapy.extensions.logstats] INFO: Crawled 15825 pages (at 97 pages/min), scraped 15588 items (at 87 items/min)
+2020-05-06 14:31:25 [scrapy.extensions.logstats] INFO: Crawled 15918 pages (at 93 pages/min), scraped 15681 items (at 93 items/min)
+2020-05-06 14:32:25 [scrapy.extensions.logstats] INFO: Crawled 16012 pages (at 94 pages/min), scraped 15775 items (at 94 items/min)
+2020-05-06 14:33:25 [scrapy.extensions.logstats] INFO: Crawled 16104 pages (at 92 pages/min), scraped 15867 items (at 92 items/min)
+2020-05-06 14:34:24 [root] ERROR: https://zz.lianjia.com/ershoufang/104103818226.html save CSV Field error
+2020-05-06 14:34:25 [scrapy.extensions.logstats] INFO: Crawled 16200 pages (at 96 pages/min), scraped 15921 items (at 54 items/min)
+2020-05-06 14:35:23 [root] ERROR: https://zz.lianjia.com/ershoufang/104103385786.html save CSV Field error
+2020-05-06 14:35:25 [scrapy.extensions.logstats] INFO: Crawled 16296 pages (at 96 pages/min), scraped 16017 items (at 96 items/min)
+2020-05-06 14:36:25 [scrapy.extensions.logstats] INFO: Crawled 16396 pages (at 100 pages/min), scraped 16116 items (at 99 items/min)
+2020-05-06 14:37:25 [scrapy.extensions.logstats] INFO: Crawled 16488 pages (at 92 pages/min), scraped 16209 items (at 93 items/min)
+2020-05-06 14:38:25 [scrapy.extensions.logstats] INFO: Crawled 16587 pages (at 99 pages/min), scraped 16308 items (at 99 items/min)
+2020-05-06 14:39:25 [scrapy.extensions.logstats] INFO: Crawled 16684 pages (at 97 pages/min), scraped 16405 items (at 97 items/min)
+2020-05-06 14:40:25 [scrapy.extensions.logstats] INFO: Crawled 16781 pages (at 97 pages/min), scraped 16502 items (at 97 items/min)
+2020-05-06 14:41:25 [scrapy.extensions.logstats] INFO: Crawled 16878 pages (at 97 pages/min), scraped 16599 items (at 97 items/min)
+2020-05-06 14:42:25 [scrapy.extensions.logstats] INFO: Crawled 16971 pages (at 93 pages/min), scraped 16692 items (at 93 items/min)
+2020-05-06 14:42:50 [root] ERROR: https://zz.lianjia.com/ershoufang/104103069831.html save CSV Field error
+2020-05-06 14:43:25 [scrapy.extensions.logstats] INFO: Crawled 17033 pages (at 62 pages/min), scraped 16754 items (at 62 items/min)
+2020-05-06 14:44:25 [scrapy.extensions.logstats] INFO: Crawled 17033 pages (at 0 pages/min), scraped 16754 items (at 0 items/min)
+2020-05-06 14:45:25 [scrapy.extensions.logstats] INFO: Crawled 17033 pages (at 0 pages/min), scraped 16754 items (at 0 items/min)
+2020-05-06 14:46:25 [scrapy.extensions.logstats] INFO: Crawled 17033 pages (at 0 pages/min), scraped 16754 items (at 0 items/min)
+2020-05-06 14:46:34 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-06 14:46:34 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-06 14:46:34 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-05-06 14:47:27 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-06 14:47:27 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-06 14:47:27 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 2, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200506.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-06 14:47:27 [scrapy.extensions.telnet] INFO: Telnet Password: 1e90b607a450081a
+2020-05-06 14:47:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-06 14:47:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-06 14:47:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-06 14:47:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-06 14:47:27 [scrapy.core.engine] INFO: Spider opened
+2020-05-06 14:47:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 14:47:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-06 14:47:50 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-06 14:47:50 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-06 14:47:54 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-05-06 15:02:42 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-06 15:02:42 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-06 15:02:42 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 2, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200506.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-06 15:02:42 [scrapy.extensions.telnet] INFO: Telnet Password: e3c405b3786b9a64
+2020-05-06 15:02:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-06 15:02:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-06 15:02:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-06 15:02:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-06 15:02:42 [scrapy.core.engine] INFO: Spider opened
+2020-05-06 15:02:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 15:02:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-06 15:03:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 15:03:57 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-06 15:03:57 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-06 15:03:58 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-05-06 16:55:04 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-06 16:55:04 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-06 16:55:04 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 2, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200506.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-06 16:55:04 [scrapy.extensions.telnet] INFO: Telnet Password: b8450bfc840cd737
+2020-05-06 16:55:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-06 16:55:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-06 16:55:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-06 16:55:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-06 16:55:04 [scrapy.core.engine] INFO: Spider opened
+2020-05-06 16:55:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 16:55:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-05-06 16:56:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-06 16:56:10 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-05-06 16:56:10 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-06 16:56:12 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

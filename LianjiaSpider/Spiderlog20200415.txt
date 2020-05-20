@@ -1,0 +1,881 @@
+2020-04-15 11:30:27 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 11:30:27 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 11:30:27 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 11:30:27 [scrapy.extensions.telnet] INFO: Telnet Password: 4020f60acfbc1430
+2020-04-15 11:30:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 11:30:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 11:30:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 11:30:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-15 11:30:28 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 11:30:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 11:30:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 11:30:29 [scrapy.core.scraper] ERROR: Error downloading <GET https://zz.lianjia.com/ershoufang/>
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+scrapy.core.downloader.handlers.http11.TunnelError: Could not open CONNECT tunnel with proxy http-dyn.abuyun.com:9020 [{'status': 402, 'reason': b'Payment Required'}]
+2020-04-15 11:30:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-04-15 11:30:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/scrapy.core.downloader.handlers.http11.TunnelError': 3,
+ 'downloader/request_bytes': 1349,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 4, 15, 3, 30, 29, 155720),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/scrapy.core.downloader.handlers.http11.TunnelError': 2,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2020, 4, 15, 3, 30, 28, 360865)}
+2020-04-15 11:30:29 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-04-15 11:30:55 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 11:30:55 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 11:30:55 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 11:30:55 [scrapy.extensions.telnet] INFO: Telnet Password: 72845ab884df06e6
+2020-04-15 11:30:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 11:30:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 11:30:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 11:30:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-15 11:30:55 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 11:30:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 11:30:55 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 11:31:55 [scrapy.extensions.logstats] INFO: Crawled 194 pages (at 194 pages/min), scraped 142 items (at 142 items/min)
+2020-04-15 11:32:55 [scrapy.extensions.logstats] INFO: Crawled 392 pages (at 198 pages/min), scraped 340 items (at 198 items/min)
+2020-04-15 11:33:55 [scrapy.extensions.logstats] INFO: Crawled 585 pages (at 193 pages/min), scraped 515 items (at 175 items/min)
+2020-04-15 11:34:55 [scrapy.extensions.logstats] INFO: Crawled 780 pages (at 195 pages/min), scraped 710 items (at 195 items/min)
+2020-04-15 11:34:57 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 11:34:57 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 11:34:58 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 11:38:12 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 11:38:12 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 11:38:12 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 11:38:12 [scrapy.extensions.telnet] INFO: Telnet Password: 50df798082bfabbe
+2020-04-15 11:38:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 11:38:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 11:38:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 11:38:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvMiddleWare',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 11:38:13 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 11:38:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 11:38:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 11:39:13 [scrapy.extensions.logstats] INFO: Crawled 190 pages (at 190 pages/min), scraped 139 items (at 139 items/min)
+2020-04-15 11:40:13 [scrapy.extensions.logstats] INFO: Crawled 385 pages (at 195 pages/min), scraped 334 items (at 195 items/min)
+2020-04-15 11:41:13 [scrapy.extensions.logstats] INFO: Crawled 579 pages (at 194 pages/min), scraped 511 items (at 177 items/min)
+2020-04-15 11:42:13 [scrapy.extensions.logstats] INFO: Crawled 778 pages (at 199 pages/min), scraped 709 items (at 198 items/min)
+2020-04-15 11:43:06 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 11:43:06 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 11:43:07 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 11:53:43 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 11:53:43 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 11:53:43 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 11:53:43 [scrapy.extensions.telnet] INFO: Telnet Password: a29149497aa7c706
+2020-04-15 11:53:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 11:53:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 11:53:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 11:53:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 11:53:43 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 11:53:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 11:53:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 11:54:20 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 11:54:20 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 11:54:20 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 11:54:20 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103668490.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-15 11:56:10 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 11:56:10 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 11:56:10 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 11:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: f03ffaff839290c8
+2020-04-15 11:56:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 11:56:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 11:56:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 11:56:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 11:56:10 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 11:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 11:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 11:56:34 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 11:56:34 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 11:56:34 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 12:00:01 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 12:00:01 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 12:00:01 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 12:00:01 [scrapy.extensions.telnet] INFO: Telnet Password: 47a9f5457a287c7e
+2020-04-15 12:00:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 12:00:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 12:00:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 12:00:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 12:00:01 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 12:00:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 12:00:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 12:00:18 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103855391.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '暂无数据',
+                     '供暖方式': '自供暖',
+                     '单价': '13061元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '辉煌铭苑',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '143.94㎡',
+                     '总价': '188万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨2卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中原',
+                     '所在楼层': '中楼层 (共30层)',
+                     '抵押信息': '暂无数据',
+                     '挂牌时间': '2020-04-14',
+                     '梯户比例': '三梯九户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '碧沙岗',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/bishagang/pg5/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:18 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103854991.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '自供暖',
+                     '单价': '11334元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '杜岭街127号',
+                     '建筑类型': '板楼',
+                     '建筑结构': '砖混结构',
+                     '建筑面积': '75㎡',
+                     '总价': '85万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室1厅1厨1卫',
+                     '房屋朝向': '东',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '金水',
+                     '所在楼层': '中楼层 (共5层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-04-14',
+                     '梯户比例': '一梯三户',
+                     '装修情况': '其他',
+                     '配备电梯': '无'},
+ 'street': '紫荆山',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zijingshan/pg22/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:19 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103846905.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '房改房',
+                     '产权所属': '共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '13340元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '郑州轻院西区家属院',
+                     '建筑类型': '板楼',
+                     '建筑结构': '未知结构',
+                     '建筑面积': '63.72㎡',
+                     '总价': '85万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '2室1厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中原',
+                     '所在楼层': '中楼层 (共5层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-04-13',
+                     '梯户比例': '一梯两户',
+                     '装修情况': '精装',
+                     '配备电梯': '暂无数据'},
+ 'street': '郑州晚报社',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhengzhouwanbaoshe/pg12/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:19 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103855106.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '36838元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '绿城百合公寓秋月苑',
+                     '建筑类型': '板楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '89.04㎡',
+                     '总价': '328万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '2室2厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '郑东新区',
+                     '所在楼层': '中楼层 (共7层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-04-14',
+                     '梯户比例': '一梯三户',
+                     '装修情况': '精装',
+                     '配备电梯': '有'},
+ 'street': '众意路',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongyilu/pg19/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:19 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103858081.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '8556元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '中建森林上郡',
+                     '建筑类型': '板塔结合',
+                     '建筑结构': '框架结构',
+                     '建筑面积': '87.66㎡',
+                     '总价': '75万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨1卫',
+                     '房屋朝向': '南',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '航空港区',
+                     '所在楼层': '高楼层 (共33层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-04-15',
+                     '梯户比例': '两梯六户',
+                     '装修情况': '简装',
+                     '配备电梯': '有'},
+ 'street': '航空港商圈',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/hangkonggangshangquan/pg55/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:19 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103859349.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '17623元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '万达广场东西区',
+                     '建筑类型': '板楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '143㎡',
+                     '总价': '252万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨2卫',
+                     '房屋朝向': '南',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中原',
+                     '所在楼层': '中楼层 (共33层)',
+                     '抵押信息': '有抵押',
+                     '挂牌时间': '2020-04-15',
+                     '梯户比例': '两梯四户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '中原万达',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongyuanwanda/pg25/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:20 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103599105.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '10818元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '东润朗郡',
+                     '建筑类型': '板塔结合',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '113.7㎡',
+                     '总价': '123万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中牟县',
+                     '所在楼层': '高楼层 (共27层)',
+                     '抵押信息': '有抵押',
+                     '挂牌时间': '2020-01-17',
+                     '梯户比例': '两梯四户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '中牟县',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongmuxian1/pg100/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:20 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103588856.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '10000元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '七里香溪',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '70㎡',
+                     '总价': '70万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '2室1厅1厨1卫',
+                     '房屋朝向': '南',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中牟县',
+                     '所在楼层': '高楼层 (共11层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-01-13',
+                     '梯户比例': '一梯四户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '中牟县',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongmuxian1/pg100/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:20 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 12:00:20 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 12:00:21 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103288756.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '暂无数据',
+                     '供暖方式': '集中供暖',
+                     '单价': '10069元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '七里香溪',
+                     '建筑类型': '塔楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '84.42㎡',
+                     '总价': '85万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中牟县',
+                     '所在楼层': '高楼层 (共10层)',
+                     '抵押信息': '有抵押',
+                     '挂牌时间': '2019-11-21',
+                     '梯户比例': '一梯四户',
+                     '装修情况': '其他',
+                     '配备电梯': '有'},
+ 'street': '中牟县',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongmuxian1/pg99/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:21 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103745406.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '31531元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '奥兰花园',
+                     '建筑类型': '板楼',
+                     '建筑结构': '钢混结构',
+                     '建筑面积': '142.72㎡',
+                     '总价': '450万',
+                     '户型结构': '暂无数据',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '4室2厅1厨2卫',
+                     '房屋朝向': '南',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '郑东新区',
+                     '所在楼层': '高楼层 (共18层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-03-29',
+                     '梯户比例': '两梯三户',
+                     '装修情况': '精装',
+                     '配备电梯': '有'},
+ 'street': '郑州东站',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhengzhoudongzhan/pg99/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 79, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '产权年限'
+2020-04-15 12:00:21 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 12:00:21 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103537170.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-15 12:05:49 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 12:05:49 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 12:05:49 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 12:05:49 [scrapy.extensions.telnet] INFO: Telnet Password: 55d93627e8acde67
+2020-04-15 12:05:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 12:05:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 12:05:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 12:05:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 12:05:49 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 12:05:50 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 12:05:50 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 12:06:10 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103538010.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '单价': '8000元/平米',
+                     '小区名称': '新里卢浮公馆三期',
+                     '建筑面积': '15㎡',
+                     '总价': '12万',
+                     '房屋年限': '暂无数据',
+                     '房屋朝向': '南',
+                     '房屋用途': '车库',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '郑东新区',
+                     '所在楼层': '地下室 (共1层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2020-01-02'},
+ 'street': '郑州东站',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhengzhoudongzhan/pg100/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 78, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '房屋户型'
+2020-04-15 12:06:15 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103850125.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '暂无数据',
+                     '供暖方式': '暂无数据',
+                     '别墅类型': '独栋',
+                     '单价': '7395元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '新法胡同',
+                     '建筑结构': '未知结构',
+                     '建筑面积': '213.66㎡',
+                     '总价': '158万',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '5室2厅1厨2卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '别墅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '新郑市',
+                     '所在楼层': '低楼层 (共3层)',
+                     '抵押信息': '暂无数据',
+                     '挂牌时间': '2020-04-14',
+                     '装修情况': '其他'},
+ 'street': '新郑市',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/xinzhengshi1/pg30/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 78, in process_item
+    data.append(item['house_info_dict'][self.data_header[i]])
+KeyError: '户型结构'
+2020-04-15 12:06:23 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 12:06:23 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 12:06:24 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 12:06:24 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103605255.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-15 12:51:44 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 12:51:44 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 12:51:44 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 12:51:44 [scrapy.extensions.telnet] INFO: Telnet Password: f7c08a30eae07f7e
+2020-04-15 12:51:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 12:51:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 12:51:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 12:51:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 12:51:45 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 12:51:45 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 12:51:45 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+PermissionError: [Errno 13] Permission denied: '..\\data_file\\ershoufang.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 91, in close_spider
+    self.f.close()
+AttributeError: 'CsvPipeline' object has no attribute 'f'
+2020-04-15 12:51:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2020, 4, 15, 4, 51, 45, 253190),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7}
+2020-04-15 12:51:45 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2020-04-15 12:51:45 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-04-15 12:51:45 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+PermissionError: [Errno 13] Permission denied: '..\\data_file\\ershoufang.csv'
+2020-04-15 12:52:48 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-15 12:52:48 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-15 12:52:48 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200415.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-15 12:52:48 [scrapy.extensions.telnet] INFO: Telnet Password: 064a3ef419c9a2a5
+2020-04-15 12:52:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-15 12:52:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-15 12:52:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-15 12:52:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-04-15 12:52:49 [scrapy.core.engine] INFO: Spider opened
+2020-04-15 12:52:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-15 12:52:49 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-15 12:53:49 [scrapy.extensions.logstats] INFO: Crawled 190 pages (at 190 pages/min), scraped 139 items (at 139 items/min)
+2020-04-15 12:54:16 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103307861.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '暂无数据',
+                     '供暖方式': '集中供暖',
+                     '单价': '8195元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '金程•名湖山庄',
+                     '建筑类型': '板楼',
+                     '建筑结构': '混合结构',
+                     '建筑面积': '144㎡',
+                     '总价': '118万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室2厅1厨2卫',
+                     '房屋朝向': '南',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中牟县',
+                     '所在楼层': '高楼层 (共5层)',
+                     '抵押信息': '无抵押',
+                     '挂牌时间': '2019-11-24',
+                     '梯户比例': '一梯两户',
+                     '装修情况': '其他',
+                     '配备电梯': '无'},
+ 'street': '中牟县',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongmuxian1/pg99/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 87, in process_item
+    self.writer.writerow(data)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 2: illegal multibyte sequence
+2020-04-15 12:54:17 [scrapy.core.scraper] ERROR: Error processing {'city': '郑州',
+ 'detail_url': 'https://zz.lianjia.com/ershoufang/104103307403.html',
+ 'house_info_dict': {'上次交易': '暂无数据',
+                     '交易权属': '商品房',
+                     '产权所属': '非共有',
+                     '供暖方式': '集中供暖',
+                     '单价': '7155元/平米',
+                     '套内面积': '暂无数据',
+                     '小区名称': '金程•名湖山庄',
+                     '建筑类型': '板楼',
+                     '建筑结构': '混合结构',
+                     '建筑面积': '123㎡',
+                     '总价': '88万',
+                     '户型结构': '平层',
+                     '房屋年限': '暂无数据',
+                     '房屋户型': '3室1厅1厨1卫',
+                     '房屋朝向': '南 北',
+                     '房屋用途': '普通住宅',
+                     '房本备件': '未上传房本照片',
+                     '所在区域': '中牟县',
+                     '所在楼层': '高楼层 (共6层)',
+                     '抵押信息': '有抵押 25万元',
+                     '挂牌时间': '2019-11-24',
+                     '梯户比例': '一梯两户',
+                     '装修情况': '精装',
+                     '配备电梯': '无'},
+ 'street': '中牟县',
+ 'street_page_url': 'https://zz.lianjia.com/ershoufang/zhongmuxian1/pg99/'}
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\pipelines.py", line 87, in process_item
+    self.writer.writerow(data)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2022' in position 2: illegal multibyte sequence
+2020-04-15 12:54:49 [scrapy.extensions.logstats] INFO: Crawled 385 pages (at 195 pages/min), scraped 332 items (at 193 items/min)
+2020-04-15 12:55:49 [scrapy.extensions.logstats] INFO: Crawled 576 pages (at 191 pages/min), scraped 506 items (at 174 items/min)
+2020-04-15 12:56:49 [scrapy.extensions.logstats] INFO: Crawled 774 pages (at 198 pages/min), scraped 704 items (at 198 items/min)
+2020-04-15 12:57:49 [scrapy.extensions.logstats] INFO: Crawled 973 pages (at 199 pages/min), scraped 892 items (at 188 items/min)
+2020-04-15 12:58:49 [scrapy.extensions.logstats] INFO: Crawled 1171 pages (at 198 pages/min), scraped 1084 items (at 192 items/min)
+2020-04-15 12:59:49 [scrapy.extensions.logstats] INFO: Crawled 1200 pages (at 29 pages/min), scraped 1113 items (at 29 items/min)
+2020-04-15 13:00:49 [scrapy.extensions.logstats] INFO: Crawled 1375 pages (at 175 pages/min), scraped 1288 items (at 175 items/min)
+2020-04-15 13:01:49 [scrapy.extensions.logstats] INFO: Crawled 1569 pages (at 194 pages/min), scraped 1465 items (at 177 items/min)
+2020-04-15 13:02:49 [scrapy.extensions.logstats] INFO: Crawled 1766 pages (at 197 pages/min), scraped 1662 items (at 197 items/min)
+2020-04-15 13:03:49 [scrapy.extensions.logstats] INFO: Crawled 1960 pages (at 194 pages/min), scraped 1839 items (at 177 items/min)
+2020-04-15 13:04:49 [scrapy.extensions.logstats] INFO: Crawled 2158 pages (at 198 pages/min), scraped 2037 items (at 198 items/min)
+2020-04-15 13:05:49 [scrapy.extensions.logstats] INFO: Crawled 2349 pages (at 191 pages/min), scraped 2227 items (at 190 items/min)
+2020-04-15 13:06:49 [scrapy.extensions.logstats] INFO: Crawled 2541 pages (at 192 pages/min), scraped 2401 items (at 174 items/min)
+2020-04-15 13:07:49 [scrapy.extensions.logstats] INFO: Crawled 2734 pages (at 193 pages/min), scraped 2595 items (at 194 items/min)
+2020-04-15 13:08:49 [scrapy.extensions.logstats] INFO: Crawled 2926 pages (at 192 pages/min), scraped 2787 items (at 192 items/min)
+2020-04-15 13:09:49 [scrapy.extensions.logstats] INFO: Crawled 3120 pages (at 194 pages/min), scraped 2965 items (at 178 items/min)
+2020-04-15 13:10:49 [scrapy.extensions.logstats] INFO: Crawled 3316 pages (at 196 pages/min), scraped 3161 items (at 196 items/min)
+2020-04-15 13:11:49 [scrapy.extensions.logstats] INFO: Crawled 3518 pages (at 202 pages/min), scraped 3347 items (at 186 items/min)
+2020-04-15 13:12:49 [scrapy.extensions.logstats] INFO: Crawled 3711 pages (at 193 pages/min), scraped 3540 items (at 193 items/min)
+2020-04-15 13:13:49 [scrapy.extensions.logstats] INFO: Crawled 3909 pages (at 198 pages/min), scraped 3737 items (at 197 items/min)
+2020-04-15 13:14:49 [scrapy.extensions.logstats] INFO: Crawled 4103 pages (at 194 pages/min), scraped 3913 items (at 176 items/min)
+2020-04-15 13:15:49 [scrapy.extensions.logstats] INFO: Crawled 4292 pages (at 189 pages/min), scraped 4103 items (at 190 items/min)
+2020-04-15 13:16:49 [scrapy.extensions.logstats] INFO: Crawled 4487 pages (at 195 pages/min), scraped 4298 items (at 195 items/min)
+2020-04-15 13:17:42 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103488262.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-15 13:17:48 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103376986.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-15 13:17:49 [scrapy.extensions.logstats] INFO: Crawled 4658 pages (at 171 pages/min), scraped 4452 items (at 154 items/min)
+2020-04-15 13:17:54 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-15 13:17:54 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-15 13:17:54 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-15 13:17:54 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104102104028.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests

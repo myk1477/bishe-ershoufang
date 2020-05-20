@@ -1,0 +1,581 @@
+2020-04-14 15:34:43 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-14 15:34:43 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-14 15:34:43 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'CONCURRENT_REQUESTS': 6, 'DOWNLOAD_DELAY': 1, 'LOG_FILE': 'Spiderlog20200414.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-14 15:34:43 [scrapy.extensions.telnet] INFO: Telnet Password: 5199acd30b41f0f4
+2020-04-14 15:34:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-14 15:34:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-14 15:34:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-14 15:34:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-14 15:34:43 [scrapy.core.engine] INFO: Spider opened
+2020-04-14 15:34:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 15:34:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-14 15:35:43 [scrapy.extensions.logstats] INFO: Crawled 2 pages (at 2 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 15:36:43 [scrapy.extensions.logstats] INFO: Crawled 10 pages (at 8 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 15:37:28 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-14 15:37:28 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-14 15:37:28 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-14 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/gaoxin9/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 15:37:28 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/zhongyuan/. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 20:29:59 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-14 20:29:59 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-14 20:29:59 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200414.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-14 20:29:59 [scrapy.extensions.telnet] INFO: Telnet Password: 1cb92180ceb6cc36
+2020-04-14 20:29:59 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-14 20:30:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-14 20:30:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-14 20:30:00 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-14 20:30:00 [scrapy.core.engine] INFO: Spider opened
+2020-04-14 20:30:00 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:30:00 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-14 20:30:27 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103600102.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg23/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:30:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103580403.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg45/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:30:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103840910.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg46/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:30:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103854318.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg47/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:31:00 [scrapy.extensions.logstats] INFO: Crawled 186 pages (at 186 pages/min), scraped 134 items (at 134 items/min)
+2020-04-14 20:31:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104102824637.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:31:02 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103855786.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 20:31:08 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103736018.html> (referer: https://zz.lianjia.com/ershoufang/zhengzhouwanbaoshe/pg11/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:31:17 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103615579.html> (referer: https://zz.lianjia.com/ershoufang/huanghenanlu/pg31/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:31:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104101410869.html> (referer: https://zz.lianjia.com/ershoufang/zhongyuanwanda/pg23/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:31:56 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103558705.html> (referer: https://zz.lianjia.com/ershoufang/zhongyuanwanda/pg24/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:00 [scrapy.extensions.logstats] INFO: Crawled 382 pages (at 196 pages/min), scraped 324 items (at 190 items/min)
+2020-04-14 20:32:21 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103645972.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 20:32:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104101688979.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg9/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103490981.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg9/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:37 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104101938193.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg10/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104102664473.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg11/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103260386.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg12/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:32:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104102998559.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg12/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:33:00 [scrapy.extensions.logstats] INFO: Crawled 569 pages (at 187 pages/min), scraped 491 items (at 167 items/min)
+2020-04-14 20:33:03 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-14 20:33:03 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-14 20:33:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104101274727.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg13/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:33:04 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-14 20:33:04 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104101307990.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 20:38:12 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-14 20:38:12 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-14 20:38:12 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.25, 'LOG_FILE': 'Spiderlog20200414.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-14 20:38:12 [scrapy.extensions.telnet] INFO: Telnet Password: b83b13a5d1415a74
+2020-04-14 20:38:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-14 20:38:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-14 20:38:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-14 20:38:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-14 20:38:13 [scrapy.core.engine] INFO: Spider opened
+2020-04-14 20:38:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:38:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-14 20:39:13 [scrapy.extensions.logstats] INFO: Crawled 196 pages (at 196 pages/min), scraped 145 items (at 145 items/min)
+2020-04-14 20:40:13 [scrapy.extensions.logstats] INFO: Crawled 394 pages (at 198 pages/min), scraped 342 items (at 197 items/min)
+2020-04-14 20:41:08 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-14 20:41:08 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-14 20:41:08 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-14 20:43:01 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-14 20:43:01 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-14 20:43:01 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.2, 'LOG_FILE': 'Spiderlog20200414.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-14 20:43:01 [scrapy.extensions.telnet] INFO: Telnet Password: 71d4d59a929170e5
+2020-04-14 20:43:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-04-14 20:43:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-14 20:43:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-14 20:43:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-14 20:43:01 [scrapy.core.engine] INFO: Spider opened
+2020-04-14 20:43:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:43:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-14 20:44:01 [scrapy.extensions.logstats] INFO: Crawled 34 pages (at 34 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:44:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103854318.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg47/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:45:01 [scrapy.extensions.logstats] INFO: Crawled 69 pages (at 35 pages/min), scraped 21 items (at 21 items/min)
+2020-04-14 20:46:01 [scrapy.extensions.logstats] INFO: Crawled 103 pages (at 34 pages/min), scraped 55 items (at 34 items/min)
+2020-04-14 20:47:01 [scrapy.extensions.logstats] INFO: Crawled 130 pages (at 27 pages/min), scraped 82 items (at 27 items/min)
+2020-04-14 20:47:04 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-14 20:47:04 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-14 20:47:05 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2020-04-14 20:49:32 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-04-14 20:49:32 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1e  17 Mar 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-04-14 20:49:32 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.2, 'LOG_FILE': 'Spiderlog20200414.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-04-14 20:49:32 [scrapy.extensions.telnet] INFO: Telnet Password: 72c82607b1122233
+2020-04-14 20:49:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-04-14 20:49:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-14 20:49:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-14 20:49:32 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.MongodbPipeline',
+ 'LianjiaSpider.pipelines.CsvMiddleWare']
+2020-04-14 20:49:32 [scrapy.core.engine] INFO: Spider opened
+2020-04-14 20:49:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:49:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-04-14 20:50:32 [scrapy.extensions.logstats] INFO: Crawled 40 pages (at 40 pages/min), scraped 0 items (at 0 items/min)
+2020-04-14 20:51:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103608818.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg23/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:51:32 [scrapy.extensions.logstats] INFO: Crawled 86 pages (at 46 pages/min), scraped 36 items (at 36 items/min)
+2020-04-14 20:51:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103856503.html> (referer: https://zz.lianjia.com/ershoufang/zhaicheng/pg24/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:51:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103643597.html> (referer: https://zz.lianjia.com/ershoufang/baisha/pg72/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:52:32 [scrapy.extensions.logstats] INFO: Crawled 129 pages (at 43 pages/min), scraped 77 items (at 41 items/min)
+2020-04-14 20:52:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103853156.html> (referer: https://zz.lianjia.com/ershoufang/baisha/pg73/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:52:38 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103850130.html> (referer: https://zz.lianjia.com/ershoufang/baisha/pg73/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:53:10 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103847058.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg46/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:53:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103845708.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg46/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:53:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zz.lianjia.com/ershoufang/104103626696.html> (referer: https://zz.lianjia.com/ershoufang/shangjiequ1/pg46/)
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Shinelon\Desktop\bishe\LianjiaSpider\LianjiaSpider\spiders\lian_jia.py", line 132, in house_parse
+    total_price = total_price_data + total_price_unit
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2020-04-14 20:53:32 [scrapy.extensions.logstats] INFO: Crawled 171 pages (at 42 pages/min), scraped 114 items (at 37 items/min)
+2020-04-14 20:54:03 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2020-04-14 20:54:03 [scrapy.core.downloader.handlers.http11] WARNING: Got data loss in https://zz.lianjia.com/ershoufang/104103605051.html. If you want to process broken responses set the setting DOWNLOAD_FAIL_ON_DATALOSS = False -- This message won't be shown in further requests
+2020-04-14 20:54:03 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-04-14 20:54:03 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

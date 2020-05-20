@@ -1,0 +1,387 @@
+<title>热门分析</title>
+{% include "analyse/importCSS.html" %}
+{% include "analyse/importJS.html" %}
+<script src="../static/js/echarts.js" charset="utf-8"></script>
+<script src="../static/js/worldcloud.js" charset="utf-8"></script>
+<!--<script src="../static/js/echarts-wordcloud.min.js" ></script>-->
+<style type="text/css">
+#main {
+height: 600px;
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #A9C9E2;
+background-color: #E8F5FE
+}
+#hot_main{
+height: 600px;
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #5C9CC0;
+background-color: #F2FAFF
+}
+</style>
+<script>
+$(document).ready(function () {
+    $("#ul_header").find("li").each(function () {
+      var a = $(this).find("a:first")[0];
+      if ($(a).attr("href") === location.pathname) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+
+});
+
+</script>
+
+{% include "analyse/header.html" %}
+<section id="portfolio" class="wow fadeInLeft" data-wow-duration="1000ms" style="position: relative;top: 0px">
+    <div class="container" >
+        <div class="row placeholders" style="position:relative;top: -50px;">
+            <ul class="portfolio-filter text-center" id="ul_qu">
+
+                <li><a class="btn active" href="#" data-filter="*" onclick="qu_attention('')">各区关注人数前五的小区</a></li>
+                {% for name in area%}
+                <li><a class="btn" href="#" onclick="qu_attention('{{name}}')">{{ name }}</a></li>
+                {% endfor %}
+
+            </ul><!--/#portfolio-filter-->
+
+            <div class="portfolio-items" id="attention">
+                {% for attention in attentions%}
+                <div class="col-xs-6 col-sm-4 col-md-2 portfolio-item computer">
+                    <div class="portfolio-wrapper">
+                        <div class="portfolio-single">
+                            <div class="portfolio-view">
+                                <ul class="nav nav-pills">
+                                    <li ><a href="" style='width: 100px;height: 80px'>{{attention.counts}}</a></li>
+                                    <!---->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info " style="position: relative;top: 40px">
+                            <h2 style="position: relative;left: -5px">{{attention.plot}}</h2>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row placeholders" style="position:relative;top: -50px; ">
+            <div class="col-xs-6 col-sm-6 col-lg-6 placeholder"  id="main">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-6 placeholder"  id="hot_main">
+            </div>
+    </div>
+
+    </div>
+</section>
+
+<script type="text/javascript" >
+myChart = echarts.init(document.getElementById('main'));
+         var hot_myChart = echarts.init(document.getElementById('hot_main'));
+
+         window.addEventListener("resize",function(){
+                    myChart.resize();
+                    hot_myChart.resize();
+            });
+
+
+        var option = {
+            title: {
+                text: '户型关注热度',
+                x: 'center',
+                textStyle: {
+                    fontSize: 15
+                }
+
+            },
+            tooltip: {
+                show:true
+            },
+                 toolbox: {
+                    show: true,
+                    itemGap: 15,
+                    showTitle: true,
+                    feature: {
+                      right:20,
+                        magicType: {
+                            show:true,
+                        },
+                        restore: {show:true, title:'重置'},
+                        saveAsImage: {show:true, title:'保存为图片图'}
+                    }
+                },
+            backgroundColor: '#F7F7F7',
+            series: [{
+                name: '关注度',
+                type: 'wordCloud',
+//			        size: ['99%', '99%'],
+                gridSize:2,
+                drawOutOfBound: true,
+                sizeRange: [5,55],
+//			        textRotation: [0, 45, 90, -45],
+                rotationRange: [-45, 90],
+                width:"100%",
+                height:'100%',
+                //shape: 'circle',
+//			        maskImage: maskImage,
+                textPadding: 0,
+                autoSize: {
+                    enable: true,
+                    minSize: 6
+                },
+                textStyle: {
+                    normal: {
+                        fontFamily:'sans-serif',
+                        color: function() {
+
+                            return 'rgb(' + [
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 130),
+                                Math.round(Math.random() * 120)
+                            ].join(',') + ')';
+                        }
+                    },
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+
+                data: []
+            }]
+        };
+
+        var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+        var hot_option = {
+                   title: {
+                        text: '',
+                        x: 'center',
+                        textStyle: {
+                            fontSize: 15
+                        }
+
+            },
+            color: colors,
+
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'
+                }
+            },
+            grid: {
+                right: '20%'
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: true, readOnly: false},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+                data: ['平均单价', '平均面积'],
+                top:30
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    data: [],
+//                    axisLabel: {
+//                        interval:0,
+//                        textStyle: {
+//                            color: '#7c8893',
+//                            fontSize: 12
+//                        },
+//                        formatter: function(value) {
+//                            return value.substring(0,3)+'\n';
+//                        }
+//                    }
+
+                     axisLabel:{
+           interval: 0,//标签设置为全部显示
+          formatter:function(params){
+           var newParamsName = "";// 最终拼接成的字符串
+              var paramsNameNumber = params.length;// 实际标签的个数
+              var provideNumber = 4;// 每行能显示的字的个数
+              var rowNumber = Math.ceil(paramsNameNumber / provideNumber);// 换行的话，需要显示几行，向上取整
+
+              // 条件等同于rowNumber>1
+              if (paramsNameNumber > provideNumber) {
+
+                 for (var p = 0; p < rowNumber; p++) {
+                     var tempStr = "";// 表示每一次截取的字符串
+                     var start = p * provideNumber;// 开始截取的位置
+                     var end = start + provideNumber;// 结束截取的位置
+                     // 此处特殊处理最后一行的索引值
+                     if (p == rowNumber - 1) {
+                        // 最后一次不换行
+                        tempStr = params.substring(start, paramsNameNumber);
+                     } else {
+                        // 每一次拼接字符串并换行
+                        tempStr = params.substring(start, end) + "\n";
+                     }
+                    newParamsName += tempStr;// 最终拼成的字符串
+                 }
+
+              } else {
+                 // 将旧标签的值赋给新标签
+                 newParamsName = params;
+              }
+              //将最终的字符串返回
+              return newParamsName
+           }
+       }
+
+
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '平均每平米单价',
+//                    min: 0,
+//                    max: 250,
+                    position: 'right',
+                    axisLine: {
+                        lineStyle: {
+                            color: colors[0]
+                        }
+                    },
+                    axisLabel: {
+                        formatter: '{value} 元'
+                    }
+                },
+
+                {
+                    type: 'value',
+                    name: '平均面积',
+//                    min: 0,
+//                    max: 25,
+                    position: 'left',
+                    axisLine: {
+                        lineStyle: {
+                            color: colors[1]
+                        }
+                    },
+                    axisLabel: {
+                        formatter: '{value} ㎡'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '平均单价',
+                    type: 'bar',
+                    yAxisIndex: 0,
+                    data: []
+                },
+                {
+                    name: '平均面积',
+                    type: 'bar',
+                    yAxisIndex: 1,
+                    data: []
+                }
+            ]
+        };
+
+        myChart.showLoading(); // 加载动画
+
+       // 异步获取词云所需要的数据
+        $.ajax({
+         cache: false,
+          type: "GET",
+          url: "/get_ciyun",
+          contentType: "application/json",
+          data: null, // 发送的数据
+          dataType : "json",  //返回数据形式为json
+          async: false,
+         success: function(result) {
+             // 异步获取 所在城区下来框中的值
+             //console.log(result);
+             // 传递数据到词云图中
+//             data.value = result.ciyun_data
+             option.series[0].data = result.ciyun_data;
+             myChart.hideLoading(); // 隐藏加载动画
+//             maskImage.onload = function() {
+//			    myChart.setOption(option);
+//			};
+             myChart.setOption(option);
+               // 热门分析初始值
+             hot_option.title.text = '郑州市热门分析';
+             hot_option.xAxis[0].data = result.x_data;
+             hot_option.series[0].data = result.price_mean;
+             hot_option.series[1].data = result.area_mean;
+             hot_myChart.setOption(hot_option);
+
+         },
+          error: function(request) {
+              alert("发送请求失败！");
+          }
+        });
+
+        function qu_attention(areaName) {
+            var data = JSON.stringify({"areaName":areaName});
+
+            // 发送 ajax 获取 热度分析的柱状图所需要的数据
+            $.ajax({
+                 cache: false,
+                  type: "POST",
+                  url: "/get_hot_histogram",
+                  contentType: "application/json",
+                  data: data, // 发送的数据
+                  dataType : "json",  //返回数据形式为json
+                  async: false,
+                 success: function(result) {
+                     // 异步获取 所在城区下来框中的值
+                     //console.log(result);
+                     // 获取 下来框标签
+                     hot_option.title.text = areaName+'热门小区分析';
+                     hot_option.xAxis[0].data = result.x_data;
+                     hot_option.series[0].data = result.price_mean;
+                     hot_option.series[1].data = result.area_mean;
+                     hot_myChart.setOption(hot_option);
+
+                 },
+                  error: function(request) {
+                      alert("发送请求失败！");
+                  }
+            });
+
+            // 异步获取 热门分析中的五个小区的名字和关注度
+            $.ajax({
+                 cache: false,
+                  type: "POST",
+                  url: "/get_attentions",
+                  contentType: "application/json",
+                  data: data, // 发送的数据
+                  dataType : "html",  //返回数据形式为HTML
+                  async: false,
+                 success: function(result) {
+                     // 异步获取 所在城区下来框中的值
+                     //console.log(result);
+                     // 获取 下来框标签
+                     attention_data = result.attentions;
+                     $('#attention').empty();
+                     $('#attention').append(result);
+
+                 },
+                  error: function(request) {
+                      alert("发送请求失败！");
+                  }
+            });
+
+
+   }
+
+</script>
+

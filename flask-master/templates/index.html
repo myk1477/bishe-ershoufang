@@ -1,0 +1,73 @@
+
+
+<title>首页</title>
+
+{% include "analyse/importCSS.html" %}
+{% include "analyse/header.html" %}
+<section id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="main-slider">
+                <div class="slide-text">
+                    <h1>二手房可视化展示</h1>
+                    <p>本系统采用flask+echarts实现对爬取郑州二手房的数据进行的数据分析</p>
+                    <a href="#" class="btn btn-common">欢迎使用</a>
+                </div>
+                <img src="{{ url_for('static',filename='img/home/analyse.png') }}" class="slider-hill" alt="slider image">
+            </div>
+        </div>
+    </div>
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+</section>
+<!--/#home-slider-->
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="{{ url_for('static',filename='img/home/icon1.png') }}" alt="">
+
+                    </div>
+                    <h2>二手房爬虫</h2>
+                    <p>爬取目标网站在售的二手房源数据</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <img src="{{ url_for('static',filename='img/home/icon2.png') }}" alt="">
+                    </div>
+                    <h2>数据分析</h2>
+                    <p>依靠抓取的房源数据，分析房源的数据，图表清晰可见</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <img src="{{ url_for('static',filename='img/home/icon3.png') }}" alt="">
+
+                    </div>
+                    <h2>数据下载</h2>
+                    <p>数据分析的结果图表均支持免费下载。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "analyse/importJS.html" %}
+<script>
+$(document).ready(function () {
+    $("#ul_header").find("li").each(function () {
+      var a = $(this).find("a:first")[0];
+      if ($(a).attr("href") === location.pathname) {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+
+});
+</script>

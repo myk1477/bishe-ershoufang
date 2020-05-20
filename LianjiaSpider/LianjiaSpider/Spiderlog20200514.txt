@@ -1,0 +1,61 @@
+2020-05-14 16:03:47 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: LianjiaSpider)
+2020-05-14 16:03:47 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2020-05-14 16:03:47 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'LianjiaSpider', 'DOWNLOAD_DELAY': 0.3, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'Spiderlog20200514.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'LianjiaSpider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['LianjiaSpider.spiders']}
+2020-05-14 16:03:47 [scrapy.extensions.telnet] INFO: Telnet Password: 1514c1fd6b3bf0a1
+2020-05-14 16:03:47 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-14 16:03:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'LianjiaSpider.middlewares.ProxyMiddleware',
+ 'LianjiaSpider.middlewares.UserAgentMiddeleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-14 16:03:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-14 16:03:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['LianjiaSpider.pipelines.CsvPipeline',
+ 'LianjiaSpider.pipelines.MongodbPipeline']
+2020-05-14 16:03:48 [scrapy.core.engine] INFO: Spider opened
+2020-05-14 16:03:48 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-14 16:03:48 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+FileNotFoundError: [Errno 2] No such file or directory: '..\\data_file\\ershoufang_demo.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "C:\Users\Shinelon\Desktop\bishe_websheji\LianjiaSpider\LianjiaSpider\pipelines.py", line 110, in close_spider
+    self.f.close()
+AttributeError: 'CsvPipeline' object has no attribute 'f'
+2020-05-14 16:03:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2020, 5, 14, 8, 3, 48, 229495),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7}
+2020-05-14 16:03:48 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2020-05-14 16:03:48 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-05-14 16:03:48 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "C:\Users\Shinelon\Anaconda3\lib\site-packages\scrapy\crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+FileNotFoundError: [Errno 2] No such file or directory: '..\\data_file\\ershoufang_demo.csv'
